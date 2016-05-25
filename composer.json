@@ -16,9 +16,10 @@
   "require-dev":
   {
     "twig/twig": "^1.24",
-    "symfony/class-loader": "^3.0"
+    "symfony/class-loader": "^3.0",
+    "phpunit/phpunit": "5.3.4"
   },
   "autoload": {
-    "psr-4": { "EndorphinStudio\\": "src/" }
+    "psr-4": { "EndorphinStudio\\Tests": "tests/", "EndorphinStudio\\": "src/" }
   }
 }
