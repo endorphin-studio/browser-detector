@@ -8,7 +8,7 @@
  */
 
 namespace EndorphinStudio\Tests;
-use EndorphinStudio\Detector;
+use EndorphinStudio\Detector\Detector;
 
 class BrowserTest extends \PHPUnit_Framework_TestCase
 {
