@@ -5,6 +5,7 @@ Detect user Browser, OS and Device through USER AGENT
 [![Latest Stable Version](https://poser.pugx.org/endorphin-studio/browser-detector/v/stable)](https://packagist.org/packages/endorphin-studio/browser-detector) [![Total Downloads](https://poser.pugx.org/endorphin-studio/browser-detector/downloads)](https://packagist.org/packages/endorphin-studio/browser-detector) [![Latest Unstable Version](https://poser.pugx.org/endorphin-studio/browser-detector/v/unstable)](https://packagist.org/packages/endorphin-studio/browser-detector) [![License](https://poser.pugx.org/endorphin-studio/browser-detector/license)](https://packagist.org/packages/endorphin-studio/browser-detector)
 [![Build Status](https://travis-ci.org/endorphin-studio/browser-detector.svg?branch=v2.0)](https://travis-ci.org/endorphin-studio/browser-detector)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/endorphin-studio/browser-detector/badges/quality-score.png?b=v2.0)](https://scrutinizer-ci.com/g/endorphin-studio/browser-detector/?branch=v2.0)
+[![Percentage of issues still open](http://isitmaintained.com/badge/open/endorphin-studio/browser-detector.svg)](http://isitmaintained.com/project/endorphin-studio/browser-detector "Percentage of issues still open")
 
 ## About
 This version is refactoring of [endorphinua/browser-detector](https://github.com/endorphinua/browser-detector) repository
