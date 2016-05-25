@@ -11,6 +11,7 @@
          stopOnError="false"
          stopOnFailure="false"
          verbose="true"
+         bootstrap="tests/bootstrap.php"
 >
     <testsuites>
         <testsuite name="Browser Detector Test Suite">
