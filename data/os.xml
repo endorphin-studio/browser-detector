@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dataset>
+    <data>
+        <id>Windows Mobile</id>
+        <name>Windows Mobile</name>
+        <type>mobile</type>
+        <family>WIN</family>
+        <pattern>(Windows Phone OS|Windows Phone|Windows\+Phone|Windows\+Phone\+OS)</pattern>
+        <versionPattern>(Windows Phone OS|Windows Phone|Windows\+Phone|Windows\+Phone\+OS)</versionPattern>
+    </data>
+    <data>
+        <id>Windows</id>
+        <name>Windows</name>
+        <type>desktop</type>
+        <family>WIN</family>
+        <pattern>(Windows|Win|WP)</pattern>
+        <versionPattern>(Windows|Win|WP)</versionPattern>
+    </data>
+    <data>
+        <id>Android</id>
+        <name>Android</name>
+        <type>mobile</type>
+        <family>UNX</family>
+        <pattern>(; |\()Android</pattern>
+        <versionPattern>Android</versionPattern>
+    </data>
+    <data>
+        <id>iOS</id>
+        <name>iOS</name>
+        <type>mobile</type>
+        <family>MAC</family>
+        <pattern>like Mac OS X</pattern>
+        <versionPattern>like Mac OS X</versionPattern>
+    </data>
+    <data>
+        <id>Ubuntu</id>
+        <name>Ubuntu</name>
+        <type>desktop</type>
+        <family>UNX</family>
+        <pattern>Ubuntu</pattern>
+        <versionPattern>Ubuntu</versionPattern>
+    </data>
+    <data>
+        <id>Bada</id>
+        <name>Bada</name>
+        <type>mobile</type>
+        <family>UNX</family>
+        <pattern>Bada</pattern>
+        <versionPattern>Bada</versionPattern>
+    </data>
+    <data>
+        <id>Maemo</id>
+        <name>Maemo</name>
+        <type>mobile</type>
+        <family>UNX</family>
+        <pattern>Maemo</pattern>
+        <versionPattern>Maemo</versionPattern>
+    </data>
+    <data>
+        <id>Chromium OS</id>
+        <name>Chromium OS</name>
+        <type>desktop</type>
+        <family>UNX</family>
+        <pattern>CrOS</pattern>
+        <versionPattern>CrOS</versionPattern>
+    </data>
+    <data>
+        <id>Linux</id>
+        <name>Linux</name>
+        <type>desktop</type>
+        <family>UNX</family>
+        <pattern>(Linux|X11)</pattern>
+        <versionPattern>(Linux|X11)</versionPattern>
+    </data>
+</dataset>

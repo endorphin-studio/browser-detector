@@ -1,0 +1,255 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dataset>
+    <data>
+        <id>Epiphany</id>
+        <name>Epiphany</name>
+        <type>desktop</type>
+        <pattern>Epiphany</pattern>
+        <versionPattern>Epiphany</versionPattern>
+    </data>
+    <data>
+        <id>Edge</id>
+        <name>Edge</name>
+        <type>desktop</type>
+        <pattern>Edge</pattern>
+        <versionPattern>Edge</versionPattern>
+    </data>
+    <data>
+        <id>Chimera</id>
+        <name>Chimera</name>
+        <type>desktop</type>
+        <pattern>Chimera</pattern>
+        <versionPattern>Chimera</versionPattern>
+    </data>
+    <data>
+        <id>CometBird</id>
+        <name>CometBird</name>
+        <type>desktop</type>
+        <pattern>CometBird</pattern>
+        <versionPattern>CometBird</versionPattern>
+    </data>
+    <data>
+        <id>Kylo</id>
+        <name>Kylo</name>
+        <type>desktop</type>
+        <pattern>Kylo</pattern>
+        <versionPattern>Kylo</versionPattern>
+    </data>
+    <data>
+        <id>iCab</id>
+        <name>iCab</name>
+        <type>desktop</type>
+        <pattern>iCab</pattern>
+        <versionPattern>iCab</versionPattern>
+    </data>
+    <data>
+        <id>Firefox</id>
+        <name>Firefox</name>
+        <type>desktop</type>
+        <pattern>Firefox</pattern>
+        <versionPattern>Firefox</versionPattern>
+    </data>
+    <data>
+        <id>Chromium</id>
+        <name>Chromium</name>
+        <type>desktop</type>
+        <pattern>Chromium</pattern>
+        <versionPattern>Chromium</versionPattern>
+    </data>
+    <data>
+        <id>Beamrise</id>
+        <name>Beamrise</name>
+        <type>desktop</type>
+        <pattern>Beamrise</pattern>
+        <versionPattern>Beamrise</versionPattern>
+    </data>
+    <data>
+        <id>Camino</id>
+        <name>Camino</name>
+        <type>desktop</type>
+        <pattern>Camino</pattern>
+        <versionPattern>Camino</versionPattern>
+    </data>
+    <data>
+        <id>Columbus</id>
+        <name>Columbus</name>
+        <type>desktop</type>
+        <pattern>Columbus</pattern>
+        <versionPattern>Columbus</versionPattern>
+    </data>
+    <data>
+        <id>Deepnet Explorer</id>
+        <name>Deepnet Explorer</name>
+        <type>desktop</type>
+        <pattern>Deepnet Explorer</pattern>
+        <versionPattern>Deepnet Explorer</versionPattern>
+    </data>
+    <data>
+        <id>Yandex Browser</id>
+        <name>Yandex Browser</name>
+        <type>desktop</type>
+        <pattern>YaBrowser</pattern>
+        <versionPattern>YaBrowser</versionPattern>
+    </data>
+    <data>
+        <id>AOL Explorer</id>
+        <name>AOL Explorer</name>
+        <type>desktop</type>
+        <pattern>AOL</pattern>
+        <versionPattern>AOL</versionPattern>
+    </data>
+    <data>
+        <id>IceWeasel</id>
+        <name>IceWeasel</name>
+        <type>desktop</type>
+        <pattern>IceWeasel</pattern>
+        <versionPattern>IceWeasel</versionPattern>
+    </data>
+    <data>
+        <id>Flock</id>
+        <name>Flock</name>
+        <type>desktop</type>
+        <pattern>Flock</pattern>
+        <versionPattern>Flock</versionPattern>
+    </data>
+    <data>
+        <id>Netscape Navigator</id>
+        <name>Netscape Navigator</name>
+        <type>desktop</type>
+        <pattern>Netscape</pattern>
+        <versionPattern>Netscape</versionPattern>
+    </data>
+    <data>
+        <id>Dolphin</id>
+        <name>Dolphin</name>
+        <type>mobile</type>
+        <pattern>(Dolfin|Dolphin)</pattern>
+        <versionPattern>(Dolfin|Dolphin)</versionPattern>
+    </data>
+    <data>
+        <id>Atomic</id>
+        <name>Atomic</name>
+        <type>desktop</type>
+        <pattern>AtomicBrowser</pattern>
+        <versionPattern>AtomicBrowser</versionPattern>
+    </data>
+    <data>
+        <id>Chrome Mobile</id>
+        <name>Chrome Mobile</name>
+        <type>desktop</type>
+        <pattern>CrMo</pattern>
+        <versionPattern>CrMo</versionPattern>
+    </data>
+    <data>
+        <id>Arora</id>
+        <name>Arora</name>
+        <type>desktop</type>
+        <pattern>Arora</pattern>
+        <versionPattern>Arora</versionPattern>
+    </data>
+    <data>
+        <id>Midori</id>
+        <name>Midori</name>
+        <type>desktop</type>
+        <pattern>Midori</pattern>
+        <versionPattern>Midori</versionPattern>
+    </data>
+    <data>
+        <id>Conkeror</id>
+        <name>Conkeror</name>
+        <type>desktop</type>
+        <pattern>(Conkeror|conkeror)</pattern>
+        <versionPattern>(Conkeror|conkeror)</versionPattern>
+    </data>
+    <data>
+        <id>Opera Mini</id>
+        <name>Opera Mini</name>
+        <type>desktop</type>
+        <pattern>Opera Mini</pattern>
+        <versionPattern>Opera Mini</versionPattern>
+    </data>
+    <data>
+        <id>Opera Mobile</id>
+        <name>Opera Mobile</name>
+        <type>desktop</type>
+        <pattern>(Opera Mobi|OPiOS)</pattern>
+        <versionPattern>(Opera Mobi|OPiOS)</versionPattern>
+    </data>
+    <data>
+        <id>Opera</id>
+        <name>Opera</name>
+        <type>desktop</type>
+        <pattern>(Opera|OPR)</pattern>
+        <versionPattern>(Version|OPR)</versionPattern>
+    </data>
+    <data>
+        <id>Chrome</id>
+        <name>Chrome</name>
+        <type>desktop</type>
+        <pattern>(Chrome|CriOS)</pattern>
+        <versionPattern>(Chrome|CriOS)</versionPattern>
+    </data>
+    <data>
+        <id>Atomic</id>
+        <name>Atomic</name>
+        <type>desktop</type>
+        <pattern>AtomicBrowser</pattern>
+        <versionPattern>AtomicBrowser</versionPattern>
+    </data>
+    <data>
+        <id>Skyfire</id>
+        <name>Skyfire</name>
+        <type>desktop</type>
+        <pattern>Skyfire</pattern>
+        <versionPattern>Skyfire</versionPattern>
+    </data>
+    <data>
+        <id>Maxthon</id>
+        <name>Maxthon</name>
+        <type>desktop</type>
+        <pattern>Maxthon</pattern>
+        <versionPattern>Maxthon</versionPattern>
+    </data>
+    <data>
+        <id>Rekonq</id>
+        <name>Rekonq</name>
+        <type>desktop</type>
+        <pattern>Rekonq</pattern>
+        <versionPattern>Rekonq</versionPattern>
+    </data>
+    <data>
+        <id>IE Mobile</id>
+        <name>IE Mobile</name>
+        <type>mobile</type>
+        <pattern>IEMobile</pattern>
+        <versionPattern>IEMobile</versionPattern>
+    </data>
+    <data>
+        <id>IE</id>
+        <name>IE</name>
+        <type>desktop</type>
+        <pattern>MSIE</pattern>
+        <versionPattern>MSIE</versionPattern>
+    </data>
+    <data>
+        <id>Columbus</id>
+        <name>Columbus</name>
+        <type>desktop</type>
+        <pattern>Columbus</pattern>
+        <versionPattern>Columbus</versionPattern>
+    </data>
+    <data>
+        <id>Safari</id>
+        <name>Safari</name>
+        <type>desktop</type>
+        <pattern>Safari</pattern>
+        <versionPattern>Safari</versionPattern>
+    </data>
+    <data>
+        <id>Konqueror</id>
+        <name>IE</name>
+        <type>desktop</type>
+        <pattern>Konqueror</pattern>
+        <versionPattern>Konqueror</versionPattern>
+    </data>
+</dataset>
