@@ -24,15 +24,15 @@ class DetectorResult
     /** @var boolean Is Mobile */
     public $isMobile;
 
-    /** @var  \EndorphinStudio\Device Device */
+    /** @var  \EndorphinStudio\Detector\Device Device */
     public $Device;
 
-    /** @var  \EndorphinStudio\OS Operating System */
+    /** @var  \EndorphinStudio\Detector\OS Operating System */
     public $OS;
 
-    /** @var \EndorphinStudio\Browser */
+    /** @var \EndorphinStudio\Detector\Browser */
     public $Browser;
 
-    /** @var \EndorphinStudio\SearchRobot */
+    /** @var \EndorphinStudio\Detector\SearchRobot */
     public $Crawler;
 }
