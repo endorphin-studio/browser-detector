@@ -18,5 +18,3 @@ if (file_exists($vendor . '/autoload.php')) {
         throw new Exception('Unable to load dependencies');
     }
 }
-
-?>
