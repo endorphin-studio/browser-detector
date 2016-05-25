@@ -7,7 +7,7 @@
  * @project browser-detector
  */
 
-namespace EndorphinStudio;
+namespace EndorphinStudio\Detector;
 
 
 class DataWithVersion extends Data

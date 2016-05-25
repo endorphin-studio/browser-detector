@@ -20,6 +20,6 @@
     "phpunit/phpunit": "5.3.4"
   },
   "autoload": {
-    "psr-4": { "EndorphinStudio\\": "src/" }
+    "psr-4": { "EndorphinStudio\\Detector\\": "src/" }
   }
 }
