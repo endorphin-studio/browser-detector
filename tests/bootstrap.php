@@ -7,7 +7,9 @@
  * @project browser-detector
  */
 
-$vendor = realpath(__DIR__ . '/../vendor');
+$vendor = realpath(__DIR__ . '/../vendor/');
+
+define('__SRC__',str_replace('tests','src',__DIR__));
 if (file_exists($vendor . '/autoload.php')) {
     require $vendor . '/autoload.php';
 } else {
@@ -16,5 +18,21 @@ if (file_exists($vendor . '/autoload.php')) {
         require $vendor . '/autoload.php';
     } else {
         throw new Exception('Unable to load dependencies');
+    }
+}
+
+use Symfony\Component\ClassLoader\Psr4ClassLoader;
+use EndorphinStudio\Detector\Detector;
+
+$loader = new Psr4ClassLoader();
+$loader->addPrefix('EndorphinStudio\\Detector', __SRC__);
+$loader->register();
+
+function testUaList($object,$detectorProperty,$property,$uaList,$expectedValue)
+{
+    foreach($uaList as $ua)
+    {
+        $obj = Detector::Analyse($ua)->$detectorProperty;
+        $object->assertEquals($expectedValue,$obj->$property);
     }
 }

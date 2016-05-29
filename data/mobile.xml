@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<rulelist>
+    <ruleset>
+        <rule>
+            <osName>Android</osName>
+        </rule>
+    </ruleset>
+    <ruleset>
+        <rule>
+            <osName>Windows Mobile</osName>
+        </rule>
+    </ruleset>
+    <ruleset>
+        <rule>
+            <deviceName>iPhone</deviceName>
+        </rule>
+    </ruleset>
+    <ruleset>
+        <rule>
+            <deviceName>iPod</deviceName>
+        </rule>
+    </ruleset>
+    <ruleset>
+        <rule>
+            <browserName>Opera Mini</browserName>
+        </rule>
+    </ruleset>
+    <ruleset>
+        <rule>
+            <browserName>Opera Mobile</browserName>
+        </rule>
+    </ruleset>
+</rulelist>
