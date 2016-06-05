@@ -27,7 +27,7 @@ This version is refactoring of [endorphinua/browser-detector](https://github.com
 
     use EndorphinStudio\Detector\Detector;
 
-    $result = Detector::Analyse();
+    $result = Detector::analyse();
     print($result);
 
 #### Browser Detection Support

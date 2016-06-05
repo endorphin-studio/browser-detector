@@ -23,9 +23,9 @@ class Robot extends Data
     /**
      * @return boolean
      */
-    public function isIsSearchEngine()
+    public function isSearchEngine()
     {
-        return $this->isSearchEngine;
+        return $this->SearchEngine;
     }
 
     /**
@@ -55,15 +55,15 @@ class Robot extends Data
     /**
      * @param boolean $isSearchEngine
      */
-    public function setIsSearchEngine($isSearchEngine)
+    public function setSearchEngine($isSearchEngine)
     {
-        $this->isSearchEngine = $isSearchEngine;
+        $this->SearchEngine = $isSearchEngine;
     }
     /** @var string Crawler homepage */
     private $Homepage;
 
     /** @var boolean Search Engine */
-    private $isSearchEngine;
+    private $SearchEngine;
 
     /** @var string Crawler Owner */
     private $Owner;

@@ -21,7 +21,7 @@ class Device extends Data
      */
     public function __construct(\SimpleXMLElement $xmlData)
     {
-        if($xmlData == null)
+        if($xmlData === null)
         {
             $this->Name = 'Desktop';
             $this->Type = 'desktop';

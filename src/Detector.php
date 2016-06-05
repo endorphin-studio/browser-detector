@@ -69,7 +69,7 @@ class Detector
         $this->setXmlData($xmlData);
     }
 
-    public static function Analyse($uaString='UA',$pathToData='auto')
+    public static function analyse($uaString='UA', $pathToData='auto')
     {
         $ua = $uaString;
         if($uaString == 'UA')
@@ -160,7 +160,7 @@ class Detector
      * @param string $uaString User agent
      * @return string Version
      */
-    private static function getVersion($xmlItem,$uaString)
+    private static function getVersion(\SimpleXMLElement $xmlItem,$uaString)
     {
         if($xmlItem !== null)
         {
