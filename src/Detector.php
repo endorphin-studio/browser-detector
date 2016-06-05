@@ -72,7 +72,6 @@ class Detector
     public static function Analyse($uaString='UA',$pathToData='auto')
     {
         $ua = $uaString;
-        $pathXML = $pathToData;
         if($uaString == 'UA')
         {
             $ua = $_SERVER['HTTP_USER_AGENT'];
@@ -97,26 +96,37 @@ class Detector
                 switch ($key)
                 {
                     case 'robot':
-                        $robot = new Robot($result);
-                        $detectorResult->Robot = $robot;
-                        if($robot->getName() != 'N\A')
+                        if($result !== null)
                         {
-                            $isRobot = true;
+                            $robot = new Robot($result);
+                            $detectorResult->Robot = $robot;
+                            if ($robot->getName() != 'N\A') {
+                                $isRobot = true;
+                            }
                         }
                         break;
                     case 'os':
-                        $os = new OS($result);
-                        $os->setVersion(self::getVersion($result, $ua));
-                        $detectorResult->OS = $os;
+                        if($result !== null)
+                        {
+                            $os = new OS($result);
+                            $os->setVersion(self::getVersion($result, $ua));
+                            $detectorResult->OS = $os;
+                        }
                         break;
                     case 'device':
-                        $device = new Device($result);
-                        $detectorResult->Device = $device;
+                        if($result !== null)
+                        {
+                            $device = new Device($result);
+                            $detectorResult->Device = $device;
+                        }
                         break;
                     case 'browser':
-                        $browser = new Browser($result);
-                        $browser->setVersion(self::getVersion($result, $ua));
-                        $detectorResult->Browser = $browser;
+                        if($result !== null)
+                        {
+                            $browser = new Browser($result);
+                            $browser->setVersion(self::getVersion($result, $ua));
+                            $detectorResult->Browser = $browser;
+                        }
                         break;
                 }
             }
@@ -152,16 +162,16 @@ class Detector
      */
     private static function getVersion($xmlItem,$uaString)
     {
-        if($xmlItem != null)
+        if($xmlItem !== null)
         {
             if(isset($xmlItem->versionPattern))
             {
                 $vPattern = $xmlItem->versionPattern;
-                $version = @'/' . $vPattern . '(\/| )[\w-._]{1,15}/';
+                $version = '/' . $vPattern . '(\/| )[\w-._]{1,15}/';
                 $uaString = str_replace(' NT', '', $uaString);
                 if (preg_match($version, $uaString)) {
                     preg_match($version, $uaString, $v);
-                    @$version = $v[0];
+                    $version = $v[0];
                     $version = preg_replace('/' . $vPattern . '/', '', $version);
                     $version = str_replace(';', '', $version);
                     $version = str_replace(' ', '', $version);
@@ -197,5 +207,4 @@ class Detector
 
         return $versions[$version];
     }
-
 }

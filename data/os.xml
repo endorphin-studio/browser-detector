@@ -28,9 +28,9 @@
         <id>iOS</id>
         <name>iOS</name>
         <type>mobile</type>
-        <family>MAC</family>
-        <pattern>like Mac OS X</pattern>
-        <versionPattern>like Mac OS X</versionPattern>
+        <family>MC</family>
+        <pattern>like MC OS X</pattern>
+        <versionPattern>like MC OS X</versionPattern>
     </data>
     <data>
         <id>Ubuntu</id>

@@ -19,10 +19,10 @@ class OS extends DataWithVersion
      * OS constructor.
      * @param \SimpleXMLElement $xmlData Xml data from file
      */
-    public function __construct($xmlData)
+    public function __construct(\SimpleXMLElement $xmlData)
     {
         parent::__construct($xmlData);
-        if($xmlData != null)
+        if($xmlData !== null)
         {
             foreach ($xmlData->children() as $child) {
                 switch ($child->getName()) {
@@ -48,4 +48,4 @@ class OS extends DataWithVersion
 
 define('UNX','unix');
 define('WIN','windows');
-define('MAC','mac');
+define('MC','mac');

@@ -19,7 +19,7 @@ class Device extends Data
      * Device constructor.
      * @param \SimpleXMLElement $xmlData Xml data from file
      */
-    public function __construct($xmlData)
+    public function __construct(\SimpleXMLElement $xmlData)
     {
         if($xmlData == null)
         {

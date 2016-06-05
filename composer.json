@@ -3,7 +3,7 @@
   "description": "Detect user Browser, OS and Device through USER AGENT",
   "minimum-stability": "dev",
   "type": "library",
-  "license": "GPLv3",
+  "license": "GPL-3.0+",
   "authors": [
     {
       "name": "Sergey Nehaenko",

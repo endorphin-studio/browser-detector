@@ -68,11 +68,11 @@ class Robot extends Data
     /** @var string Crawler Owner */
     private $Owner;
 
-    public function __construct($xmlData)
+    public function __construct(\SimpleXMLElement $xmlData)
     {
         parent::__construct($xmlData);
 
-        if($xmlData != null)
+        if($xmlData !== null)
         {
             foreach ($xmlData->children() as $child)
             {
@@ -88,6 +88,4 @@ class Robot extends Data
             }
         }
     }
-
-
 }
