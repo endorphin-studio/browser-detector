@@ -1,3 +1,67 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <dataset>
+    <data>
+        <id>Goodlebot-News</id>
+        <name>Google (News)</name>
+        <url>http://google.com</url>
+        <owner>Google Inc.</owner>
+        <pattern>Googlebot-News</pattern>
+        <isse>true</isse>
+    </data>
+    <data>
+        <id>Goodlebot-Images</id>
+        <name>Google (Images) </name>
+        <url>http://google.com</url>
+        <owner>Google Inc.</owner>
+        <pattern>Googlebot-Image</pattern>
+        <isse>true</isse>
+    </data>
+    <data>
+        <id>Goodlebot-Videos</id>
+        <name>Google (Videos)</name>
+        <url>http://google.com</url>
+        <owner>Google Inc.</owner>
+        <pattern>Googlebot-Video</pattern>
+        <isse>true</isse>
+    </data>
+    <data>
+        <id>Goodlebot-AdSense</id>
+        <name>Google (AdSense)</name>
+        <url>http://google.com</url>
+        <owner>Google Inc.</owner>
+        <pattern>Mediapartners-Google</pattern>
+        <isse>true</isse>
+    </data>
+    <data>
+        <id>Goodlebot-Smartphone</id>
+        <name>Google (Smartphone)</name>
+        <url>http://google.com</url>
+        <owner>Google Inc.</owner>
+        <pattern>compatible; Googlebot</pattern>
+        <isse>true</isse>
+    </data>
+    <data>
+        <id>Goodlebot-Mobile</id>
+        <name>Google (Mobile)</name>
+        <url>http://google.com</url>
+        <owner>Google Inc.</owner>
+        <pattern>Googlebot-Mobile</pattern>
+        <isse>true</isse>
+    </data>
+    <data>
+        <id>Goodlebot-Main</id>
+        <name>Google (Search)</name>
+        <url>http://google.com</url>
+        <owner>Google Inc.</owner>
+        <pattern>Googlebot</pattern>
+        <isse>true</isse>
+    </data>
+    <data>
+        <id>Tiny-RSS</id>
+        <name>Tiny RSS</name>
+        <url>http://tt-rss.org</url>
+        <owner>Andrew Dolgov</owner>
+        <pattern>(Tiny RSS|TinyRSS)</pattern>
+        <isse>false</isse>
+    </data>
 </dataset>

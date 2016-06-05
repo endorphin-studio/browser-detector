@@ -13,9 +13,24 @@ namespace EndorphinStudio\Detector;
 class DataWithVersion extends Data
 {
     /**
+     * @return string
+     */
+    public function getVersion()
+    {
+        return $this->Version;
+    }
+
+    /**
+     * @param string $Version
+     */
+    public function setVersion($Version)
+    {
+        $this->Version = $Version;
+    }
+    /**
      * @var string Version
      */
-    public $Version;
+    protected $Version;
 
     /**
      * DataWithVersion constructor.

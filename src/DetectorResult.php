@@ -33,6 +33,6 @@ class DetectorResult
     /** @var \EndorphinStudio\Detector\Browser */
     public $Browser;
 
-    /** @var \EndorphinStudio\Detector\SearchRobot */
-    public $Crawler;
+    /** @var \EndorphinStudio\Detector\Robot */
+    public $Robot;
 }

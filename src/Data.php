@@ -13,11 +13,42 @@ namespace EndorphinStudio\Detector;
 class Data
 {
     /**
+     * @return string
+     */
+    public function getName()
+    {
+        return $this->Name;
+    }
+
+    /**
+     * @return string
+     */
+    public function getType()
+    {
+        return $this->Type;
+    }
+
+    /**
+     * @param string $Name
+     */
+    public function setName($Name)
+    {
+        $this->Name = $Name;
+    }
+
+    /**
+     * @param string $Type
+     */
+    public function setType($Type)
+    {
+        $this->Type = $Type;
+    }
+    /**
      * @var string Name
      */
-    public $Name = 'N\A';
+    protected $Name = 'N\A';
     /** @var string Type */
-    public $Type = 'N\A';
+    protected $Type = 'N\A';
 
     /**
      * Data constructor.

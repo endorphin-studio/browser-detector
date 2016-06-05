@@ -60,7 +60,7 @@ class Detector
             $this->setPathToData(str_replace('src','data',__DIR__).'/');
         }
 
-        $xml = array('browser','device','os','robot');
+        $xml = array('robot','browser','device','os');
         $xmlData = array();
         foreach($xml as $name)
         {
@@ -88,25 +88,37 @@ class Detector
 
         $detectorResult = new DetectorResult();
         $detectorResult->uaString = $ua;
+        $isRobot = false;
 
         foreach($data as $key => $result)
         {
-            switch($key)
+            if(!$isRobot)
             {
-                case 'os':
-                    $os = new OS($result);
-                    $os->Version = self::getVersion($result,$ua);
-                    $detectorResult->OS = $os;
-                    break;
-                case 'device':
-                    $device = new Device($result);
-                    $detectorResult->Device = $device;
-                    break;
-                case 'browser':
-                    $browser = new Browser($result);
-                    $browser->Version = self::getVersion($result,$ua);
-                    $detectorResult->Browser = $browser;
-                    break;
+                switch ($key)
+                {
+                    case 'robot':
+                        $robot = new Robot($result);
+                        $detectorResult->Robot = $robot;
+                        if($robot->getName() != 'N\A')
+                        {
+                            $isRobot = true;
+                        }
+                        break;
+                    case 'os':
+                        $os = new OS($result);
+                        $os->setVersion(self::getVersion($result, $ua));
+                        $detectorResult->OS = $os;
+                        break;
+                    case 'device':
+                        $device = new Device($result);
+                        $detectorResult->Device = $device;
+                        break;
+                    case 'browser':
+                        $browser = new Browser($result);
+                        $browser->setVersion(self::getVersion($result, $ua));
+                        $detectorResult->Browser = $browser;
+                        break;
+                }
             }
         }
 
@@ -142,26 +154,29 @@ class Detector
     {
         if($xmlItem != null)
         {
-            $vPattern = $xmlItem->versionPattern;
-            $version = @'/' . $vPattern . '(\/| )[\w-._]{1,15}/';
-            $uaString = str_replace(' NT', '', $uaString);
-            if (preg_match($version, $uaString)) {
-                preg_match($version, $uaString, $v);
-                @$version = $v[0];
-                $version = preg_replace('/' . $vPattern . '/', '', $version);
-                $version = str_replace(';', '', $version);
-                $version = str_replace(' ', '', $version);
-                $version = str_replace('/', '', $version);
-                $version = str_replace('_', '.', $version);
+            if(isset($xmlItem->versionPattern))
+            {
+                $vPattern = $xmlItem->versionPattern;
+                $version = @'/' . $vPattern . '(\/| )[\w-._]{1,15}/';
+                $uaString = str_replace(' NT', '', $uaString);
+                if (preg_match($version, $uaString)) {
+                    preg_match($version, $uaString, $v);
+                    @$version = $v[0];
+                    $version = preg_replace('/' . $vPattern . '/', '', $version);
+                    $version = str_replace(';', '', $version);
+                    $version = str_replace(' ', '', $version);
+                    $version = str_replace('/', '', $version);
+                    $version = str_replace('_', '.', $version);
 
-                if ($xmlItem->id == 'Windows') {
-                    $version = self::getWindowsVersion($version);
+                    if ($xmlItem->id == 'Windows') {
+                        $version = self::getWindowsVersion($version);
+                    }
+
+                    return $version;
                 }
-
-                return $version;
             }
         }
-        return null;
+        return 'N\A';
     }
 
     /**

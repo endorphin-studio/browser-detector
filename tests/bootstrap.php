@@ -33,6 +33,7 @@ function testUaList($object,$detectorProperty,$property,$uaList,$expectedValue)
     foreach($uaList as $ua)
     {
         $obj = Detector::Analyse($ua)->$detectorProperty;
-        $object->assertEquals($expectedValue,$obj->$property);
+        $func = 'get'.$property;
+        $object->assertEquals($expectedValue,$obj->$func());
     }
 }
