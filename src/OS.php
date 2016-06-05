@@ -22,24 +22,24 @@ class OS extends DataWithVersion
     public function __construct($xmlData)
     {
         parent::__construct($xmlData);
-        foreach($xmlData->children() as $child)
+        if($xmlData != null)
         {
-            switch($child->getName())
-            {
-                case 'family':
-                    switch($child->__toString())
-                    {
-                        case 'UNX':
-                            $this->Family = UNX;
-                            break;
-                        case 'MAC':
-                            $this->Family = MAC;
-                            break;
-                        case 'WIN':
-                            $this->Family = WIN;
-                            break;
-                    }
-                    break;
+            foreach ($xmlData->children() as $child) {
+                switch ($child->getName()) {
+                    case 'family':
+                        switch ($child->__toString()) {
+                            case 'UNX':
+                                $this->Family = UNX;
+                                break;
+                            case 'MAC':
+                                $this->Family = MAC;
+                                break;
+                            case 'WIN':
+                                $this->Family = WIN;
+                                break;
+                        }
+                        break;
+                }
             }
         }
     }

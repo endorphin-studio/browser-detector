@@ -37,7 +37,7 @@
         <name>Google (Smartphone)</name>
         <url>http://google.com</url>
         <owner>Google Inc.</owner>
-        <pattern>compatible; Googlebot</pattern>
+        <pattern>compatible\; Googlebot</pattern>
         <isse>true</isse>
     </data>
     <data>
@@ -63,5 +63,205 @@
         <owner>Andrew Dolgov</owner>
         <pattern>(Tiny RSS|TinyRSS)</pattern>
         <isse>false</isse>
+    </data>
+    <data>
+        <id>Yandex-Mobile</id>
+        <name>Yandex (Mobile)</name>
+        <url>http://yandex.com/bots</url>
+        <owner>Yandex LLC.</owner>
+        <pattern>compatible\; (YandexBot|YandexMobileBot)</pattern>
+        <isse>true</isse>
+    </data>
+    <data>
+        <id>Yandex-Accessibility</id>
+        <name>Yandex (Accessibility)</name>
+        <url>http://yandex.com/bots</url>
+        <owner>Yandex LLC.</owner>
+        <pattern>YandexAccessibilityBot</pattern>
+        <isse>true</isse>
+    </data>
+    <data>
+        <id>Yandex-Direct</id>
+        <name>Yandex (Direct)</name>
+        <url>http://yandex.com/bots</url>
+        <owner>Yandex LLC.</owner>
+        <pattern>YandexDirectDyn</pattern>
+        <isse>true</isse>
+    </data>
+    <data>
+        <id>Yandex-Screenshot</id>
+        <name>Yandex (Screenshot)</name>
+        <url>http://yandex.com/bots</url>
+        <owner>Yandex LLC.</owner>
+        <pattern>YandexScreenshotBot</pattern>
+        <isse>true</isse>
+    </data>
+    <data>
+        <id>Yandex-Images</id>
+        <name>Yandex (Images)</name>
+        <url>http://yandex.com/bots</url>
+        <owner>Yandex LLC.</owner>
+        <pattern>YandexImages</pattern>
+        <isse>true</isse>
+    </data>
+    <data>
+        <id>Yandex-Video</id>
+        <name>Yandex (Video)</name>
+        <url>http://yandex.com/bots</url>
+        <owner>Yandex LLC.</owner>
+        <pattern>YandexVideo</pattern>
+        <isse>true</isse>
+    </data>
+    <data>
+        <id>Yandex-Media</id>
+        <name>Yandex (Media)</name>
+        <url>http://yandex.com/bots</url>
+        <owner>Yandex LLC.</owner>
+        <pattern>YandexMedia</pattern>
+        <isse>true</isse>
+    </data>
+    <data>
+        <id>Yandex-Blogs</id>
+        <name>Yandex (Blogs)</name>
+        <url>http://yandex.com/bots</url>
+        <owner>Yandex LLC.</owner>
+        <pattern>YandexBlogs</pattern>
+        <isse>true</isse>
+    </data>
+    <data>
+        <id>Yandex-Webmaster</id>
+        <name>Yandex (Webmaster)</name>
+        <url>http://yandex.com/bots</url>
+        <owner>Yandex LLC.</owner>
+        <pattern>YandexWebmaster</pattern>
+        <isse>true</isse>
+    </data>
+    <data>
+        <id>Yandex-Pagechecker</id>
+        <name>Yandex (Pagechecker)</name>
+        <url>http://yandex.com/bots</url>
+        <owner>Yandex LLC.</owner>
+        <pattern>YandexPagechecker</pattern>
+        <isse>true</isse>
+    </data>
+    <data>
+        <id>Yandex-ImageResizer</id>
+        <name>Yandex (ImageResizer)</name>
+        <url>http://yandex.com/bots</url>
+        <owner>Yandex LLC.</owner>
+        <pattern>YandexImageResizer</pattern>
+        <isse>true</isse>
+    </data>
+    <data>
+        <id>Yandex-Ad</id>
+        <name>Yandex (Ad)</name>
+        <url>http://yandex.com/bots</url>
+        <owner>Yandex LLC.</owner>
+        <pattern>YandexAdNet</pattern>
+        <isse>true</isse>
+    </data>
+    <data>
+        <id>Yandex-Direct</id>
+        <name>Yandex (Direct)</name>
+        <url>http://yandex.com/bots</url>
+        <owner>Yandex LLC.</owner>
+        <pattern>(YandexDirect|YaDirectFetcher)</pattern>
+        <isse>true</isse>
+    </data>
+    <data>
+        <id>Yandex-Calendar</id>
+        <name>Yandex (Calendar)</name>
+        <url>http://yandex.com/bots</url>
+        <owner>Yandex LLC.</owner>
+        <pattern>YandexCalendar</pattern>
+        <isse>true</isse>
+    </data>
+    <data>
+        <id>Yandex-Sitelinks</id>
+        <name>Yandex (Sitelinks)</name>
+        <url>http://yandex.com/bots</url>
+        <owner>Yandex LLC.</owner>
+        <pattern>YandexSitelinks</pattern>
+        <isse>true</isse>
+    </data>
+    <data>
+        <id>Yandex-Favicons</id>
+        <name>Yandex (Favicons)</name>
+        <url>http://yandex.com/bots</url>
+        <owner>Yandex LLC.</owner>
+        <pattern>YandexFavicons</pattern>
+        <isse>true</isse>
+    </data>
+    <data>
+        <id>Yandex-Metrika</id>
+        <name>Yandex (Metrika)</name>
+        <url>http://yandex.com/bots</url>
+        <owner>Yandex LLC.</owner>
+        <pattern>YandexMetrika</pattern>
+        <isse>true</isse>
+    </data>
+    <data>
+        <id>Yandex-News</id>
+        <name>Yandex (News)</name>
+        <url>http://yandex.com/bots</url>
+        <owner>Yandex LLC.</owner>
+        <pattern>(YandexNews|YandexNewslinks)</pattern>
+        <isse>true</isse>
+    </data>
+    <data>
+        <id>Yandex-Catalog</id>
+        <name>Yandex (Catalog)</name>
+        <url>http://yandex.com/bots</url>
+        <owner>Yandex LLC.</owner>
+        <pattern>YandexCatalog</pattern>
+        <isse>true</isse>
+    </data>
+    <data>
+        <id>Yandex-Antivirus</id>
+        <name>Yandex (Antivirus)</name>
+        <url>http://yandex.com/bots</url>
+        <owner>Yandex LLC.</owner>
+        <pattern>YandexAntivirus</pattern>
+        <isse>true</isse>
+    </data>
+    <data>
+        <id>Yandex-Market</id>
+        <name>Yandex (Market)</name>
+        <url>http://yandex.com/bots</url>
+        <owner>Yandex LLC.</owner>
+        <pattern>YandexMarket</pattern>
+        <isse>true</isse>
+    </data>
+    <data>
+        <id>Yandex-Vertis</id>
+        <name>Yandex (Vertis)</name>
+        <url>http://yandex.com/bots</url>
+        <owner>Yandex LLC.</owner>
+        <pattern>YandexVertis</pattern>
+        <isse>true</isse>
+    </data>
+    <data>
+        <id>Yandex-Mail</id>
+        <name>Yandex (Mail)</name>
+        <url>http://yandex.com/bots</url>
+        <owner>Yandex LLC.</owner>
+        <pattern>YandexForDomain</pattern>
+        <isse>true</isse>
+    </data>
+    <data>
+        <id>Yandex-Sprav</id>
+        <name>Yandex (Sprav)</name>
+        <url>http://yandex.com/bots</url>
+        <owner>Yandex LLC.</owner>
+        <pattern>YandexSpravBot</pattern>
+        <isse>true</isse>
+    </data>
+    <data>
+        <id>Yandex-Mail</id>
+        <name>Yandex</name>
+        <url>http://yandex.com/bots</url>
+        <owner>Yandex LLC.</owner>
+        <pattern>YandexBot</pattern>
+        <isse>true</isse>
     </data>
 </dataset>

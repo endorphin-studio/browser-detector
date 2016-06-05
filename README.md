@@ -30,18 +30,22 @@ This version is refactoring of [endorphinua/browser-detector](https://github.com
     $result = Detector::Analyse();
     print($result);
 
-### Browser Detection Support
+#### Browser Detection Support
 
     Google Chrome, Firefox, Opera, Opera Mini, Opera Mobile, Internet Explorer, Internet Explorer Mobile
     Edge, Epiphany, Chimera, CometBird, Kylo, iCab, Chromium, Beamrise, Camino, Columbus,
     Deepnet Explorer, Yandex Browser, AOL Explorer, IceWeasel, Flock, Netscape Navigator,
     Dolphin, Atomic, Chrome Mobile, Arora, Midori, Conkeror, Skyfire, Maxthon, Rekonq, Safari, Konqueror
 
-### Operating System Detection Support
+#### Operating System Detection Support
 
     Windows Phone, Windows Mobile, Windows, iOS, Android, Linux, Ubuntu, Chromium OS, Bada, Maemo
 
-### Device Detection Support
+#### Device Detection Support
 
     Microsoft Lumia, iPhone, iPod, iPad, Android based, Dell, NOOK, Samsung, Toshiba, HTC, Cisco, Asus,
     Google Nexus, Kindle Fire, Motorolla, Microsoft Sursace, Sony Ericsson, Nokia
+
+#### Crawlers (Robots) Detection Support
+
+    Google Bots, Tiny RSS, Yandex Bots
