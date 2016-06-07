@@ -115,7 +115,6 @@ class Detector
                         else
                         {
                             $os = OS::initEmpty();
-                            $os->setVersion(self::getVersion($result, $ua));
                             $detectorResult->OS = $os;
                         }
                         break;
@@ -141,7 +140,6 @@ class Detector
                         else
                         {
                             $browser = Browser::initEmpty();
-                            $browser->setVersion(self::getVersion($result, $ua));
                             $detectorResult->Browser = $browser;
                         }
                         break;
