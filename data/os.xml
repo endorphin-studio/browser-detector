@@ -17,6 +17,14 @@
         <versionPattern>(Windows|Win|WP)</versionPattern>
     </data>
     <data>
+        <id>Aliyun-OS</id>
+        <name>Aliyun OS</name>
+        <type>mobile</type>
+        <family>UNX</family>
+        <pattern>(Aliyun OS|AliyunOS)</pattern>
+        <versionPattern>AliyunOS</versionPattern>
+    </data>
+    <data>
         <id>Android</id>
         <name>Android</name>
         <type>mobile</type>
@@ -63,6 +71,14 @@
         <family>UNX</family>
         <pattern>CrOS</pattern>
         <versionPattern>CrOS</versionPattern>
+    </data>
+    <data>
+        <id>AIX</id>
+        <name>AIX</name>
+        <type>desktop</type>
+        <family>UNX</family>
+        <pattern>AIX</pattern>
+        <versionPattern>AIX</versionPattern>
     </data>
     <data>
         <id>Linux</id>
