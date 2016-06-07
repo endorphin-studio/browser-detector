@@ -7,8 +7,8 @@ Detect user Browser, OS and Device through USER AGENT
 [![License](https://poser.pugx.org/endorphin-studio/browser-detector/license)](https://packagist.org/packages/endorphin-studio/browser-detector)
 
 
-[![Build Status](https://travis-ci.org/endorphin-studio/browser-detector.svg?branch=2.0.1)](https://travis-ci.org/endorphin-studio/browser-detector)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/endorphin-studio/browser-detector/badges/quality-score.png?b=2.0.1)](https://scrutinizer-ci.com/g/endorphin-studio/browser-detector/?branch=2.0.1)
+[![Build Status](https://travis-ci.org/endorphin-studio/browser-detector.svg?branch=3.0.0)](https://travis-ci.org/endorphin-studio/browser-detector)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/endorphin-studio/browser-detector/badges/quality-score.png?b=3.0.0)](https://scrutinizer-ci.com/g/endorphin-studio/browser-detector/?branch=3.0.0)
 [![Percentage of issues still open](http://isitmaintained.com/badge/open/endorphin-studio/browser-detector.svg)](http://isitmaintained.com/project/endorphin-studio/browser-detector "Percentage of issues still open")
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/7fd738b4-54a9-4e02-b647-adf14dd4e5ff/mini.png)](https://insight.sensiolabs.com/projects/7fd738b4-54a9-4e02-b647-adf14dd4e5ff)
 
@@ -16,10 +16,10 @@ Detect user Browser, OS and Device through USER AGENT
 This version is refactoring of [endorphinua/browser-detector](https://github.com/endorphinua/browser-detector) repository
 
 	Author: Sergey Nehaenko <sergey.nekhaenko@gmail.com>
-	Current Version: 2.0.1
+	Current Version: 3.0.0
 	Stable Version: 2.0
 	Last Update: 05.06.2016
-	License: GPLv3
+	License: GPL-3.0+
 
 ## Install via Composer
     composer require endorphin-studio/browser-detector
