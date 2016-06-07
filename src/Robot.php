@@ -88,4 +88,9 @@ class Robot extends Data
             }
         }
     }
+
+    public static function initEmpty()
+    {
+        return new self(new \SimpleXMLElement('<null>null</null>'));
+    }
 }

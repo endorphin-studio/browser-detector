@@ -112,6 +112,12 @@ class Detector
                             $os->setVersion(self::getVersion($result, $ua));
                             $detectorResult->OS = $os;
                         }
+                        else
+                        {
+                            $os = OS::initEmpty();
+                            $os->setVersion(self::getVersion($result, $ua));
+                            $detectorResult->OS = $os;
+                        }
                         break;
                     case 'device':
                         if($result !== null)
@@ -119,11 +125,22 @@ class Detector
                             $device = new Device($result);
                             $detectorResult->Device = $device;
                         }
+                        else
+                        {
+                            $device = Device::initEmpty();
+                            $detectorResult->Device = $device;
+                        }
                         break;
                     case 'browser':
                         if($result !== null)
                         {
                             $browser = new Browser($result);
+                            $browser->setVersion(self::getVersion($result, $ua));
+                            $detectorResult->Browser = $browser;
+                        }
+                        else
+                        {
+                            $browser = Browser::initEmpty();
                             $browser->setVersion(self::getVersion($result, $ua));
                             $detectorResult->Browser = $browser;
                         }

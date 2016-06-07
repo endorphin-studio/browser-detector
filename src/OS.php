@@ -31,8 +31,8 @@ class OS extends DataWithVersion
                             case 'UNX':
                                 $this->Family = UNX;
                                 break;
-                            case 'MAC':
-                                $this->Family = MAC;
+                            case 'MC':
+                                $this->Family = MC;
                                 break;
                             case 'WIN':
                                 $this->Family = WIN;
@@ -42,6 +42,11 @@ class OS extends DataWithVersion
                 }
             }
         }
+    }
+
+    public static function initEmpty()
+    {
+        return new self(new \SimpleXMLElement('<null>null</null>'));
     }
 
 }

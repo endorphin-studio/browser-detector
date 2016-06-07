@@ -20,4 +20,9 @@ class Browser extends DataWithVersion
     {
         parent::__construct($xmlData);
     }
+
+    public static function initEmpty()
+    {
+        return new self(new \SimpleXMLElement('<null>null</null>'));
+    }
 }

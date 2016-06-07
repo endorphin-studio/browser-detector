@@ -21,10 +21,12 @@ class Device extends Data
      */
     public function __construct(\SimpleXMLElement $xmlData)
     {
-        if($xmlData === null)
+        if($xmlData === null || $xmlData->getName() == 'null')
         {
-            $this->Name = 'Desktop';
-            $this->Type = 'desktop';
+            parent::__construct($xmlData);
+
+            $this->setName('Desktop');
+            $this->setType('desktop');
         }
         else
         {
@@ -39,5 +41,10 @@ class Device extends Data
                 }
             }
         }
+    }
+
+    public static function initEmpty()
+    {
+        return new self(new \SimpleXMLElement('<null>null</null>'));
     }
 }
