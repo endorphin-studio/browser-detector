@@ -41,6 +41,14 @@
         <versionPattern>like MC OS X</versionPattern>
     </data>
     <data>
+        <id>MaxOS-X</id>
+        <name>Mac OS X</name>
+        <type>mobile</type>
+        <family>MC</family>
+        <pattern>like MC OS X</pattern>
+        <versionPattern>Mac OS X</versionPattern>
+    </data>
+    <data>
         <id>Ubuntu</id>
         <name>Ubuntu</name>
         <type>desktop</type>

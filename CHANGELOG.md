@@ -3,6 +3,7 @@
     - Google
     - Yandex
     - Tiny RSS
+    - Bing
 + added os detection (+):
     - AIX
     - Aliyun OS

@@ -41,6 +41,7 @@ This version is refactoring of [endorphinua/browser-detector](https://github.com
 #### Operating System Detection Support
 
     Windows Phone, Windows Mobile, Windows, iOS, Android, Linux, Ubuntu, Chromium OS, Bada, Maemo
+    AIX, Aliyun OS
 
 #### Device Detection Support
 
@@ -49,4 +50,4 @@ This version is refactoring of [endorphinua/browser-detector](https://github.com
 
 #### Crawlers (Robots) Detection Support
 
-    Google Bots, Tiny RSS, Yandex Bots
+    Google Bots, Tiny RSS, Yandex Bots, Bing

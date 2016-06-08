@@ -264,4 +264,12 @@
         <pattern>YandexBot</pattern>
         <isse>true</isse>
     </data>
+    <data>
+        <id>Bing</id>
+        <name>Bing</name>
+        <url>http://www.bing.com/bingbot.htm</url>
+        <owner>Microsoft Corp.</owner>
+        <pattern>(bingbot|msnbot|adidxbot|BingPreview)</pattern>
+        <isse>true</isse>
+    </data>
 </dataset>
