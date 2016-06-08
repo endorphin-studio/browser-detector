@@ -45,7 +45,7 @@
         <name>Mac OS X</name>
         <type>mobile</type>
         <family>MC</family>
-        <pattern>like MC OS X</pattern>
+        <pattern>Mac OS X</pattern>
         <versionPattern>Mac OS X</versionPattern>
     </data>
     <data>

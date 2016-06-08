@@ -13,7 +13,7 @@ namespace EndorphinStudio\Detector;
 class Device extends Data
 {
     /** @var string Model Name */
-    public $ModelName = 'N\A';
+    public $ModelName = D_NA;
 
     /**
      * Device constructor.

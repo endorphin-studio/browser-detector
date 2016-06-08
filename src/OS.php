@@ -13,7 +13,7 @@ namespace EndorphinStudio\Detector;
 class OS extends DataWithVersion
 {
     /** @var string $Family */
-    public $Family;
+    public $Family = D_NA;
 
     /**
      * OS constructor.

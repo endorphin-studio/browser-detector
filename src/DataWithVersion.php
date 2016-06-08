@@ -30,7 +30,7 @@ class DataWithVersion extends Data
     /**
      * @var string Version
      */
-    protected $Version;
+    protected $Version = D_NA;
 
     /**
      * DataWithVersion constructor.

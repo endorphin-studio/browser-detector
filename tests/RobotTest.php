@@ -23,6 +23,7 @@ class RobotTest extends \PHPUnit_Framework_TestCase
         );
 
         testUaList($this,'Robot','Name',$ualist,'Tiny RSS');
+        testUaList($this,'Robot','Type',$ualist,'RSS Reader');
     }
     /**
      * Test Google Bots
@@ -43,6 +44,8 @@ class RobotTest extends \PHPUnit_Framework_TestCase
         );
 
         testUaList($this,'Robot','Owner',$ualist,'Google Inc.');
+        testUaList($this,'Robot','Type',$ualist,'Search Engine');
+        testUaListBooleanTrue($this,'Robot','SearchEngine',$ualist);
     }
     /**
      * Test Yandex Bots
@@ -82,6 +85,8 @@ class RobotTest extends \PHPUnit_Framework_TestCase
         );
 
         testUaList($this,'Robot','Owner',$ualist,'Yandex LLC.');
+        testUaList($this,'Robot','Type',$ualist,'Search Engine');
+        testUaListBooleanTrue($this,'Robot','SearchEngine',$ualist);
     }
     /**
      * Test Bing Bots
@@ -102,5 +107,7 @@ class RobotTest extends \PHPUnit_Framework_TestCase
         );
 
         testUaList($this,'Robot','Name',$ualist,'Bing');
+        testUaList($this,'Robot','Type',$ualist,'Search Engine');
+        testUaListBooleanTrue($this,'Robot','SearchEngine',$ualist);
     }
 }

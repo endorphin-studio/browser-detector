@@ -60,13 +60,13 @@ class Robot extends Data
         $this->SearchEngine = $isSearchEngine;
     }
     /** @var string Crawler homepage */
-    private $Homepage;
+    private $Homepage = D_NA;
 
     /** @var boolean Search Engine */
-    private $SearchEngine;
+    private $SearchEngine = false;
 
     /** @var string Crawler Owner */
-    private $Owner;
+    private $Owner = D_NA;
 
     public function __construct(\SimpleXMLElement $xmlData)
     {
@@ -83,6 +83,15 @@ class Robot extends Data
                         break;
                     case 'owner':
                         $this->Owner = $child->__toString();
+                        break;
+                    case 'isse':
+                        $val = $child->__toString();
+                        if($val == 'true')
+                        {
+                            $this->setSearchEngine(true);
+                        }
+                        else
+                            $this->setSearchEngine(false);
                         break;
                 }
             }

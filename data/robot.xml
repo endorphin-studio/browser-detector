@@ -7,6 +7,7 @@
         <owner>Google Inc.</owner>
         <pattern>Googlebot-News</pattern>
         <isse>true</isse>
+        <type>Search Engine</type>
     </data>
     <data>
         <id>Goodlebot-Images</id>
@@ -15,6 +16,7 @@
         <owner>Google Inc.</owner>
         <pattern>Googlebot-Image</pattern>
         <isse>true</isse>
+        <type>Search Engine</type>
     </data>
     <data>
         <id>Goodlebot-Videos</id>
@@ -23,6 +25,7 @@
         <owner>Google Inc.</owner>
         <pattern>Googlebot-Video</pattern>
         <isse>true</isse>
+        <type>Search Engine</type>
     </data>
     <data>
         <id>Goodlebot-AdSense</id>
@@ -31,6 +34,7 @@
         <owner>Google Inc.</owner>
         <pattern>Mediapartners-Google</pattern>
         <isse>true</isse>
+        <type>Search Engine</type>
     </data>
     <data>
         <id>Goodlebot-Smartphone</id>
@@ -39,6 +43,7 @@
         <owner>Google Inc.</owner>
         <pattern>compatible\; Googlebot</pattern>
         <isse>true</isse>
+        <type>Search Engine</type>
     </data>
     <data>
         <id>Goodlebot-Mobile</id>
@@ -47,6 +52,7 @@
         <owner>Google Inc.</owner>
         <pattern>Googlebot-Mobile</pattern>
         <isse>true</isse>
+        <type>Search Engine</type>
     </data>
     <data>
         <id>Goodlebot-Main</id>
@@ -55,6 +61,7 @@
         <owner>Google Inc.</owner>
         <pattern>Googlebot</pattern>
         <isse>true</isse>
+        <type>Search Engine</type>
     </data>
     <data>
         <id>Tiny-RSS</id>
@@ -63,6 +70,7 @@
         <owner>Andrew Dolgov</owner>
         <pattern>(Tiny RSS|TinyRSS)</pattern>
         <isse>false</isse>
+        <type>RSS Reader</type>
     </data>
     <data>
         <id>Yandex-Mobile</id>
@@ -71,6 +79,7 @@
         <owner>Yandex LLC.</owner>
         <pattern>compatible\; (YandexBot|YandexMobileBot)</pattern>
         <isse>true</isse>
+        <type>Search Engine</type>
     </data>
     <data>
         <id>Yandex-Accessibility</id>
@@ -79,6 +88,7 @@
         <owner>Yandex LLC.</owner>
         <pattern>YandexAccessibilityBot</pattern>
         <isse>true</isse>
+        <type>Search Engine</type>
     </data>
     <data>
         <id>Yandex-Direct</id>
@@ -87,6 +97,7 @@
         <owner>Yandex LLC.</owner>
         <pattern>YandexDirectDyn</pattern>
         <isse>true</isse>
+        <type>Search Engine</type>
     </data>
     <data>
         <id>Yandex-Screenshot</id>
@@ -95,6 +106,7 @@
         <owner>Yandex LLC.</owner>
         <pattern>YandexScreenshotBot</pattern>
         <isse>true</isse>
+        <type>Search Engine</type>
     </data>
     <data>
         <id>Yandex-Images</id>
@@ -103,6 +115,7 @@
         <owner>Yandex LLC.</owner>
         <pattern>YandexImages</pattern>
         <isse>true</isse>
+        <type>Search Engine</type>
     </data>
     <data>
         <id>Yandex-Video</id>
@@ -111,6 +124,7 @@
         <owner>Yandex LLC.</owner>
         <pattern>YandexVideo</pattern>
         <isse>true</isse>
+        <type>Search Engine</type>
     </data>
     <data>
         <id>Yandex-Media</id>
@@ -119,6 +133,7 @@
         <owner>Yandex LLC.</owner>
         <pattern>YandexMedia</pattern>
         <isse>true</isse>
+        <type>Search Engine</type>
     </data>
     <data>
         <id>Yandex-Blogs</id>
@@ -127,6 +142,7 @@
         <owner>Yandex LLC.</owner>
         <pattern>YandexBlogs</pattern>
         <isse>true</isse>
+        <type>Search Engine</type>
     </data>
     <data>
         <id>Yandex-Webmaster</id>
@@ -135,6 +151,7 @@
         <owner>Yandex LLC.</owner>
         <pattern>YandexWebmaster</pattern>
         <isse>true</isse>
+        <type>Search Engine</type>
     </data>
     <data>
         <id>Yandex-Pagechecker</id>
@@ -143,6 +160,7 @@
         <owner>Yandex LLC.</owner>
         <pattern>YandexPagechecker</pattern>
         <isse>true</isse>
+        <type>Search Engine</type>
     </data>
     <data>
         <id>Yandex-ImageResizer</id>
@@ -151,6 +169,7 @@
         <owner>Yandex LLC.</owner>
         <pattern>YandexImageResizer</pattern>
         <isse>true</isse>
+        <type>Search Engine</type>
     </data>
     <data>
         <id>Yandex-Ad</id>
@@ -159,6 +178,7 @@
         <owner>Yandex LLC.</owner>
         <pattern>YandexAdNet</pattern>
         <isse>true</isse>
+        <type>Search Engine</type>
     </data>
     <data>
         <id>Yandex-Direct</id>
@@ -167,6 +187,7 @@
         <owner>Yandex LLC.</owner>
         <pattern>(YandexDirect|YaDirectFetcher)</pattern>
         <isse>true</isse>
+        <type>Search Engine</type>
     </data>
     <data>
         <id>Yandex-Calendar</id>
@@ -175,6 +196,7 @@
         <owner>Yandex LLC.</owner>
         <pattern>YandexCalendar</pattern>
         <isse>true</isse>
+        <type>Search Engine</type>
     </data>
     <data>
         <id>Yandex-Sitelinks</id>
@@ -183,6 +205,7 @@
         <owner>Yandex LLC.</owner>
         <pattern>YandexSitelinks</pattern>
         <isse>true</isse>
+        <type>Search Engine</type>
     </data>
     <data>
         <id>Yandex-Favicons</id>
@@ -191,6 +214,7 @@
         <owner>Yandex LLC.</owner>
         <pattern>YandexFavicons</pattern>
         <isse>true</isse>
+        <type>Search Engine</type>
     </data>
     <data>
         <id>Yandex-Metrika</id>
@@ -199,6 +223,7 @@
         <owner>Yandex LLC.</owner>
         <pattern>YandexMetrika</pattern>
         <isse>true</isse>
+        <type>Search Engine</type>
     </data>
     <data>
         <id>Yandex-News</id>
@@ -207,6 +232,7 @@
         <owner>Yandex LLC.</owner>
         <pattern>(YandexNews|YandexNewslinks)</pattern>
         <isse>true</isse>
+        <type>Search Engine</type>
     </data>
     <data>
         <id>Yandex-Catalog</id>
@@ -215,6 +241,7 @@
         <owner>Yandex LLC.</owner>
         <pattern>YandexCatalog</pattern>
         <isse>true</isse>
+        <type>Search Engine</type>
     </data>
     <data>
         <id>Yandex-Antivirus</id>
@@ -223,6 +250,7 @@
         <owner>Yandex LLC.</owner>
         <pattern>YandexAntivirus</pattern>
         <isse>true</isse>
+        <type>Search Engine</type>
     </data>
     <data>
         <id>Yandex-Market</id>
@@ -231,6 +259,7 @@
         <owner>Yandex LLC.</owner>
         <pattern>YandexMarket</pattern>
         <isse>true</isse>
+        <type>Search Engine</type>
     </data>
     <data>
         <id>Yandex-Vertis</id>
@@ -239,6 +268,7 @@
         <owner>Yandex LLC.</owner>
         <pattern>YandexVertis</pattern>
         <isse>true</isse>
+        <type>Search Engine</type>
     </data>
     <data>
         <id>Yandex-Mail</id>
@@ -247,6 +277,7 @@
         <owner>Yandex LLC.</owner>
         <pattern>YandexForDomain</pattern>
         <isse>true</isse>
+        <type>Search Engine</type>
     </data>
     <data>
         <id>Yandex-Sprav</id>
@@ -255,6 +286,7 @@
         <owner>Yandex LLC.</owner>
         <pattern>YandexSpravBot</pattern>
         <isse>true</isse>
+        <type>Search Engine</type>
     </data>
     <data>
         <id>Yandex-Mail</id>
@@ -263,6 +295,7 @@
         <owner>Yandex LLC.</owner>
         <pattern>YandexBot</pattern>
         <isse>true</isse>
+        <type>Search Engine</type>
     </data>
     <data>
         <id>Bing</id>
@@ -271,5 +304,6 @@
         <owner>Microsoft Corp.</owner>
         <pattern>(bingbot|msnbot|adidxbot|BingPreview)</pattern>
         <isse>true</isse>
+        <type>Search Engine</type>
     </data>
 </dataset>

@@ -201,7 +201,7 @@ class Detector
                 }
             }
         }
-        return 'N\A';
+        return D_NA;
     }
 
     /**
@@ -223,3 +223,4 @@ class Detector
         return $versions[$version];
     }
 }
+define('D_NA','N\A');

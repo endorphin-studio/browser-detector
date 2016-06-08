@@ -46,9 +46,9 @@ class Data
     /**
      * @var string Name
      */
-    protected $Name = 'N\A';
+    protected $Name = D_NA;
     /** @var string Type */
-    protected $Type = 'N\A';
+    protected $Type = D_NA;
 
     /**
      * Data constructor.
