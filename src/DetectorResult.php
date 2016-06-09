@@ -19,10 +19,15 @@ class DetectorResult
     /**
      * @var boolean Is Bot
      */
-    public $isBot;
+    public $isBot = false;
+
+    /**
+     * @var boolean Is Touch device
+     */
+    public $isTouch = false;
 
     /** @var boolean Is Mobile */
-    public $isMobile;
+    public $isMobile = false;
 
     /** @var  \EndorphinStudio\Detector\Device Device */
     public $Device;

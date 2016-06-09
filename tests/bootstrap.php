@@ -47,3 +47,11 @@ function testUaListBooleanTrue($object,$detectorProperty,$property,$uaList)
         $object->assertTrue($obj->$func(),'Object Property '.$property.' is no equal TRUE');
     }
 }
+
+function testUaListIsProperty($object,$detectorProperty,$uaList,$expectedValue)
+{
+    foreach($uaList as $ua)
+    {
+        $object->assertEquals($expectedValue,Detector::analyse($ua)->$detectorProperty);
+    }
+}

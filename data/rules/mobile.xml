@@ -1,33 +1,45 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rulelist>
-    <ruleset>
-        <rule>
-            <osName>Android</osName>
-        </rule>
-    </ruleset>
-    <ruleset>
-        <rule>
-            <osName>Windows Mobile</osName>
-        </rule>
-    </ruleset>
-    <ruleset>
-        <rule>
-            <deviceName>iPhone</deviceName>
-        </rule>
-    </ruleset>
-    <ruleset>
-        <rule>
-            <deviceName>iPod</deviceName>
-        </rule>
-    </ruleset>
-    <ruleset>
-        <rule>
-            <browserName>Opera Mini</browserName>
-        </rule>
-    </ruleset>
-    <ruleset>
-        <rule>
-            <browserName>Opera Mobile</browserName>
-        </rule>
-    </ruleset>
-</rulelist>
+<ruleset>
+    <rule>
+        <objectType>OS</objectType>
+        <objectProperty>Name</objectProperty>
+        <objectPropertyValue>Android</objectPropertyValue>
+        <targetType>isMobile</targetType>
+        <targetProperty>true</targetProperty>
+    </rule>
+    <rule>
+        <objectType>OS</objectType>
+        <objectProperty>Name</objectProperty>
+        <objectPropertyValue>Windows Mobile</objectPropertyValue>
+        <targetType>isMobile</targetType>
+        <targetProperty>true</targetProperty>
+    </rule>
+    <rule>
+        <objectType>Device</objectType>
+        <objectProperty>Name</objectProperty>
+        <objectPropertyValue>iPhone</objectPropertyValue>
+        <targetType>isMobile</targetType>
+        <targetProperty>true</targetProperty>
+    </rule>
+    <rule>
+        <objectType>Device</objectType>
+        <objectProperty>Name</objectProperty>
+        <objectPropertyValue>iPod</objectPropertyValue>
+        <targetType>isMobile</targetType>
+        <targetProperty>true</targetProperty>
+    </rule>
+    <rule>
+        <objectType>Browser</objectType>
+        <objectProperty>Name</objectProperty>
+        <objectPropertyValue>Opera Mini</objectPropertyValue>
+        <targetType>isMobile</targetType>
+        <targetProperty>true</targetProperty>
+    </rule>
+    <rule>
+        <objectType>Browser</objectType>
+        <objectProperty>Name</objectProperty>
+        <objectPropertyValue>Opera isMobile</objectPropertyValue>
+        <targetType>isMobile</targetType>
+        <targetProperty>true</targetProperty>
+    </rule>
+</ruleset>

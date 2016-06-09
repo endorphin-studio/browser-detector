@@ -10,6 +10,8 @@
 namespace EndorphinStudio\Detector;
 
 
+use Composer\DependencyResolver\Rule;
+
 class Detector
 {
     /**
@@ -49,6 +51,8 @@ class Detector
     /** @var array Xml Data */
     private $xmlData;
 
+    private $Rules;
+
     /**
      * Detector constructor.
      * @param string $pathToData Path to directory with xml data files
@@ -67,6 +71,8 @@ class Detector
             $xmlData[$name] = simplexml_load_file($this->getPathToData().$name.'.xml');
         }
         $this->setXmlData($xmlData);
+
+        $this->Rules = DetectorRule::loadRulesFromFile();
     }
 
     public static function analyse($uaString='UA', $pathToData='auto')
@@ -147,6 +153,8 @@ class Detector
             }
         }
 
+        $detectorResult = $detector->ckeckRules($detectorResult);
+
         return $detectorResult;
     }
 
@@ -221,6 +229,30 @@ class Detector
         );
 
         return $versions[$version];
+    }
+
+    /**
+     * @param DetectorResult $DetectorResult Detector result
+     * @return DetectorResult Final result
+     */
+    private function ckeckRules(\EndorphinStudio\Detector\DetectorResult $result)
+    {
+        foreach($this->Rules as $rule)
+        {
+            $objectType = $rule->getObjectType();
+            $objectProperty = $rule->getObjectProperty();
+            $targetType = $rule->getTargetType();
+            $targetValue = $rule->isTargetValue();
+            $func = 'get'.$objectProperty;
+            if($result->$objectType !== null)
+            {
+                if ($result->$objectType->$func() == $rule->getObjectPropertyValue()) {
+                    $result->$targetType = $targetValue;
+                    break;
+                }
+            }
+        }
+        return $result;
     }
 }
 define('D_NA','N\A');

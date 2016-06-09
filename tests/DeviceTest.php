@@ -22,6 +22,7 @@ class DeviceTest extends \PHPUnit_Framework_TestCase
         );
 
         testUaList($this,'Device','Name',$ualist,'iPhone');
+        testUaListIsProperty($this,'isMobile',$ualist,true);
     }
 
     public function testIPad()
@@ -46,5 +47,6 @@ class DeviceTest extends \PHPUnit_Framework_TestCase
         );
 
         testUaList($this,'Device','Name',$ualist,'Lumia');
+        testUaListIsProperty($this,'isMobile',$ualist,true);
     }
 }
