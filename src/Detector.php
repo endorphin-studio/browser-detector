@@ -187,25 +187,28 @@ class Detector
     {
         if($xmlItem !== null)
         {
-            if(isset($xmlItem->versionPattern))
+            foreach($xmlItem->children() as $node)
             {
-                $vPattern = $xmlItem->versionPattern;
-                $version = '/' . $vPattern . '(\/| )[\w-._]{1,15}/';
-                $uaString = str_replace(' NT', '', $uaString);
-                if (preg_match($version, $uaString)) {
-                    preg_match($version, $uaString, $v);
-                    $version = $v[0];
-                    $version = preg_replace('/' . $vPattern . '/', '', $version);
-                    $version = str_replace(';', '', $version);
-                    $version = str_replace(' ', '', $version);
-                    $version = str_replace('/', '', $version);
-                    $version = str_replace('_', '.', $version);
+                if($node->getName() == 'versionPattern')
+                {
+                    $vPattern = $node->__toString();
+                    $version = '/' . $vPattern . '(\/| )[\w-._]{1,15}/';
+                    $uaString = str_replace(' NT', '', $uaString);
+                    if (preg_match($version, $uaString)) {
+                        preg_match($version, $uaString, $v);
+                        $version = $v[0];
+                        $version = preg_replace('/' . $vPattern . '/', '', $version);
+                        $version = str_replace(';', '', $version);
+                        $version = str_replace(' ', '', $version);
+                        $version = str_replace('/', '', $version);
+                        $version = str_replace('_', '.', $version);
 
-                    if ($xmlItem->id == 'Windows') {
-                        $version = self::getWindowsVersion($version);
+                        if ($xmlItem->id == 'Windows') {
+                            $version = self::getWindowsVersion($version);
+                        }
+
+                        return $version;
                     }
-
-                    return $version;
                 }
             }
         }
