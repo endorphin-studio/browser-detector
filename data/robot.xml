@@ -306,4 +306,58 @@
         <isse>true</isse>
         <type>Search Engine</type>
     </data>
+    <data>
+        <id>WASALive-Bot</id>
+        <name>WASALive Bot</name>
+        <url>http://blog.wasalive.com/wasalive-bots/</url>
+        <owner>WASALive</owner>
+        <pattern>WASALive-Bot</pattern>
+        <isse>false</isse>
+        <type>Bot/Crawler</type>
+    </data>
+    <data>
+        <id>DotNetFramework-Bot</id>
+        <name>.NET Framework CLR</name>
+        <url>N\A</url>
+        <owner>Microsoft Corp.</owner>
+        <pattern>MS Web Services</pattern>
+        <isse>false</isse>
+        <type>Bot/Crawler</type>
+    </data>
+    <data>
+        <id>007ac9-Bot</id>
+        <name>007ac9 Crawler</name>
+        <url>http://crawler.007ac9.net/</url>
+        <owner>007AC9.net</owner>
+        <pattern>007ac9 Crawler</pattern>
+        <isse>false</isse>
+        <type>Bot/Crawler</type>
+    </data>
+    <data>
+        <id>80legs-Bot</id>
+        <name>80legs Crawler</name>
+        <url>http://www.80legs.com/webcrawler.html</url>
+        <owner>80legs.com</owner>
+        <pattern>80legs.com</pattern>
+        <isse>false</isse>
+        <type>Bot/Crawler</type>
+    </data>
+    <data>
+        <id>123metaspider-Bot</id>
+        <name>123metaspider Crawler</name>
+        <url>http://www.123metaspider.com</url>
+        <owner>123metaspider.com</owner>
+        <pattern>123metaspider</pattern>
+        <isse>false</isse>
+        <type>Bot/Crawler</type>
+    </data>
+    <data>
+        <id>1470-Bot</id>
+        <name>1470 Crawler</name>
+        <url>http://1470.net</url>
+        <owner>1470.net</owner>
+        <pattern>1470.net</pattern>
+        <isse>false</isse>
+        <type>Bot/Crawler</type>
+    </data>
 </dataset>

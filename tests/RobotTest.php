@@ -110,4 +110,76 @@ class RobotTest extends \PHPUnit_Framework_TestCase
         testUaList($this,'Robot','Type',$ualist,'Search Engine');
         testUaListBooleanTrue($this,'Robot','SearchEngine',$ualist);
     }
+    /**
+     * Test WASALive
+     */
+    public function testWasaLiveBot()
+    {
+        $ualist = array(
+            'Mozilla/5.0 (compatible; WASALive-Bot ; http://blog.wasalive.com/wasalive-bots/) '
+        );
+
+        testUaList($this,'Robot','Name',$ualist,'WASALive Bot');
+        testUaList($this,'Robot','Type',$ualist,'Bot/Crawler');
+    }
+    /**
+     * Test .Net robot
+     */
+    public function testDotNetBot()
+    {
+        $ualist = array(
+            'MS Web Services Client Protocol 1.0.3705.0'
+        );
+
+        testUaList($this,'Robot','Name',$ualist,'.NET Framework CLR');
+        testUaList($this,'Robot','Type',$ualist,'Bot/Crawler');
+    }
+    /**
+     * Test 007ac9 robot
+     */
+    public function test007ac9Bot()
+    {
+        $ualist = array(
+            'Mozilla/5.0 (compatible; 007ac9 Crawler; http://crawler.007ac9.net/) '
+        );
+
+        testUaList($this,'Robot','Name',$ualist,'007ac9 Crawler');
+        testUaList($this,'Robot','Type',$ualist,'Bot/Crawler');
+    }
+    /**
+     * Test 80legs robot
+     */
+    public function test80legsBot()
+    {
+        $ualist = array(
+            'Mozilla/5.0 (compatible; 008/0.83; http://www.80legs.com/webcrawler.html) Gecko/2008032620 '
+        );
+
+        testUaList($this,'Robot','Name',$ualist,'80legs Crawler');
+        testUaList($this,'Robot','Type',$ualist,'Bot/Crawler');
+    }
+    /**
+     * Test 80123metaspider robot
+     */
+    public function test123metaspiderBot()
+    {
+        $ualist = array(
+            '123metaspider-Bot (Version: 1.04, powered by www.123metaspider.com) '
+        );
+
+        testUaList($this,'Robot','Name',$ualist,'123metaspider Crawler');
+        testUaList($this,'Robot','Type',$ualist,'Bot/Crawler');
+    }
+    /**
+     * Test 1470 robot
+     */
+    public function test1470Bot()
+    {
+        $ualist = array(
+            '1470.net crawler '
+        );
+
+        testUaList($this,'Robot','Name',$ualist,'1470 Crawler');
+        testUaList($this,'Robot','Type',$ualist,'Bot/Crawler');
+    }
 }

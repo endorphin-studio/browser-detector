@@ -57,4 +57,5 @@ This version is refactoring of [endorphinua/browser-detector](https://github.com
 
 #### Crawlers (Robots) Detection Support
 
-    Google Bots, Tiny RSS, Yandex Bots, Bing
+    Google Bots, Tiny RSS, Yandex Bots, Bing, WASALive, .NET Framework CLR, 007ac9 Crawler, 80legs Crawler,
+    123metaspider Crawler, 1470 Crawler
