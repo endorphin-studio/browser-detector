@@ -1,52 +1,52 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <ruleset>
     <rule>
-        <objectType>OS</objectType>
-        <objectProperty>Name</objectProperty>
-        <objectPropertyValue>Android</objectPropertyValue>
-        <targetType>isMobile</targetType>
-        <targetProperty>true</targetProperty>
+        <ObjectType>OS</ObjectType>
+        <ObjectProperty>Name</ObjectProperty>
+        <ObjectPropertyValue>Android</ObjectPropertyValue>
+        <TargetType>isMobile</TargetType>
+        <TargetProperty>true</TargetProperty>
     </rule>
     <rule>
-        <objectType>OS</objectType>
-        <objectProperty>Name</objectProperty>
-        <objectPropertyValue>Windows Mobile</objectPropertyValue>
-        <targetType>isMobile</targetType>
-        <targetProperty>true</targetProperty>
+        <ObjectType>OS</ObjectType>
+        <ObjectProperty>Name</ObjectProperty>
+        <ObjectPropertyValue>Windows Mobile</ObjectPropertyValue>
+        <TargetType>isMobile</TargetType>
+        <TargetProperty>true</TargetProperty>
     </rule>
     <rule>
-        <objectType>Device</objectType>
-        <objectProperty>Name</objectProperty>
-        <objectPropertyValue>iPhone</objectPropertyValue>
-        <targetType>isMobile</targetType>
-        <targetProperty>true</targetProperty>
+        <ObjectType>Device</ObjectType>
+        <ObjectProperty>Name</ObjectProperty>
+        <ObjectPropertyValue>iPhone</ObjectPropertyValue>
+        <TargetType>isMobile</TargetType>
+        <TargetProperty>true</TargetProperty>
     </rule>
     <rule>
-        <objectType>Device</objectType>
-        <objectProperty>Name</objectProperty>
-        <objectPropertyValue>iPod</objectPropertyValue>
-        <targetType>isMobile</targetType>
-        <targetProperty>true</targetProperty>
+        <ObjectType>Device</ObjectType>
+        <ObjectProperty>Name</ObjectProperty>
+        <ObjectPropertyValue>iPod</ObjectPropertyValue>
+        <TargetType>isMobile</TargetType>
+        <TargetProperty>true</TargetProperty>
     </rule>
     <rule>
-        <objectType>Device</objectType>
-        <objectProperty>Name</objectProperty>
-        <objectPropertyValue>Lumia</objectPropertyValue>
-        <targetType>isMobile</targetType>
-        <targetProperty>true</targetProperty>
+        <ObjectType>Device</ObjectType>
+        <ObjectProperty>Name</ObjectProperty>
+        <ObjectPropertyValue>Lumia</ObjectPropertyValue>
+        <TargetType>isMobile</TargetType>
+        <TargetProperty>true</TargetProperty>
     </rule>
     <rule>
-        <objectType>Browser</objectType>
-        <objectProperty>Name</objectProperty>
-        <objectPropertyValue>Opera Mini</objectPropertyValue>
-        <targetType>isMobile</targetType>
-        <targetProperty>true</targetProperty>
+        <ObjectType>Browser</ObjectType>
+        <ObjectProperty>Name</ObjectProperty>
+        <ObjectPropertyValue>Opera Mini</ObjectPropertyValue>
+        <TargetType>isMobile</TargetType>
+        <TargetProperty>true</TargetProperty>
     </rule>
     <rule>
-        <objectType>Browser</objectType>
-        <objectProperty>Name</objectProperty>
-        <objectPropertyValue>Opera isMobile</objectPropertyValue>
-        <targetType>isMobile</targetType>
-        <targetProperty>true</targetProperty>
+        <ObjectType>Browser</ObjectType>
+        <ObjectProperty>Name</ObjectProperty>
+        <ObjectPropertyValue>Opera isMobile</ObjectPropertyValue>
+        <TargetType>isMobile</TargetType>
+        <TargetProperty>true</TargetProperty>
     </rule>
 </ruleset>

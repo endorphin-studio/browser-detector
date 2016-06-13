@@ -106,33 +106,11 @@ class DetectorRule
     {
         if($xmlData !== null)
         {
-            foreach ($xmlData->children() as $child) {
-                switch ($child->getName())
-                {
-                    case 'objectType':
-                        $this->ObjectType = $child->__toString();
-                        break;
-                    case 'objectProperty':
-                        $this->ObjectProperty = $child->__toString();
-                        break;
-                    case 'objectPropertyValue':
-                        $this->ObjectPropertyValue = $child->__toString();
-                        break;
-                    case 'targetType':
-                        $this->TargetType = $child->__toString();
-                        break;
-                    case 'targetProperty':
-                        $boolVal = $child->__toString();
-                        if($boolVal == 'true')
-                        {
-                            $this->TargetValue = true;
-                        }
-                        else
-                        {
-                            $this->TargetValue = false;
-                        }
-                        break;
-                }
+            foreach ($xmlData->children() as $child)
+            {
+                $name = $child->getName();
+                $val = $child->__toString();
+                $this->$name = $val;
             }
         }
     }
