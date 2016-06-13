@@ -9,9 +9,6 @@
 
 namespace EndorphinStudio\Detector;
 
-
-use Composer\DependencyResolver\Rule;
-
 class Detector
 {
     /**
@@ -153,7 +150,7 @@ class Detector
             }
         }
 
-        $detectorResult = $detector->ckeckRules($detectorResult);
+        $detectorResult = $detector->checkRules($detectorResult);
 
         return $detectorResult;
     }
@@ -238,7 +235,7 @@ class Detector
      * @param DetectorResult $DetectorResult Detector result
      * @return DetectorResult Final result
      */
-    private function ckeckRules(\EndorphinStudio\Detector\DetectorResult $result)
+    private function checkRules(\EndorphinStudio\Detector\DetectorResult $result)
     {
         foreach($this->Rules as $rule)
         {

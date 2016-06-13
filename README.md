@@ -10,7 +10,7 @@ Detect user Browser, OS and Device through USER AGENT
 [![Build Status](https://travis-ci.org/endorphin-studio/browser-detector.svg?branch=3.0.0)](https://travis-ci.org/endorphin-studio/browser-detector)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/endorphin-studio/browser-detector/badges/quality-score.png?b=3.0.0)](https://scrutinizer-ci.com/g/endorphin-studio/browser-detector/?branch=3.0.0)
 [![Percentage of issues still open](http://isitmaintained.com/badge/open/endorphin-studio/browser-detector.svg)](http://isitmaintained.com/project/endorphin-studio/browser-detector "Percentage of issues still open")
-[![SensioLabsInsight](https://insight.sensiolabs.com/projects/7fd738b4-54a9-4e02-b647-adf14dd4e5ff/mini.png)](https://insight.sensiolabs.com/projects/7fd738b4-54a9-4e02-b647-adf14dd4e5ff)
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/80f8b2e1-434d-43b3-97ab-d77c9cc4b1ef/mini.png)](https://insight.sensiolabs.com/projects/80f8b2e1-434d-43b3-97ab-d77c9cc4b1ef)
 
 ## About
 This version is refactoring of [endorphinua/browser-detector](https://github.com/endorphinua/browser-detector) repository
