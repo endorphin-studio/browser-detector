@@ -150,7 +150,7 @@ class Detector
             }
         }
 
-        $detectorResult = $detector->checkRules($detectorResult);
+        $detectorResult = self::checkRules($detector,$detectorResult);
 
         return $detectorResult;
     }
@@ -235,9 +235,9 @@ class Detector
      * @param DetectorResult $result Detector result
      * @return DetectorResult Final result
      */
-    private function checkRules(DetectorResult $result)
+    private static function checkRules(Detector $object,DetectorResult $result)
     {
-        foreach($this->Rules as $rule)
+        foreach($object->Rules as $rule)
         {
             $objectType = $rule->getObjectType();
             $objectProperty = $rule->getObjectProperty();
