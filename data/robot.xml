@@ -2,362 +2,362 @@
 <dataset>
     <data>
         <id>Goodlebot-News</id>
-        <name>Google (News)</name>
-        <url>http://google.com</url>
-        <owner>Google Inc.</owner>
+        <Name>Google (News)</Name>
+        <Homepage>http://google.com</Homepage>
+        <Owner>Google Inc.</Owner>
         <pattern>Googlebot-News</pattern>
-        <isse>true</isse>
-        <type>Search Engine</type>
+        <SearchEngine>true</SearchEngine>
+        <Type>Search Engine</Type>
     </data>
     <data>
         <id>Goodlebot-Images</id>
-        <name>Google (Images) </name>
-        <url>http://google.com</url>
-        <owner>Google Inc.</owner>
+        <Name>Google (Images) </Name>
+        <Homepage>http://google.com</Homepage>
+        <Owner>Google Inc.</Owner>
         <pattern>Googlebot-Image</pattern>
-        <isse>true</isse>
-        <type>Search Engine</type>
+        <SearchEngine>true</SearchEngine>
+        <Type>Search Engine</Type>
     </data>
     <data>
         <id>Goodlebot-Videos</id>
-        <name>Google (Videos)</name>
-        <url>http://google.com</url>
-        <owner>Google Inc.</owner>
+        <Name>Google (Videos)</Name>
+        <Homepage>http://google.com</Homepage>
+        <Owner>Google Inc.</Owner>
         <pattern>Googlebot-Video</pattern>
-        <isse>true</isse>
-        <type>Search Engine</type>
+        <SearchEngine>true</SearchEngine>
+        <Type>Search Engine</Type>
     </data>
     <data>
         <id>Goodlebot-AdSense</id>
-        <name>Google (AdSense)</name>
-        <url>http://google.com</url>
-        <owner>Google Inc.</owner>
+        <Name>Google (AdSense)</Name>
+        <Homepage>http://google.com</Homepage>
+        <Owner>Google Inc.</Owner>
         <pattern>Mediapartners-Google</pattern>
-        <isse>true</isse>
-        <type>Search Engine</type>
+        <SearchEngine>true</SearchEngine>
+        <Type>Search Engine</Type>
     </data>
     <data>
         <id>Goodlebot-Smartphone</id>
-        <name>Google (Smartphone)</name>
-        <url>http://google.com</url>
-        <owner>Google Inc.</owner>
+        <Name>Google (Smartphone)</Name>
+        <Homepage>http://google.com</Homepage>
+        <Owner>Google Inc.</Owner>
         <pattern>compatible\; Googlebot</pattern>
-        <isse>true</isse>
-        <type>Search Engine</type>
+        <SearchEngine>true</SearchEngine>
+        <Type>Search Engine</Type>
     </data>
     <data>
         <id>Goodlebot-Mobile</id>
-        <name>Google (Mobile)</name>
-        <url>http://google.com</url>
-        <owner>Google Inc.</owner>
+        <Name>Google (Mobile)</Name>
+        <Homepage>http://google.com</Homepage>
+        <Owner>Google Inc.</Owner>
         <pattern>Googlebot-Mobile</pattern>
-        <isse>true</isse>
-        <type>Search Engine</type>
+        <SearchEngine>true</SearchEngine>
+        <Type>Search Engine</Type>
     </data>
     <data>
         <id>Goodlebot-Main</id>
-        <name>Google (Search)</name>
-        <url>http://google.com</url>
-        <owner>Google Inc.</owner>
+        <Name>Google (Search)</Name>
+        <Homepage>http://google.com</Homepage>
+        <Owner>Google Inc.</Owner>
         <pattern>Googlebot</pattern>
-        <isse>true</isse>
-        <type>Search Engine</type>
+        <SearchEngine>true</SearchEngine>
+        <Type>Search Engine</Type>
     </data>
     <data>
         <id>Tiny-RSS</id>
-        <name>Tiny RSS</name>
-        <url>http://tt-rss.org</url>
-        <owner>Andrew Dolgov</owner>
+        <Name>Tiny RSS</Name>
+        <Homepage>http://tt-rss.org</Homepage>
+        <Owner>Andrew Dolgov</Owner>
         <pattern>(Tiny RSS|TinyRSS)</pattern>
-        <isse>false</isse>
-        <type>RSS Reader</type>
+        <SearchEngine>false</SearchEngine>
+        <Type>RSS Reader</Type>
     </data>
     <data>
         <id>Yandex-Mobile</id>
-        <name>Yandex (Mobile)</name>
-        <url>http://yandex.com/bots</url>
-        <owner>Yandex LLC.</owner>
+        <Name>Yandex (Mobile)</Name>
+        <Homepage>http://yandex.com/bots</Homepage>
+        <Owner>Yandex LLC.</Owner>
         <pattern>compatible\; (YandexBot|YandexMobileBot)</pattern>
-        <isse>true</isse>
-        <type>Search Engine</type>
+        <SearchEngine>true</SearchEngine>
+        <Type>Search Engine</Type>
     </data>
     <data>
         <id>Yandex-Accessibility</id>
-        <name>Yandex (Accessibility)</name>
-        <url>http://yandex.com/bots</url>
-        <owner>Yandex LLC.</owner>
+        <Name>Yandex (Accessibility)</Name>
+        <Homepage>http://yandex.com/bots</Homepage>
+        <Owner>Yandex LLC.</Owner>
         <pattern>YandexAccessibilityBot</pattern>
-        <isse>true</isse>
-        <type>Search Engine</type>
+        <SearchEngine>true</SearchEngine>
+        <Type>Search Engine</Type>
     </data>
     <data>
         <id>Yandex-Direct</id>
-        <name>Yandex (Direct)</name>
-        <url>http://yandex.com/bots</url>
-        <owner>Yandex LLC.</owner>
+        <Name>Yandex (Direct)</Name>
+        <Homepage>http://yandex.com/bots</Homepage>
+        <Owner>Yandex LLC.</Owner>
         <pattern>YandexDirectDyn</pattern>
-        <isse>true</isse>
-        <type>Search Engine</type>
+        <SearchEngine>true</SearchEngine>
+        <Type>Search Engine</Type>
     </data>
     <data>
         <id>Yandex-Screenshot</id>
-        <name>Yandex (Screenshot)</name>
-        <url>http://yandex.com/bots</url>
-        <owner>Yandex LLC.</owner>
+        <Name>Yandex (Screenshot)</Name>
+        <Homepage>http://yandex.com/bots</Homepage>
+        <Owner>Yandex LLC.</Owner>
         <pattern>YandexScreenshotBot</pattern>
-        <isse>true</isse>
-        <type>Search Engine</type>
+        <SearchEngine>true</SearchEngine>
+        <Type>Search Engine</Type>
     </data>
     <data>
         <id>Yandex-Images</id>
-        <name>Yandex (Images)</name>
-        <url>http://yandex.com/bots</url>
-        <owner>Yandex LLC.</owner>
+        <Name>Yandex (Images)</Name>
+        <Homepage>http://yandex.com/bots</Homepage>
+        <Owner>Yandex LLC.</Owner>
         <pattern>YandexImages</pattern>
-        <isse>true</isse>
-        <type>Search Engine</type>
+        <SearchEngine>true</SearchEngine>
+        <Type>Search Engine</Type>
     </data>
     <data>
         <id>Yandex-Video</id>
-        <name>Yandex (Video)</name>
-        <url>http://yandex.com/bots</url>
-        <owner>Yandex LLC.</owner>
+        <Name>Yandex (Video)</Name>
+        <Homepage>http://yandex.com/bots</Homepage>
+        <Owner>Yandex LLC.</Owner>
         <pattern>YandexVideo</pattern>
-        <isse>true</isse>
-        <type>Search Engine</type>
+        <SearchEngine>true</SearchEngine>
+        <Type>Search Engine</Type>
     </data>
     <data>
         <id>Yandex-Media</id>
-        <name>Yandex (Media)</name>
-        <url>http://yandex.com/bots</url>
-        <owner>Yandex LLC.</owner>
+        <Name>Yandex (Media)</Name>
+        <Homepage>http://yandex.com/bots</Homepage>
+        <Owner>Yandex LLC.</Owner>
         <pattern>YandexMedia</pattern>
-        <isse>true</isse>
-        <type>Search Engine</type>
+        <SearchEngine>true</SearchEngine>
+        <Type>Search Engine</Type>
     </data>
     <data>
         <id>Yandex-Blogs</id>
-        <name>Yandex (Blogs)</name>
-        <url>http://yandex.com/bots</url>
-        <owner>Yandex LLC.</owner>
+        <Name>Yandex (Blogs)</Name>
+        <Homepage>http://yandex.com/bots</Homepage>
+        <Owner>Yandex LLC.</Owner>
         <pattern>YandexBlogs</pattern>
-        <isse>true</isse>
-        <type>Search Engine</type>
+        <SearchEngine>true</SearchEngine>
+        <Type>Search Engine</Type>
     </data>
     <data>
         <id>Yandex-Webmaster</id>
-        <name>Yandex (Webmaster)</name>
-        <url>http://yandex.com/bots</url>
-        <owner>Yandex LLC.</owner>
+        <Name>Yandex (Webmaster)</Name>
+        <Homepage>http://yandex.com/bots</Homepage>
+        <Owner>Yandex LLC.</Owner>
         <pattern>YandexWebmaster</pattern>
-        <isse>true</isse>
-        <type>Search Engine</type>
+        <SearchEngine>true</SearchEngine>
+        <Type>Search Engine</Type>
     </data>
     <data>
         <id>Yandex-Pagechecker</id>
-        <name>Yandex (Pagechecker)</name>
-        <url>http://yandex.com/bots</url>
-        <owner>Yandex LLC.</owner>
+        <Name>Yandex (Pagechecker)</Name>
+        <Homepage>http://yandex.com/bots</Homepage>
+        <Owner>Yandex LLC.</Owner>
         <pattern>YandexPagechecker</pattern>
-        <isse>true</isse>
-        <type>Search Engine</type>
+        <SearchEngine>true</SearchEngine>
+        <Type>Search Engine</Type>
     </data>
     <data>
         <id>Yandex-ImageResizer</id>
-        <name>Yandex (ImageResizer)</name>
-        <url>http://yandex.com/bots</url>
-        <owner>Yandex LLC.</owner>
+        <Name>Yandex (ImageResizer)</Name>
+        <Homepage>http://yandex.com/bots</Homepage>
+        <Owner>Yandex LLC.</Owner>
         <pattern>YandexImageResizer</pattern>
-        <isse>true</isse>
-        <type>Search Engine</type>
+        <SearchEngine>true</SearchEngine>
+        <Type>Search Engine</Type>
     </data>
     <data>
         <id>Yandex-Ad</id>
-        <name>Yandex (Ad)</name>
-        <url>http://yandex.com/bots</url>
-        <owner>Yandex LLC.</owner>
+        <Name>Yandex (Ad)</Name>
+        <Homepage>http://yandex.com/bots</Homepage>
+        <Owner>Yandex LLC.</Owner>
         <pattern>YandexAdNet</pattern>
-        <isse>true</isse>
-        <type>Search Engine</type>
+        <SearchEngine>true</SearchEngine>
+        <Type>Search Engine</Type>
     </data>
     <data>
         <id>Yandex-Direct</id>
-        <name>Yandex (Direct)</name>
-        <url>http://yandex.com/bots</url>
-        <owner>Yandex LLC.</owner>
+        <Name>Yandex (Direct)</Name>
+        <Homepage>http://yandex.com/bots</Homepage>
+        <Owner>Yandex LLC.</Owner>
         <pattern>(YandexDirect|YaDirectFetcher)</pattern>
-        <isse>true</isse>
-        <type>Search Engine</type>
+        <SearchEngine>true</SearchEngine>
+        <Type>Search Engine</Type>
     </data>
     <data>
         <id>Yandex-Calendar</id>
-        <name>Yandex (Calendar)</name>
-        <url>http://yandex.com/bots</url>
-        <owner>Yandex LLC.</owner>
+        <Name>Yandex (Calendar)</Name>
+        <Homepage>http://yandex.com/bots</Homepage>
+        <Owner>Yandex LLC.</Owner>
         <pattern>YandexCalendar</pattern>
-        <isse>true</isse>
-        <type>Search Engine</type>
+        <SearchEngine>true</SearchEngine>
+        <Type>Search Engine</Type>
     </data>
     <data>
         <id>Yandex-Sitelinks</id>
-        <name>Yandex (Sitelinks)</name>
-        <url>http://yandex.com/bots</url>
-        <owner>Yandex LLC.</owner>
+        <Name>Yandex (Sitelinks)</Name>
+        <Homepage>http://yandex.com/bots</Homepage>
+        <Owner>Yandex LLC.</Owner>
         <pattern>YandexSitelinks</pattern>
-        <isse>true</isse>
-        <type>Search Engine</type>
+        <SearchEngine>true</SearchEngine>
+        <Type>Search Engine</Type>
     </data>
     <data>
         <id>Yandex-Favicons</id>
-        <name>Yandex (Favicons)</name>
-        <url>http://yandex.com/bots</url>
-        <owner>Yandex LLC.</owner>
+        <Name>Yandex (Favicons)</Name>
+        <Homepage>http://yandex.com/bots</Homepage>
+        <Owner>Yandex LLC.</Owner>
         <pattern>YandexFavicons</pattern>
-        <isse>true</isse>
-        <type>Search Engine</type>
+        <SearchEngine>true</SearchEngine>
+        <Type>Search Engine</Type>
     </data>
     <data>
         <id>Yandex-Metrika</id>
-        <name>Yandex (Metrika)</name>
-        <url>http://yandex.com/bots</url>
-        <owner>Yandex LLC.</owner>
+        <Name>Yandex (Metrika)</Name>
+        <Homepage>http://yandex.com/bots</Homepage>
+        <Owner>Yandex LLC.</Owner>
         <pattern>YandexMetrika</pattern>
-        <isse>true</isse>
-        <type>Search Engine</type>
+        <SearchEngine>true</SearchEngine>
+        <Type>Search Engine</Type>
     </data>
     <data>
         <id>Yandex-News</id>
-        <name>Yandex (News)</name>
-        <url>http://yandex.com/bots</url>
-        <owner>Yandex LLC.</owner>
+        <Name>Yandex (News)</Name>
+        <Homepage>http://yandex.com/bots</Homepage>
+        <Owner>Yandex LLC.</Owner>
         <pattern>(YandexNews|YandexNewslinks)</pattern>
-        <isse>true</isse>
-        <type>Search Engine</type>
+        <SearchEngine>true</SearchEngine>
+        <Type>Search Engine</Type>
     </data>
     <data>
         <id>Yandex-Catalog</id>
-        <name>Yandex (Catalog)</name>
-        <url>http://yandex.com/bots</url>
-        <owner>Yandex LLC.</owner>
+        <Name>Yandex (Catalog)</Name>
+        <Homepage>http://yandex.com/bots</Homepage>
+        <Owner>Yandex LLC.</Owner>
         <pattern>YandexCatalog</pattern>
-        <isse>true</isse>
-        <type>Search Engine</type>
+        <SearchEngine>true</SearchEngine>
+        <Type>Search Engine</Type>
     </data>
     <data>
         <id>Yandex-Antivirus</id>
-        <name>Yandex (Antivirus)</name>
-        <url>http://yandex.com/bots</url>
-        <owner>Yandex LLC.</owner>
+        <Name>Yandex (Antivirus)</Name>
+        <Homepage>http://yandex.com/bots</Homepage>
+        <Owner>Yandex LLC.</Owner>
         <pattern>YandexAntivirus</pattern>
-        <isse>true</isse>
-        <type>Search Engine</type>
+        <SearchEngine>true</SearchEngine>
+        <Type>Search Engine</Type>
     </data>
     <data>
         <id>Yandex-Market</id>
-        <name>Yandex (Market)</name>
-        <url>http://yandex.com/bots</url>
-        <owner>Yandex LLC.</owner>
+        <Name>Yandex (Market)</Name>
+        <Homepage>http://yandex.com/bots</Homepage>
+        <Owner>Yandex LLC.</Owner>
         <pattern>YandexMarket</pattern>
-        <isse>true</isse>
-        <type>Search Engine</type>
+        <SearchEngine>true</SearchEngine>
+        <Type>Search Engine</Type>
     </data>
     <data>
         <id>Yandex-Vertis</id>
-        <name>Yandex (Vertis)</name>
-        <url>http://yandex.com/bots</url>
-        <owner>Yandex LLC.</owner>
+        <Name>Yandex (Vertis)</Name>
+        <Homepage>http://yandex.com/bots</Homepage>
+        <Owner>Yandex LLC.</Owner>
         <pattern>YandexVertis</pattern>
-        <isse>true</isse>
-        <type>Search Engine</type>
+        <SearchEngine>true</SearchEngine>
+        <Type>Search Engine</Type>
     </data>
     <data>
         <id>Yandex-Mail</id>
-        <name>Yandex (Mail)</name>
-        <url>http://yandex.com/bots</url>
-        <owner>Yandex LLC.</owner>
+        <Name>Yandex (Mail)</Name>
+        <Homepage>http://yandex.com/bots</Homepage>
+        <Owner>Yandex LLC.</Owner>
         <pattern>YandexForDomain</pattern>
-        <isse>true</isse>
-        <type>Search Engine</type>
+        <SearchEngine>true</SearchEngine>
+        <Type>Search Engine</Type>
     </data>
     <data>
         <id>Yandex-Sprav</id>
-        <name>Yandex (Sprav)</name>
-        <url>http://yandex.com/bots</url>
-        <owner>Yandex LLC.</owner>
+        <Name>Yandex (Sprav)</Name>
+        <Homepage>http://yandex.com/bots</Homepage>
+        <Owner>Yandex LLC.</Owner>
         <pattern>YandexSpravBot</pattern>
-        <isse>true</isse>
-        <type>Search Engine</type>
+        <SearchEngine>true</SearchEngine>
+        <Type>Search Engine</Type>
     </data>
     <data>
         <id>Yandex-Mail</id>
-        <name>Yandex</name>
-        <url>http://yandex.com/bots</url>
-        <owner>Yandex LLC.</owner>
+        <Name>Yandex</Name>
+        <Homepage>http://yandex.com/bots</Homepage>
+        <Owner>Yandex LLC.</Owner>
         <pattern>YandexBot</pattern>
-        <isse>true</isse>
-        <type>Search Engine</type>
+        <SearchEngine>true</SearchEngine>
+        <Type>Search Engine</Type>
     </data>
     <data>
         <id>Bing</id>
-        <name>Bing</name>
-        <url>http://www.bing.com/bingbot.htm</url>
-        <owner>Microsoft Corp.</owner>
+        <Name>Bing</Name>
+        <Homepage>http://www.bing.com/bingbot.htm</Homepage>
+        <Owner>Microsoft Corp.</Owner>
         <pattern>(bingbot|msnbot|adidxbot|BingPreview)</pattern>
-        <isse>true</isse>
-        <type>Search Engine</type>
+        <SearchEngine>true</SearchEngine>
+        <Type>Search Engine</Type>
     </data>
     <data>
         <id>WASALive-Bot</id>
-        <name>WASALive Bot</name>
-        <url>http://blog.wasalive.com/wasalive-bots/</url>
-        <owner>WASALive</owner>
+        <Name>WASALive Bot</Name>
+        <Homepage>http://blog.wasalive.com/wasalive-bots/</Homepage>
+        <Owner>WASALive</Owner>
         <pattern>WASALive-Bot</pattern>
-        <isse>false</isse>
-        <type>Bot/Crawler</type>
+        <SearchEngine>false</SearchEngine>
+        <Type>Bot/Crawler</Type>
     </data>
     <data>
         <id>DotNetFramework-Bot</id>
-        <name>.NET Framework CLR</name>
-        <url>N\A</url>
-        <owner>Microsoft Corp.</owner>
+        <Name>.NET Framework CLR</Name>
+        <Homepage>N\A</Homepage>
+        <Owner>Microsoft Corp.</Owner>
         <pattern>MS Web Services</pattern>
-        <isse>false</isse>
-        <type>Bot/Crawler</type>
+        <SearchEngine>false</SearchEngine>
+        <Type>Bot/Crawler</Type>
     </data>
     <data>
         <id>007ac9-Bot</id>
-        <name>007ac9 Crawler</name>
-        <url>http://crawler.007ac9.net/</url>
-        <owner>007AC9.net</owner>
+        <Name>007ac9 Crawler</Name>
+        <Homepage>http://crawler.007ac9.net/</Homepage>
+        <Owner>007AC9.net</Owner>
         <pattern>007ac9 Crawler</pattern>
-        <isse>false</isse>
-        <type>Bot/Crawler</type>
+        <SearchEngine>false</SearchEngine>
+        <Type>Bot/Crawler</Type>
     </data>
     <data>
         <id>80legs-Bot</id>
-        <name>80legs Crawler</name>
-        <url>http://www.80legs.com/webcrawler.html</url>
-        <owner>80legs.com</owner>
+        <Name>80legs Crawler</Name>
+        <Homepage>http://www.80legs.com/webcrawler.html</Homepage>
+        <Owner>80legs.com</Owner>
         <pattern>80legs.com</pattern>
-        <isse>false</isse>
-        <type>Bot/Crawler</type>
+        <SearchEngine>false</SearchEngine>
+        <Type>Bot/Crawler</Type>
     </data>
     <data>
         <id>123metaspider-Bot</id>
-        <name>123metaspider Crawler</name>
-        <url>http://www.123metaspider.com</url>
-        <owner>123metaspider.com</owner>
+        <Name>123metaspider Crawler</Name>
+        <Homepage>http://www.123metaspider.com</Homepage>
+        <Owner>123metaspider.com</Owner>
         <pattern>123metaspider</pattern>
-        <isse>false</isse>
-        <type>Bot/Crawler</type>
+        <SearchEngine>false</SearchEngine>
+        <Type>Bot/Crawler</Type>
     </data>
     <data>
         <id>1470-Bot</id>
-        <name>1470 Crawler</name>
-        <url>http://1470.net</url>
-        <owner>1470.net</owner>
+        <Name>1470 Crawler</Name>
+        <Homepage>http://1470.net</Homepage>
+        <Owner>1470.net</Owner>
         <pattern>1470.net</pattern>
-        <isse>false</isse>
-        <type>Bot/Crawler</type>
+        <SearchEngine>false</SearchEngine>
+        <Type>Bot/Crawler</Type>
     </data>
 </dataset>

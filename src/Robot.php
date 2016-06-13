@@ -76,23 +76,20 @@ class Robot extends Data
         {
             foreach ($xmlData->children() as $child)
             {
-                switch ($child->getName())
+                $name = $child->getName();
+                $val = $child->__toString();
+                if($name != 'id' && $name != 'pattern' && $name != 'SearchEngine')
                 {
-                    case 'url':
-                        $this->Homepage = $child->__toString();
-                        break;
-                    case 'owner':
-                        $this->Owner = $child->__toString();
-                        break;
-                    case 'isse':
-                        $val = $child->__toString();
-                        if($val == 'true')
-                        {
-                            $this->setSearchEngine(true);
-                        }
-                        else
-                            $this->setSearchEngine(false);
-                        break;
+                    $this->$name = $val;
+                }
+                if($name == 'SearchEngine')
+                {
+                    if($val == 'true')
+                    {
+                        $this->setSearchEngine(true);
+                    }
+                    else
+                        $this->setSearchEngine(false);
                 }
             }
         }

@@ -78,25 +78,21 @@ class Detector
 
         $detector = new Detector($pathToData);
         $xml = $detector->getXmlData();
-        $data = array();
-        foreach($xml as $key => $item)
-        {
-            $data[$key] = self::analysePart($xml,$key,$ua);
-        }
 
         $detectorResult = new DetectorResult();
         $detectorResult->uaString = $ua;
         $ns = '\\EndorphinStudio\\Detector\\';
 
-        foreach($data as $key => $result)
+        foreach($xml as $key => $item)
         {
+            $data = self::analysePart($xml,$key,$ua);
             $classname = $ns.$key;
-            if($result !== null)
+            if($data !== null)
             {
-                $object = new $classname($result);
-                if($key == 'Os' || $key == 'Browser')
+                $object = new $classname($data);
+                if($key == 'OS' || $key == 'Browser')
                 {
-                    $object->setVersion(self::getVersion($result, $ua));
+                    $object->setVersion(self::getVersion($data, $ua));
                 }
             }
             else
