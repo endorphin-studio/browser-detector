@@ -110,7 +110,12 @@ class DetectorRule
             {
                 $name = $child->getName();
                 $val = $child->__toString();
-                $this->$name = $val;
+                if($name != 'TargetValue')
+                {
+                    $this->$name = $val;
+                }
+                else
+                    $this->$name = filter_var($val, FILTER_VALIDATE_BOOLEAN);
             }
         }
     }
