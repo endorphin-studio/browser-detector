@@ -48,8 +48,6 @@ class Detector
     /** @var array Xml Data */
     private $xmlData;
 
-    private $Rules;
-
     /**
      * Detector constructor.
      * @param string $pathToData Path to directory with xml data files
@@ -68,8 +66,6 @@ class Detector
             $xmlData[$name] = simplexml_load_file($this->getPathToData().$name.'.xml');
         }
         $this->setXmlData($xmlData);
-
-        $this->Rules = DetectorRule::loadRulesFromFile();
     }
 
     public static function analyse($uaString='UA', $pathToData='auto')
@@ -150,7 +146,7 @@ class Detector
             }
         }
 
-        $detectorResult = self::checkRules($detector,$detectorResult);
+        $detectorResult = self::checkRules($detectorResult);
 
         return $detectorResult;
     }
@@ -235,9 +231,10 @@ class Detector
      * @param DetectorResult $result Detector result
      * @return DetectorResult Final result
      */
-    private static function checkRules(Detector $object,DetectorResult $result)
+    private static function checkRules(DetectorResult $result)
     {
-        foreach($object->Rules as $rule)
+        $Rules = DetectorRule::loadRulesFromFile();
+        foreach($Rules as $rule)
         {
             $objectType = $rule->getObjectType();
             $objectProperty = $rule->getObjectProperty();
