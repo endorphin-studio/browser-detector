@@ -29,6 +29,13 @@
         <targetProperty>true</targetProperty>
     </rule>
     <rule>
+        <objectType>Device</objectType>
+        <objectProperty>Name</objectProperty>
+        <objectPropertyValue>Lumia</objectPropertyValue>
+        <targetType>isMobile</targetType>
+        <targetProperty>true</targetProperty>
+    </rule>
+    <rule>
         <objectType>Browser</objectType>
         <objectProperty>Name</objectProperty>
         <objectPropertyValue>Opera Mini</objectPropertyValue>

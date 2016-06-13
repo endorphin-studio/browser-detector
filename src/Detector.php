@@ -59,11 +59,11 @@ class Detector
             $this->setPathToData(str_replace('src','data',__DIR__).'/');
         }
 
-        $xml = array('robot','browser','device','os');
+        $xml = array('Robot','Browser','Device','OS');
         $xmlData = array();
         foreach($xml as $name)
         {
-            $xmlData[$name] = simplexml_load_file($this->getPathToData().$name.'.xml');
+            $xmlData[$name] = simplexml_load_file($this->getPathToData().strtolower($name).'.xml');
         }
         $this->setXmlData($xmlData);
     }
@@ -86,64 +86,24 @@ class Detector
 
         $detectorResult = new DetectorResult();
         $detectorResult->uaString = $ua;
-        $isRobot = false;
+        $ns = '\\EndorphinStudio\\Detector\\';
 
         foreach($data as $key => $result)
         {
-            if(!$isRobot)
+            $classname = $ns.$key;
+            if($result !== null)
             {
-                switch ($key)
+                $object = new $classname($result);
+                if($key == 'Os' || $key == 'Browser')
                 {
-                    case 'robot':
-                        if($result !== null)
-                        {
-                            $robot = new Robot($result);
-                            $detectorResult->Robot = $robot;
-                            if ($robot->getName() != 'N\A') {
-                                $isRobot = true;
-                            }
-                        }
-                        break;
-                    case 'os':
-                        if($result !== null)
-                        {
-                            $os = new OS($result);
-                            $os->setVersion(self::getVersion($result, $ua));
-                            $detectorResult->OS = $os;
-                        }
-                        else
-                        {
-                            $os = OS::initEmpty();
-                            $detectorResult->OS = $os;
-                        }
-                        break;
-                    case 'device':
-                        if($result !== null)
-                        {
-                            $device = new Device($result);
-                            $detectorResult->Device = $device;
-                        }
-                        else
-                        {
-                            $device = Device::initEmpty();
-                            $detectorResult->Device = $device;
-                        }
-                        break;
-                    case 'browser':
-                        if($result !== null)
-                        {
-                            $browser = new Browser($result);
-                            $browser->setVersion(self::getVersion($result, $ua));
-                            $detectorResult->Browser = $browser;
-                        }
-                        else
-                        {
-                            $browser = Browser::initEmpty();
-                            $detectorResult->Browser = $browser;
-                        }
-                        break;
+                    $object->setVersion(self::getVersion($result, $ua));
                 }
             }
+            else
+            {
+                $object = $classname::initEmpty();
+            }
+            $detectorResult->$key = $object;
         }
 
         $detectorResult = self::checkRules($detectorResult);

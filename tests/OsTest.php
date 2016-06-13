@@ -17,7 +17,6 @@ class OsTest extends \PHPUnit_Framework_TestCase
         $ualist = array(
             'Mozilla/1.1I (X11; I; UNIX_SV 4.2MP R4000)',
         );
-
         testUaList($this,'OS','Name',$ualist,'Linux');
     }
 

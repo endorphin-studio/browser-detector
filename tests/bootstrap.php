@@ -34,6 +34,7 @@ function testUaList($object,$detectorProperty,$property,$uaList,$expectedValue)
     {
         $obj = Detector::analyse($ua)->$detectorProperty;
         $func = 'get'.$property;
+        $object->assertNotNull($obj);
         $object->assertEquals($expectedValue,$obj->$func());
     }
 }
