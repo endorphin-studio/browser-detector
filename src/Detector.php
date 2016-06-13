@@ -232,10 +232,10 @@ class Detector
     }
 
     /**
-     * @param DetectorResult $DetectorResult Detector result
+     * @param DetectorResult $result Detector result
      * @return DetectorResult Final result
      */
-    private function checkRules(\EndorphinStudio\Detector\DetectorResult $result)
+    private function checkRules(DetectorResult $result)
     {
         foreach($this->Rules as $rule)
         {
