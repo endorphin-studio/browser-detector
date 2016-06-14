@@ -11,61 +11,25 @@ namespace EndorphinStudio\Detector;
 
 class Detector
 {
-    /**
-     * @return string Path to directory with xml data files
-     */
-    public function getPathToData()
-    {
-        return $this->PathToData;
-    }
-
-    /**
-     * @return array Xml data object
-     */
-    public function getXmlData()
-    {
-        return $this->xmlData;
-    }
-
-    /**
-     * @param string $PathToData
-     */
-    public function setPathToData($PathToData)
-    {
-        $this->PathToData = $PathToData;
-    }
-
-    /**
-     * @param array $xmlData Xml data object
-     */
-    public function setXmlData($xmlData)
-    {
-        $this->xmlData = $xmlData;
-    }
-    /** @var  string Path to directory with xml data */
-    private $PathToData;
-
     /** @var array Xml Data */
-    private $xmlData;
+    public static $xmlData;
 
-    /**
-     * Detector constructor.
-     * @param string $pathToData Path to directory with xml data files
-     */
-    private function __construct($pathToData='auto')
+    private static function init($pathToData = 'auto')
     {
-        if($pathToData == 'auto')
+        if ($pathToData == 'auto')
         {
-            $this->setPathToData(str_replace('src','data',__DIR__).'/');
+            $pathToData = str_replace('src', 'data', __DIR__) . '/';
         }
 
-        $xml = array('Robot','Browser','Device','OS');
-        $xmlData = array();
-        foreach($xml as $name)
+        if (self::$xmlData == null)
         {
-            $xmlData[$name] = simplexml_load_file($this->getPathToData().strtolower($name).'.xml');
+            $xml = array('Robot', 'Browser', 'Device', 'OS');
+            $xmlData = array();
+            foreach ($xml as $name) {
+                $xmlData[$name] = simplexml_load_file($pathToData . strtolower($name) . '.xml');
+            }
+            self::$xmlData = $xmlData;
         }
-        $this->setXmlData($xmlData);
     }
 
     public static function analyse($uaString='UA', $pathToData='auto')
@@ -76,8 +40,8 @@ class Detector
             $ua = $_SERVER['HTTP_USER_AGENT'];
         }
 
-        $detector = new Detector($pathToData);
-        $xml = $detector->getXmlData();
+        Detector::init();
+        $xml = Detector::$xmlData;
 
         $detectorResult = new DetectorResult();
         $detectorResult->uaString = $ua;

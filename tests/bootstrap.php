@@ -26,33 +26,5 @@ use EndorphinStudio\Detector\Detector;
 
 $loader = new Psr4ClassLoader();
 $loader->addPrefix('EndorphinStudio\\Detector', __SRC__);
+$loader->addPrefix('EndorphinStudio\\Tests', __DIR__);
 $loader->register();
-
-function testUaList($object,$detectorProperty,$property,$uaList,$expectedValue)
-{
-    foreach($uaList as $ua)
-    {
-        $obj = Detector::analyse($ua)->$detectorProperty;
-        $func = 'get'.$property;
-        $object->assertNotNull($obj);
-        $object->assertEquals($expectedValue,$obj->$func());
-    }
-}
-
-function testUaListBooleanTrue($object,$detectorProperty,$property,$uaList)
-{
-    foreach($uaList as $ua)
-    {
-        $obj = Detector::analyse($ua)->$detectorProperty;
-        $func = 'is'.$property;
-        $object->assertTrue($obj->$func(),'Object Property '.$property.' is no equal TRUE');
-    }
-}
-
-function testUaListIsProperty($object,$detectorProperty,$uaList,$expectedValue)
-{
-    foreach($uaList as $ua)
-    {
-        $object->assertEquals($expectedValue,Detector::analyse($ua)->$detectorProperty);
-    }
-}

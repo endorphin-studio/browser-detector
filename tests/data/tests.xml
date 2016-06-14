@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<list>
+    <test>
+        <name>Browsers</name>
+        <file>browser</file>
+    </test>
+    <test>
+        <name>OS</name>
+        <file>os</file>
+    </test>
+    <test>
+        <name>Device</name>
+        <file>device</file>
+    </test>
+    <test>
+        <name>Robots</name>
+        <file>robot</file>
+    </test>
+</list>
