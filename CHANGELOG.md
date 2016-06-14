@@ -4,6 +4,7 @@
         + Google
         + Yandex
         + Bing
+        + Yodao
     - RSS Readers:
         + Tyny RSS
     - Bot/Crawlers:
@@ -13,6 +14,8 @@
         + 80legs Crawler
         + 123metaspider Crawler
         + 1470 Crawler
+        + Yisou Spider
+        + Yioop Bot
 + added os detection (+):
     - AIX
     - Aliyun OS

@@ -360,4 +360,31 @@
         <SearchEngine>false</SearchEngine>
         <Type>Bot/Crawler</Type>
     </data>
+    <data>
+        <id>Yodao</id>
+        <Name>Yodao</Name>
+        <Homepage>http://www.youdao.com/help/webmaster/spider/</Homepage>
+        <Owner>NetEase</Owner>
+        <pattern>YodaoBot</pattern>
+        <SearchEngine>true</SearchEngine>
+        <Type>Search Engine</Type>
+    </data>
+    <data>
+        <id>YisouSpider</id>
+        <Name>Yisou Spider</Name>
+        <Homepage>N\A</Homepage>
+        <Owner>N\A</Owner>
+        <pattern>YisouSpider</pattern>
+        <SearchEngine>false</SearchEngine>
+        <Type>Bot/Crawler</Type>
+    </data>
+    <data>
+        <id>YioopBot</id>
+        <Name>Yioop Bot</Name>
+        <Homepage>N\A</Homepage>
+        <Owner>N\A</Owner>
+        <pattern>YioopBot</pattern>
+        <SearchEngine>false</SearchEngine>
+        <Type>Bot/Crawler</Type>
+    </data>
 </dataset>

@@ -235,4 +235,62 @@
             <UA>1470.net crawler</UA>
         </UAList>
     </test>
+    <test>
+        <CheckList>
+            <Item>
+                <Property>Robot->getName()</Property>
+                <Value>Yodao</Value>
+            </Item>
+            <Item>
+                <Property>Robot->getType()</Property>
+                <Value>Search Engine</Value>
+            </Item>
+            <Item>
+                <Property>Robot->isSearchEngine()</Property>
+                <Value>true</Value>
+            </Item>
+        </CheckList>
+        <UAList>
+            <UA>Mozilla/5.0 (compatible;YodaoBot-Image/1.0;http://www.youdao.com/help/webmaster/spider/;)</UA>
+            <UA>Mozilla/5.0 (compatible; YodaoBot/1.0; http://www.yodao.com/help/webmaster/spider/; )</UA>
+        </UAList>
+    </test>
+    <test>
+        <CheckList>
+            <Item>
+                <Property>Robot->getName()</Property>
+                <Value>Yisou Spider</Value>
+            </Item>
+            <Item>
+                <Property>Robot->getType()</Property>
+                <Value>Bot/Crawler</Value>
+            </Item>
+            <Item>
+                <Property>Robot->isSearchEngine()</Property>
+                <Value>false</Value>
+            </Item>
+        </CheckList>
+        <UAList>
+            <UA>YisouSpider</UA>
+        </UAList>
+    </test>
+    <test>
+        <CheckList>
+            <Item>
+                <Property>Robot->getName()</Property>
+                <Value>Yioop Bot</Value>
+            </Item>
+            <Item>
+                <Property>Robot->getType()</Property>
+                <Value>Bot/Crawler</Value>
+            </Item>
+            <Item>
+                <Property>Robot->isSearchEngine()</Property>
+                <Value>false</Value>
+            </Item>
+        </CheckList>
+        <UAList>
+            <UA>Mozilla/5.0 (compatible; YioopBot; +http://173.13.143.74/bot.php)</UA>
+        </UAList>
+    </test>
 </list>
