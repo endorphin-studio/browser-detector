@@ -32,7 +32,7 @@ class Detector
         }
     }
 
-    public static function analyse($uaString='UA', $pathToData='auto')
+    public static function analyse($uaString='UA')
     {
         $ua = $uaString;
         if($uaString == 'UA')
