@@ -21,7 +21,7 @@ class Detector
             $pathToData = str_replace('src', 'data', __DIR__) . '/';
         }
 
-        if (self::$xmlData == null)
+        if (self::$xmlData === null)
         {
             $xml = array('Robot', 'Browser', 'Device', 'OS');
             $xmlData = array();
