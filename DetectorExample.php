@@ -10,4 +10,3 @@
 use EndorphinStudio\Detector\Detector;
 
 $result = Detector::analyse();
-// print_r($result);
