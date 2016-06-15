@@ -50,4 +50,19 @@
             <UA>Mozilla/5.0 (compatible; MSIE 9.0; Windows Phone OS 7.5; Trident/5.0; IEMobile/9.0; NOKIA; Lumia 900)</UA>
         </UAList>
     </test>
+    <test>
+        <CheckList>
+            <Item>
+                <Property>Device->getName()</Property>
+                <Value>Apple TV</Value>
+            </Item>
+            <Item>
+                <Property>Device->getType()</Property>
+                <Value>tv</Value>
+            </Item>
+        </CheckList>
+        <UAList>
+            <UA>AppleTV/1.1</UA>
+        </UAList>
+    </test>
 </list>

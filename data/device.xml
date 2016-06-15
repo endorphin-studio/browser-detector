@@ -13,6 +13,12 @@
         <pattern>iPhone</pattern>
     </data>
     <data>
+        <id>Apple TV</id>
+        <name>Apple TV</name>
+        <type>tv</type>
+        <pattern>AppleTV</pattern>
+    </data>
+    <data>
         <id>iPod</id>
         <name>iPod</name>
         <type>mobile</type>

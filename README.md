@@ -13,12 +13,10 @@ Detect user Browser, OS and Device through USER AGENT
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/80f8b2e1-434d-43b3-97ab-d77c9cc4b1ef/mini.png)](https://insight.sensiolabs.com/projects/80f8b2e1-434d-43b3-97ab-d77c9cc4b1ef)
 
 ## About
-This version is refactoring of [endorphinua/browser-detector](https://github.com/endorphinua/browser-detector) repository
-
 	Author: Sergey Nehaenko <sergey.nekhaenko@gmail.com>
 	Current Version: 3.0.0
 	Stable Version: 2.0
-	Last Update: 05.06.2016
+	Last Update: 15.06.2016
 	License: GPL-3.0+
 
 ## Install via Composer
@@ -48,12 +46,12 @@ This version is refactoring of [endorphinua/browser-detector](https://github.com
 #### Operating System Detection Support
 
     Windows Phone, Windows Mobile, Windows, iOS, Android, Linux, Ubuntu, Chromium OS, Bada, Maemo
-    AIX, Aliyun OS
+    AIX, Aliyun OS, Amiga, Android (TV), Apple (TV)
 
 #### Device Detection Support
 
     Microsoft Lumia, iPhone, iPod, iPad, Android based, Dell, NOOK, Samsung, Toshiba, HTC, Cisco, Asus,
-    Google Nexus, Kindle Fire, Motorolla, Microsoft Sursace, Sony Ericsson, Nokia
+    Google Nexus, Kindle Fire, Motorolla, Microsoft Sursace, Sony Ericsson, Nokia, Apple TV
 
 #### Crawlers (Robots) Detection Support
 

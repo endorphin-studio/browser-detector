@@ -19,8 +19,14 @@
 + added os detection (+):
     - AIX
     - Aliyun OS
+    - Amiga
+    - Android (TV)
+    - Apple (TV)
++ added device detection (+)
+    - Apple TV
 + fixed issues:
     - gh-2
+    - gh-3
 
 ### v.2.0
 + code refactoring

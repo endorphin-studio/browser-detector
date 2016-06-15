@@ -25,12 +25,34 @@
         <versionPattern>AliyunOS</versionPattern>
     </data>
     <data>
+        <id>Android-TV</id>
+        <name>Android (TV)</name>
+        <type>tv</type>
+        <family>UNX</family>
+        <pattern>(GoogleTV|SmartTv|PhilipsTV|OMI)</pattern>
+    </data>
+    <data>
+        <id>Apple-TV</id>
+        <name>Apple (TV)</name>
+        <type>tv</type>
+        <family>UNX</family>
+        <pattern>AppleTV</pattern>
+    </data>
+    <data>
         <id>Android</id>
         <name>Android</name>
         <type>mobile</type>
         <family>UNX</family>
         <pattern>(; |\()Android</pattern>
         <versionPattern>Android</versionPattern>
+    </data>
+    <data>
+        <id>Amiga</id>
+        <name>Amiga</name>
+        <type>desktop</type>
+        <family>UNX</family>
+        <pattern>Amiga</pattern>
+        <versionPattern>Amiga</versionPattern>
     </data>
     <data>
         <id>iOS</id>
