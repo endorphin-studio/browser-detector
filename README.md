@@ -22,18 +22,11 @@ Detect user Browser, OS and Device through USER AGENT
 ## Install via Composer
     composer require endorphin-studio/browser-detector
 
-## Basic Usage (v 3.*)
+## Basic Usage
 
     use EndorphinStudio\Detector\Detector;
 
     $result = Detector::analyse();
-    print($result);
-
-## Basic Usage (v 2.*)
-
-    use EndorphinStudio\Detector\Detector;
-
-    $result = Detector::Analyse();
     print($result);
 
 #### Browser Detection Support
