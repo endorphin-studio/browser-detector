@@ -28,6 +28,7 @@ class Test
                 $ExpectedValue = $Item->Value->__toString();
                 $params = explode('->', $Property);
                 $Value = Detector::analyse($ua);
+                $detector = $Value;
                 $TextProperty = get_class($Value);
                 foreach ($params as $parameter) {
                     if (!preg_match('/\(/', $parameter)) {
@@ -47,9 +48,9 @@ class Test
                     $TestObject->assertEquals($ExpectedValue, $Value);
                 else {
                     if ($ExpectedValue == 'true')
-                        $TestObject->assertTrue($Value, 'Object Property ' . $TextProperty . ' is no equal TRUE');
+                        $TestObject->assertTrue($Value, 'Object Property ' . $TextProperty . ' is no equal TRUE, UA:" '.$ua."\"\n\n".var_export($detector,true));
                     else
-                        $TestObject->assertFalse($Value, 'Object Property ' . $TextProperty . ' is no equal FALSE');
+                        $TestObject->assertFalse($Value, 'Object Property ' . $TextProperty . ' is no equal FALSE, UA:'.$ua."\"\n\n".var_export($detector,true));
                 }
             }
         }

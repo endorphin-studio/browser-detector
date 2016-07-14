@@ -58,6 +58,13 @@ class Detector
                 {
                     $object->setVersion(self::getVersion($data, $ua));
                 }
+                if($key == 'Robot')
+                {
+                    if($object->getName() != D_NA)
+                    {
+                        $detectorResult->isBot = true;
+                    }
+                }
             }
             else
             {

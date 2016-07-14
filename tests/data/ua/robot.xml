@@ -60,6 +60,10 @@
                 <Property>Robot->isSearchEngine()</Property>
                 <Value>true</Value>
             </Item>
+            <Item>
+                <Property>isBot</Property>
+                <Value>true</Value>
+            </Item>
         </CheckList>
         <UAList>
             <UA>Mozilla/5.0 (compatible; YandexBot/3.0; +http://yandex.com/bots)</UA>
@@ -107,6 +111,10 @@
                 <Property>Robot->isSearchEngine()</Property>
                 <Value>true</Value>
             </Item>
+            <Item>
+                <Property>isBot</Property>
+                <Value>true</Value>
+            </Item>
         </CheckList>
         <UAList>
             <UA>Mozilla/5.0 (compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm)</UA>
@@ -135,6 +143,10 @@
                 <Property>Robot->isSearchEngine()</Property>
                 <Value>false</Value>
             </Item>
+            <Item>
+                <Property>isBot</Property>
+                <Value>true</Value>
+            </Item>
         </CheckList>
         <UAList>
             <UA>Mozilla/5.0 (compatible; WASALive-Bot ; http://blog.wasalive.com/wasalive-bots/)</UA>
@@ -153,6 +165,10 @@
             <Item>
                 <Property>Robot->isSearchEngine()</Property>
                 <Value>false</Value>
+            </Item>
+            <Item>
+                <Property>isBot</Property>
+                <Value>true</Value>
             </Item>
         </CheckList>
         <UAList>
@@ -173,6 +189,10 @@
                 <Property>Robot->isSearchEngine()</Property>
                 <Value>false</Value>
             </Item>
+            <Item>
+                <Property>isBot</Property>
+                <Value>true</Value>
+            </Item>
         </CheckList>
         <UAList>
             <UA>Mozilla/5.0 (compatible; 007ac9 Crawler; http://crawler.007ac9.net/)</UA>
@@ -191,6 +211,10 @@
             <Item>
                 <Property>Robot->isSearchEngine()</Property>
                 <Value>false</Value>
+            </Item>
+            <Item>
+                <Property>isBot</Property>
+                <Value>true</Value>
             </Item>
         </CheckList>
         <UAList>
@@ -211,6 +235,10 @@
                 <Property>Robot->isSearchEngine()</Property>
                 <Value>false</Value>
             </Item>
+            <Item>
+                <Property>isBot</Property>
+                <Value>true</Value>
+            </Item>
         </CheckList>
         <UAList>
             <UA>123metaspider-Bot (Version: 1.04, powered by www.123metaspider.com)</UA>
@@ -230,6 +258,10 @@
                 <Property>Robot->isSearchEngine()</Property>
                 <Value>false</Value>
             </Item>
+            <Item>
+                <Property>isBot</Property>
+                <Value>true</Value>
+            </Item>
         </CheckList>
         <UAList>
             <UA>1470.net crawler</UA>
@@ -247,6 +279,10 @@
             </Item>
             <Item>
                 <Property>Robot->isSearchEngine()</Property>
+                <Value>true</Value>
+            </Item>
+            <Item>
+                <Property>isBot</Property>
                 <Value>true</Value>
             </Item>
         </CheckList>
@@ -269,6 +305,10 @@
                 <Property>Robot->isSearchEngine()</Property>
                 <Value>false</Value>
             </Item>
+            <Item>
+                <Property>isBot</Property>
+                <Value>true</Value>
+            </Item>
         </CheckList>
         <UAList>
             <UA>YisouSpider</UA>
@@ -288,6 +328,10 @@
                 <Property>Robot->isSearchEngine()</Property>
                 <Value>false</Value>
             </Item>
+            <Item>
+                <Property>isBot</Property>
+                <Value>true</Value>
+            </Item>
         </CheckList>
         <UAList>
             <UA>Mozilla/5.0 (compatible; YioopBot; +http://173.13.143.74/bot.php)</UA>
@@ -305,6 +349,10 @@
             </Item>
             <Item>
                 <Property>Robot->isSearchEngine()</Property>
+                <Value>true</Value>
+            </Item>
+            <Item>
+                <Property>isBot</Property>
                 <Value>true</Value>
             </Item>
         </CheckList>
