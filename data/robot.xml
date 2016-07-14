@@ -387,4 +387,13 @@
         <SearchEngine>false</SearchEngine>
         <Type>Bot/Crawler</Type>
     </data>
+    <data>
+        <id>Baidu</id>
+        <Name>Baidu</Name>
+        <Homepage>http://baidu.com</Homepage>
+        <Owner>Baidu</Owner>
+        <pattern>(baidu|Baidu)</pattern>
+        <SearchEngine>true</SearchEngine>
+        <Type>Search Engine</Type>
+    </data>
 </dataset>

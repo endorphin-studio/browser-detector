@@ -293,4 +293,30 @@
             <UA>Mozilla/5.0 (compatible; YioopBot; +http://173.13.143.74/bot.php)</UA>
         </UAList>
     </test>
+    <test>
+        <CheckList>
+            <Item>
+                <Property>Robot->getName()</Property>
+                <Value>Baidu</Value>
+            </Item>
+            <Item>
+                <Property>Robot->getType()</Property>
+                <Value>Search Engine</Value>
+            </Item>
+            <Item>
+                <Property>Robot->isSearchEngine()</Property>
+                <Value>true</Value>
+            </Item>
+        </CheckList>
+        <UAList>
+            <UA>Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0; baidu Transcoder;) </UA>
+            <UA>Mozilla/5.0 (compatible; Baiduspider-cpro; +http://www.baidu.com/search/spider.html)</UA>
+            <UA>Mozilla/5.0 (compatible; Baiduspider-cpro; +http://www.baidu.com/search/spider.html)</UA>
+            <UA>BaiduImagespider ( http://help.baidu.jp/system/05.html)</UA>
+            <UA>DoCoMo/2.0 P05A(c100;TB;W24H15) (compatible; BaiduMobaider/1.0; http://www.baidu.jp/spider/)</UA>
+            <UA>Baiduspider+(+http://www.baidu.com/search/spider_jp.html)</UA>
+            <UA>Baiduspider+(+http://www.baidu.jp/spider/)</UA>
+            <UA>baiduspider-mobile-gate</UA>
+        </UAList>
+    </test>
 </list>

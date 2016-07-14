@@ -5,6 +5,7 @@
         + Yandex
         + Bing
         + Yodao
+        + Baidu
     - RSS Readers:
         + Tyny RSS
     - Bot/Crawlers:
@@ -27,6 +28,8 @@
 + fixed issues:
     - gh-2
     - gh-3
+    - gh-4
+    - gh-6
 
 ### v.2.0
 + code refactoring

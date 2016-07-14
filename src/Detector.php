@@ -135,16 +135,27 @@ class Detector
     private static function getWindowsVersion($version)
     {
         $versions = array(
+            '95' => '95',
+            '3.1' => '3.1',
+            '3.5' => '3.5',
+            '3.51' => '3.51',
+            '4.0' => '4.0',
+            '2000' => '2000',
+            '5.0' => '2000',
             '5.1' => 'XP',
             '5.2' => 'Server 2003',
             '6.0' => 'Vista',
             '6.1' => '7',
             '6.2' => '8',
             '6.3' => '8.1',
-            '6.4' => '10'
+            '6.4' => '10',
+            '10.0' => '10'
         );
 
-        return $versions[$version];
+        if(array_key_exists(strval($version),$versions))
+            return $versions[strval($version)];
+        else
+            return D_NA;
     }
 
     /**

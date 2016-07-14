@@ -56,4 +56,4 @@ Detect user Browser, OS and Device through USER AGENT
 #### Crawlers (Robots) Detection Support
 
     Google Bots, Tiny RSS, Yandex Bots, Bing, WASALive, .NET Framework CLR, 007ac9 Crawler, 80legs Crawler,
-    123metaspider Crawler, 1470 Crawler, Yodao, Yisou Spider, Yioop Bot
+    123metaspider Crawler, 1470 Crawler, Yodao, Yisou Spider, Yioop Bot, Baidu

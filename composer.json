@@ -11,8 +11,7 @@
     }
   ],
   "require": {
-    "php": ">=5.6",
-    "symfony/class-loader": "^3.0"
+    "php": ">=5.6"
   },
   "require-dev":
   {
@@ -21,5 +20,11 @@
   },
   "autoload": {
     "psr-4": { "EndorphinStudio\\Detector\\": "src/" }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "EndorphinStudio\\Detector\\":  "src/",
+      "EndorphinStudio\\Tests\\":  "tests/"
+    }
   }
 }

@@ -16,4 +16,8 @@
         <name>Robots</name>
         <file>robot</file>
     </test>
+    <test>
+        <name>Issues</name>
+        <file>issues</file>
+    </test>
 </list>
