@@ -252,4 +252,11 @@
         <pattern>Konqueror</pattern>
         <versionPattern>Konqueror</versionPattern>
     </data>
+    <data>
+        <id>QQBrowser</id>
+        <name>QQ Browser</name>
+        <type>mobile</type>
+        <pattern>QQBrowser</pattern>
+        <versionPattern>QQBrowser</versionPattern>
+    </data>
 </dataset>

@@ -118,4 +118,12 @@
         <pattern>(Linux|X11)</pattern>
         <versionPattern>(Linux|X11)</versionPattern>
     </data>
+    <data>
+        <id>Qtopia</id>
+        <name>Qtopia</name>
+        <type>mobile</type>
+        <family>UNX</family>
+        <pattern>(Qtopia)</pattern>
+        <versionPattern>(Qtopia)</versionPattern>
+    </data>
 </dataset>

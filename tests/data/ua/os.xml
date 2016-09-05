@@ -70,4 +70,17 @@
             <UA>AppleTV/1.1</UA>
         </UAList>
     </test>
+    <test>
+        <CheckList>
+            <Item>
+                <Property>OS->getName()</Property>
+                <Value>Qtopia</Value>
+            </Item>
+        </CheckList>
+        <UAList>
+            <UA>Mozilla/4.08 (PDA; SL-C1000/1.0,Qtopia/1.5.4) NetFront/3.1</UA>
+            <UA>Mozilla/4.08 (PDA; SL-C3000/1.0,Qtopia/1.4.9) NetFront/3.1</UA>
+            <UA>Mozilla/4.08 (PDA; SL-C3100/1.0,Qtopia/1.5.5) NetFront/3.1</UA>
+        </UAList>
+    </test>
 </list>

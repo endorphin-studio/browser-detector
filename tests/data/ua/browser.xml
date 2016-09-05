@@ -22,4 +22,15 @@
             <UA>Opera/9.80 (X11; Linux i686; Ubuntu/14.10) Presto/2.12.388 Version/12.16</UA>
         </UAList>
     </test>
+    <test>
+        <CheckList>
+            <Item>
+                <Property>Browser->getName()</Property>
+                <Value>QQ Browser</Value>
+            </Item>
+        </CheckList>
+        <UAList>
+            <UA>MQQBrowser/3.7/ZTEU795_TD/1.0 Linux/2.6.39 Android/4.0 Release/6.10.2012 Browser/AppleWebKit534.30</UA>
+        </UAList>
+    </test>
 </list>

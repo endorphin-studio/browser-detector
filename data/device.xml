@@ -46,7 +46,7 @@
         <id>Samsung</id>
         <name>Samsung</name>
         <type>mobile</type>
-        <pattern>SGH</pattern>
+        <pattern>(SGH|Samsung|SAMSUNG)</pattern>
     </data>
     <data>
         <id>Toshiba</id>
@@ -107,6 +107,24 @@
         <name>Nokia</name>
         <type>mobile</type>
         <pattern>(Nokia|N900|nokia|NOKIA|Series 60|Series 40|S60|S40)</pattern>
+    </data>
+    <data>
+        <id>Zune</id>
+        <name>Zune HD</name>
+        <type>player</type>
+        <pattern>ZuneHD</pattern>
+    </data>
+    <data>
+        <id>ZTE</id>
+        <name>ZTE</name>
+        <type>mobile</type>
+        <pattern>ZTE</pattern>
+    </data>
+    <data>
+        <id>Zaurus</id>
+        <name>Zaurus</name>
+        <type>mobile</type>
+        <pattern>(PDA; SL|sharp pda browser)</pattern>
     </data>
     <data>
         <id>Android based</id>

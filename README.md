@@ -35,16 +35,18 @@ Detect user Browser, OS and Device through USER AGENT
     Edge, Epiphany, Chimera, CometBird, Kylo, iCab, Chromium, Beamrise, Camino, Columbus,
     Deepnet Explorer, Yandex Browser, AOL Explorer, IceWeasel, Flock, Netscape Navigator,
     Dolphin, Atomic, Chrome Mobile, Arora, Midori, Conkeror, Skyfire, Maxthon, Rekonq, Safari, Konqueror
+    QQ Browser
 
 #### Operating System Detection Support
 
     Windows Phone, Windows Mobile, Windows, iOS, Android, Linux, Ubuntu, Chromium OS, Bada, Maemo
-    AIX, Aliyun OS, Amiga, Android (TV), Apple (TV)
+    AIX, Aliyun OS, Amiga, Android (TV), Apple (TV), Qtopia
 
 #### Device Detection Support
 
     Microsoft Lumia, iPhone, iPod, iPad, Android based, Dell, NOOK, Samsung, Toshiba, HTC, Cisco, Asus,
-    Google Nexus, Kindle Fire, Motorolla, Microsoft Sursace, Sony Ericsson, Nokia, Apple TV
+    Google Nexus, Kindle Fire, Motorolla, Microsoft Sursace, Sony Ericsson, Nokia, Apple TV, Zune HD
+    ZTE, Zaurus
 
 #### Crawlers (Robots) Detection Support
 
