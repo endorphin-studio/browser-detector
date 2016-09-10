@@ -12,6 +12,22 @@ namespace EndorphinStudio\Detector;
 
 class Device extends Data
 {
+    /**
+     * @return string
+     */
+    public function getModelName()
+    {
+        return $this->ModelName;
+    }
+
+    /**
+     * @param string $ModelName
+     */
+    public function setModelName($ModelName)
+    {
+        $this->ModelName = $ModelName;
+    }
+
     /** @var string Model Name */
     public $ModelName = D_NA;
 

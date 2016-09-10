@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dataset>
+    <data>
+        <id>Lumia</id>
+        <deviceName>Lumia</deviceName>
+        <pattern>Lumia ([\w]{3,6})</pattern>
+    </data>
+</dataset>

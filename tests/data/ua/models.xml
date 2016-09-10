@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<list>
+    <test>
+        <CheckList>
+            <Item>
+                <Property>OS->getName()</Property>
+                <Value>Windows Mobile</Value>
+            </Item>
+            <Item>
+                <Property>OS->getVersion()</Property>
+                <Value>8.1</Value>
+            </Item>
+            <Item>
+                <Property>Device->getName()</Property>
+                <Value>Lumia</Value>
+            </Item>
+            <Item>
+                <Property>Device->getModelName()</Property>
+                <Value>620</Value>
+            </Item>
+        </CheckList>
+        <UAList>
+            <UA>Mozilla/5.0 (Mobile; Windows Phone 8.1; Android 4.0; ARM; Trident/7.0; Touch; rv:11.0; IEMobile/11.0; NOKIA; Lumia 620) like iPhone OS 7_0_3 Mac OS X AppleWebKit/537 (KHTML, like Gecko) Mobile Safari/537</UA>
+        </UAList>
+    </test>
+</list>

@@ -74,6 +74,7 @@ class Detector
         }
 
         $detectorResult = self::checkRules($detectorResult);
+        $detectorResult = self::checkModelName($detectorResult);
 
         return $detectorResult;
     }
@@ -185,6 +186,21 @@ class Detector
                     $result->$targetType = $targetValue;
                     break;
                 }
+            }
+        }
+        return $result;
+    }
+
+    private static function checkModelName(DetectorResult $result)
+    {
+        $models = DeviceModel::loadFromFile();
+        foreach($models as $model)
+        {
+            if($model->getDeviceName() === $result->Device->getName())
+            {
+                $pattern = '/'.$model->getPattern().'/';
+                preg_match($pattern,$result->uaString,$match);
+                $result->Device->setModelName($match[1]);
             }
         }
         return $result;

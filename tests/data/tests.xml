@@ -20,4 +20,8 @@
         <name>Issues</name>
         <file>issues</file>
     </test>
+    <test>
+        <name>Device Models</name>
+        <file>models</file>
+    </test>
 </list>
