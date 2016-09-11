@@ -15,7 +15,7 @@ Detect user Browser, OS and Device through USER AGENT
 ## About
 	Author: Sergey Nehaenko <sergey.nekhaenko@gmail.com>
 	Current Version: 3.0.1
-	Stable Version: 2.0
+	Stable Version: 3.0.0
 	Last Update: 10.09.2016
 	License: GPL-3.0+
 
