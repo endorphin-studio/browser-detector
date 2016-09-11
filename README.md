@@ -19,6 +19,9 @@ Detect user Browser, OS and Device through USER AGENT
 	Last Update: 10.09.2016
 	License: GPL-3.0+
 
+## Requirements
+	PHP 5.6+
+
 ## Install via Composer
     composer require endorphin-studio/browser-detector
 ## Basic Usage
