@@ -14,14 +14,13 @@ Detect user Browser, OS and Device through USER AGENT
 
 ## About
 	Author: Sergey Nehaenko <sergey.nekhaenko@gmail.com>
-	Current Version: 3.0.0
+	Current Version: 3.0.1
 	Stable Version: 2.0
-	Last Update: 15.06.2016
+	Last Update: 10.09.2016
 	License: GPL-3.0+
 
 ## Install via Composer
     composer require endorphin-studio/browser-detector
-
 ## Basic Usage
 
     use EndorphinStudio\Detector\Detector;
@@ -48,6 +47,10 @@ Detect user Browser, OS and Device through USER AGENT
     Microsoft Lumia, iPhone, iPod, iPad, Android based, Dell, NOOK, Samsung, Toshiba, HTC, Cisco, Asus,
     Google Nexus, Kindle Fire, Motorolla, Microsoft Sursace, Sony Ericsson, Nokia, Apple TV, Zune HD
     ZTE, Zaurus
+
+#### Device Model Detection Support
+
+    Microsoft Lumia
 
 #### Crawlers (Robots) Detection Support
 
