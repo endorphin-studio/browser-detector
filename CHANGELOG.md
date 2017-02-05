@@ -3,6 +3,7 @@ add detection:
 
     Smart TV (device)
     Megafon (device)
+    Tizen (OS)
 
 add model detection:
 

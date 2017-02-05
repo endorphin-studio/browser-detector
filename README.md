@@ -43,7 +43,7 @@ Detect user Browser, OS and Device through USER AGENT
 
     Windows Phone, Windows Mobile, Windows, iOS, Android, Linux, Ubuntu, Chromium OS, Bada, Maemo
     AIX, Aliyun OS, Amiga, Android (TV), Apple (TV), Qtopia, Arch Linux, Mac OS X, AROS, Baidy Yi,
-    BeOS, BlackBerry OS
+    BeOS, BlackBerry OS, Tizen
 
 #### Device Detection Support
 
