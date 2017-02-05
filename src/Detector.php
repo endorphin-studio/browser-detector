@@ -12,23 +12,25 @@ namespace EndorphinStudio\Detector;
 class Detector
 {
     /** @var array Xml Data */
-    public static $xmlData;
+    private static $_xmlData;
+    public static $isInitialized = false;
 
-    private static function init($pathToData = 'auto')
+    private static function initialize($pathToData = 'auto')
     {
         if ($pathToData == 'auto')
         {
             $pathToData = str_replace('src', 'data', __DIR__) . '/';
         }
 
-        if (self::$xmlData === null)
+        if (self::$_xmlData === null)
         {
             $xml = array('Robot', 'Browser', 'Device', 'OS');
             $xmlData = array();
             foreach ($xml as $name) {
                 $xmlData[$name] = simplexml_load_file($pathToData . strtolower($name) . '.xml');
             }
-            self::$xmlData = $xmlData;
+            self::$_xmlData = $xmlData;
+            self::$isInitialized = true;
         }
     }
 
@@ -40,8 +42,9 @@ class Detector
             $ua = $_SERVER['HTTP_USER_AGENT'];
         }
 
-        Detector::init();
-        $xml = Detector::$xmlData;
+        if(!self::$isInitialized)
+            self::initialize();
+        $xml = self::$_xmlData;
 
         $detectorResult = new DetectorResult();
         $detectorResult->uaString = $ua;
