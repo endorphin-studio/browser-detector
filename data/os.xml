@@ -134,6 +134,14 @@
         <versionPattern>ARCHOS</versionPattern>
     </data>
     <data>
+        <id>Tizen</id>
+        <name>Tizen</name>
+        <type>mobile</type>
+        <family>UNX</family>
+        <pattern>Tizen</pattern>
+        <versionPattern>Tizen</versionPattern>
+    </data>
+    <data>
         <id>Linux</id>
         <name>Linux</name>
         <type>desktop</type>

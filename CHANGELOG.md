@@ -1,3 +1,44 @@
+### 3.0.2
+add detection:
+
+    Smart TV (device)
+    Megafon (device)
+
+add model detection:
+
+    Megafon
+
+### 3.0.1
+
+
+implements
+
+    Device->ModelName property
+    isBot property
+added detection:
+
+    AROS (OS)
+    Baidu Yi (OS)
+    BeOS (OS)
+    BlackBerry OS (OS)
+    Arch Linux (OS)
+    Limia models detection
+    Qtopia (OS)
+    Zune HD (Device)
+    ZTE (Device)
+    Zaurus (Device)
+    QQ Browser (Browser)
+
+fix issues:
+
+    #gh-4
+    #gh-6
+
+remove:
+tests/bootstrap.php
+symforny class loader
+
+
 ### 3.0.0
 + added bots detection (+):
     - Search Engines:

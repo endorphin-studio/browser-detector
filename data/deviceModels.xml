@@ -5,4 +5,9 @@
         <deviceName>Lumia</deviceName>
         <pattern>Lumia ([\w]{3,6})</pattern>
     </data>
+    <data>
+        <id>Megafon</id>
+        <deviceName>Megafon</deviceName>
+        <pattern>MegaFon ([\w]{2,6})</pattern>
+    </data>
 </dataset>

@@ -92,6 +92,13 @@
         <versionPattern>YaBrowser</versionPattern>
     </data>
     <data>
+        <id>Samsung Browser</id>
+        <name>Samsung Browser</name>
+        <type>desktop</type>
+        <pattern>SamsungBrowser</pattern>
+        <versionPattern>SamsungBrowser</versionPattern>
+    </data>
+    <data>
         <id>AOL Explorer</id>
         <name>AOL Explorer</name>
         <type>desktop</type>

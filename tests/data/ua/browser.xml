@@ -33,4 +33,15 @@
             <UA>MQQBrowser/3.7/ZTEU795_TD/1.0 Linux/2.6.39 Android/4.0 Release/6.10.2012 Browser/AppleWebKit534.30</UA>
         </UAList>
     </test>
+    <test>
+        <CheckList>
+            <Item>
+                <Property>Browser->getName()</Property>
+                <Value>Samsung Browser</Value>
+            </Item>
+        </CheckList>
+        <UAList>
+            <UA>Mozilla/5.0 (SMART-TV; Linux; Tizen 2.3) AppleWebkit/538.1 (KHTML, like Gecko) SamsungBrowser/1.0 TV Safari/538.1</UA>
+        </UAList>
+    </test>
 </list>

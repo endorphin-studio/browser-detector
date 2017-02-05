@@ -149,4 +149,15 @@
             <UA>BlackBerry9100/6.6.0.248 Profile/MIDP-2.0 Configuration/CLDC-1.1/UCWEB8.1.0.104/159/999</UA>
         </UAList>
     </test>
+    <test>
+        <CheckList>
+            <Item>
+                <Property>OS->getName()</Property>
+                <Value>Tizen</Value>
+            </Item>
+        </CheckList>
+        <UAList>
+            <UA>Mozilla/5.0 (SMART-TV; Linux; Tizen 2.3) AppleWebkit/538.1 (KHTML, like Gecko) SamsungBrowser/1.0 TV Safari/538.1</UA>
+        </UAList>
+    </test>
 </list>

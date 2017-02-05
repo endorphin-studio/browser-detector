@@ -31,6 +31,18 @@
         <pattern>iPad</pattern>
     </data>
     <data>
+        <id>SMART-TV</id>
+        <name>Smart TV</name>
+        <type>tv</type>
+        <pattern>(SMART-TV)</pattern>
+    </data>
+    <data>
+        <id>Megafon</id>
+        <name>Megafon</name>
+        <type>tablet</type>
+        <pattern>(MegaFon)</pattern>
+    </data>
+    <data>
         <id>Dell</id>
         <name>Dell</name>
         <type>mobile</type>
