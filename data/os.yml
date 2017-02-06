@@ -1,8 +1,8 @@
 Windows Mobile:
     type: "mobile"
     family: "win"
-    patterm: "(Windows Phone OS|Windows Phone|Windows\+Phone|Windows\+Phone\+OS)"
-    versionPattern: "(Windows Phone OS|Windows Phone|Windows\+Phone|Windows\+Phone\+OS)"
+    patterm: "(Windows Phone OS|Windows Phone|Windows+Phone|Windows+Phone+OS)"
+    versionPattern: "(Windows Phone OS|Windows Phone|Windows+Phone|Windows+Phone+OS)"
 AROS:
     type: "desktop"
     family: "unix"
@@ -33,7 +33,7 @@ Baidu Yi:
 Android:
     type: "mobile"
     family: "unix"
-    patterm: "(; |\()Android"
+    patterm: "(; |()Android"
     versionPattern: "Android"
 Amiga:
     type: "desktop"
