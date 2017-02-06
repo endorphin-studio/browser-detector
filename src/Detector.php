@@ -9,21 +9,22 @@
 
 namespace EndorphinStudio\Detector;
 
+use Symfony\Component\Yaml\Parser;
+
 class Detector
 {
     /** @var array Xml Data */
     private static $_xmlData;
+    private static $_ymlData;
     public static $isInitialized = false;
 
     private static function initialize($pathToData = 'auto')
     {
-        if ($pathToData == 'auto')
-        {
+        if ($pathToData == 'auto') {
             $pathToData = str_replace('src', 'data', __DIR__) . '/';
         }
 
-        if (self::$_xmlData === null)
-        {
+        if (self::$_xmlData === null) {
             $xml = array('Robot', 'Browser', 'Device', 'OS');
             $xmlData = array();
             foreach ($xml as $name) {
@@ -31,6 +32,16 @@ class Detector
             }
             self::$_xmlData = $xmlData;
             self::$isInitialized = true;
+        }
+
+        if (self::$_ymlData === null)
+        {
+            $parser = new Parser();
+            $fields = array('OS');
+            self::$_ymlData = [];
+            foreach ($fields as $name) {
+                self::$_ymlData[$name] = $parser->parse(file_get_contents($pathToData . strtolower($name) . '.yml'));
+            }
         }
     }
 
