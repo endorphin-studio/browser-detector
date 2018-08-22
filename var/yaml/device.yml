@@ -1,0 +1,57 @@
+device:
+    mobile:
+        Lumia:
+            pattern: "{id} [0-9]{1,5}"
+        iPhone:
+            default: true
+        Dell:
+            pattern: "({id}|DELL)"
+        Samsung:
+            pattern: "(SGH|{id}|SAMSUNG)"
+        HTC:
+            pattern: "(Evo|PG86100|EVO|Sprint |Mazaa|Mozart|MWP6885|T7576|HTC-7 Pro|USCCHTC-PC93100|T7575|HTC|Trophy|T8686)"
+        Nexus:
+            default: true
+        Motorola:
+            pattern: "(MOT|Motorola|MOT-|MOTOZINE|XT|Mot|Droid|DROIDXA[0-9]{3,4}|Motorola.*ELECTRIFY|Motorola.*i1|i867|i[0-9]{3}|MB[0-9]{3}|ME[0-9]{3}|MT[0-9]{3}|WX435|WX[0-9]{3}|XT[0-9]{3}|XT928|HR[0-9]{3}|Xoom)"
+        Sony Ericsson:
+            pattern: "SonyEricsson"
+        Nokia:
+            pattern: "(Nokia|N900|nokia|NOKIA|Series 60|Series 40|S60|S40)"
+        ZTE:
+            default: true
+        Zaurus:
+            pattern: "(PDA; SL|sharp pda browser)"
+        Android:
+            default: true
+    tv:
+        Apple TV:
+            pattern: "AppleTV"
+    player:
+        iPod:
+            pattern: "({id}|itouch)"
+        Zune:
+            pattern: "ZuneHD"
+    tablet:
+        iPad:
+            default: true
+        SMART TV:
+            pattern: "(SMART-TV)"
+        Megafon:
+            default: true
+        NOOK:
+            pattern: "(BNTV)"
+        Toshiba:
+            pattern: "AT[0-9]{1,3}"
+        Cisco:
+            pattern: "(CIUS|cius)"
+        Asus:
+            pattern: "({id}|ASUS)"
+        Kindle Fire:
+            default: true
+        Microsoft Surface:
+            pattern: "Windows NT 6.2; ARM;"
+    default:
+        name: "PC"
+        type: "desktop"
+        model: "not available"

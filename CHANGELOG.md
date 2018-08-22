@@ -1,3 +1,19 @@
+### 4.0
+
+performed:
+
+    code refactoring (in progress)
+    remove xml (in progress)
+    add yml (in progress)
+
+add detection:
+    
+    UC Browser (mobile)
+    Puffin (mobile)
+    Safari (mobile)
+    Yandex Browser (mobile)
+    Chrome (mobile)
+
 ### 3.0.2
 add detection:
 
