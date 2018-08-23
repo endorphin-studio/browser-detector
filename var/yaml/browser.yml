@@ -1,4 +1,73 @@
 browser:
+    mobile:
+        Dolphin:
+            pattern: "(Dolfin|Dolphin)"
+            version: "(Dolfin|Dolphin)"
+            attributes:
+                device:
+                    isMobile: true
+                    isTouch: true
+        Opera Mini:
+            default: true
+            attributes:
+                device:
+                    isMobile: true
+                    isTouch: true
+        Opera Mobile:
+            pattern: "(Opera Mobi|OPiOS)"
+            version: "(Opera Mobi|OPiOS)"
+            attributes:
+                device:
+                    isMobile: true
+                    isTouch: true
+        Firefox:
+            pattern: "FxiOS"
+            version: "FxiOS"
+            attributes:
+                device:
+                    isMobile: true
+                    isTouch: true
+        Chrome:
+            pattern: "(CriOS|CrMo)"
+            version: "(CriOS|CrMo)"
+            attributes:
+                device:
+                    isMobile: true
+                    isTouch: true
+        Skyfire:
+            default: true
+        IE Mobile:
+            pattern: "IEMobile"
+            version: "IEMobile"
+            attributes:
+                device:
+                    isMobile: true
+                    isTouch: true
+        QQBrowser:
+            default: true
+        UC Browser:
+            pattern: "UCBrowser"
+            version: "UCBrowser"
+        Puffin:
+            default: true
+            attributes:
+                device:
+                    isMobile: true
+                    isTouch: true
+        Yandex Browser:
+            pattern: "YaBrowser/(.*) Mobile"
+            version: "YaBrowser"
+            attributes:
+                device:
+                    isMobile: true
+                    isTouch: true
+        Safari:
+            pattern: "Mobile/(.*) Safari"
+            version: "Version"
+            attributes:
+                device:
+                    isMobile: true
+                    isTouch: true
     desktop:
         Epiphany:
             default: true
@@ -72,72 +141,3 @@ browser:
             default: true
         Konqueror:
             default: true
-    mobile:
-        Dolphin:
-            pattern: "(Dolfin|Dolphin)"
-            version: "(Dolfin|Dolphin)"
-            attributes:
-                device:
-                    isMobile: true
-                    isTouch: true
-        Opera Mini:
-            default: true
-            attributes:
-                device:
-                    isMobile: true
-                    isTouch: true
-        Opera Mobile:
-            pattern: "(Opera Mobi|OPiOS)"
-            version: "(Opera Mobi|OPiOS)"
-            attributes:
-                device:
-                    isMobile: true
-                    isTouch: true
-        Firefox:
-            pattern: "FxiOS"
-            version: "FxiOS"
-            attributes:
-                device:
-                    isMobile: true
-                    isTouch: true
-        Chrome:
-            pattern: "(CriOS|CrMo)"
-            version: "(CriOS|CrMo)"
-            attributes:
-                device:
-                    isMobile: true
-                    isTouch: true
-        Skyfire:
-            default: true
-        IE Mobile:
-            pattern: "IEMobile"
-            version: "IEMobile"
-            attributes:
-                device:
-                    isMobile: true
-                    isTouch: true
-        QQBrowser:
-            default: true
-        UC Browser:
-            pattern: "UCBrowser"
-            version: "UCBrowser"
-        Puffin:
-            default: true
-            attributes:
-                device:
-                    isMobile: true
-                    isTouch: true
-        Yandex Browser:
-            pattern: "YaBrowser/(.*) Mobile"
-            version: "YaBrowser"
-            attributes:
-                device:
-                    isMobile: true
-                    isTouch: true
-        Safari:
-            pattern: "Mobile/(.*) Safari"
-            version: "Version"
-            attributes:
-                device:
-                    isMobile: true
-                    isTouch: true

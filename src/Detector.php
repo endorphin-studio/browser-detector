@@ -9,8 +9,10 @@
 
 namespace EndorphinStudio\Detector;
 
+use EndorphinStudio\Detector\Data\Result;
 use EndorphinStudio\Detector\Exception\StorageException;
 use EndorphinStudio\Detector\Storage\StorageInterface;
+use Twig\Parser;
 
 class Detector
 {
@@ -28,12 +30,27 @@ class Detector
     }
 
     /**
+     * @return Result
+     */
+    public function getResultObject(): Result
+    {
+        return $this->resultObject;
+    }
+
+    /**
+     * @var Result
+     */
+    private $resultObject;
+
+    /**
      * @param StorageInterface $dataProvider
      */
     public function setDataProvider(StorageInterface $dataProvider)
     {
         $this->dataProvider = $dataProvider;
     }
+
+    private $ua;
 
     /**
      * Detector constructor.
@@ -49,7 +66,25 @@ class Detector
         $this->setDataProvider($dataProvider);
     }
 
-    public function analyze(string $ua = 'ua') {
-        $ua = $ua === 'ua' ? $_SERVER['HTTP_USER_AGENT'] : $ua;
+    public function analyze(string $ua = 'ua')
+    {
+        $this->ua = $ua === 'ua' ? $_SERVER['HTTP_USER_AGENT'] : $ua;
+        $config = $this->getDataProvider()->getConfig();
+        $check = ['device', 'os', 'browser', 'robots'];
+        $this->resultObject = new Result();
+        foreach ($check as $type) {
+            $this->detect($config, $type);
+        }
+        var_dump($this->resultObject);
+    }
+
+    private function detect($config, $type)
+    {
+
+    }
+
+    private function getPatternList($list, $type)
+    {
+        return array_key_exists($type, $list) ? $list[$type] : [];
     }
 }
