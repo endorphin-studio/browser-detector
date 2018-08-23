@@ -1,0 +1,83 @@
+robots:
+    homepages:
+        Google Inc.: "http://google.com"
+        Yandex LLC.: "http://yandex.com/bots"
+        Microsoft Corp.: "http://www.bing.com/bingbot.htm"
+        WASALive: "http://blog.wasalive.com/wasalive-bots/"
+        007AC9.net: "http://crawler.007ac9.net/"
+        80legs.com: "http://www.80legs.com/webcrawler.html"
+        123metaspider.com: "http://www.123metaspider.com"
+        1470.net: "http://1470.net"
+        NetEase: "http://www.youdao.com/help/webmaster/spider/"
+        Baidu: "http://baidu.com"
+        Andrew Dolgov: "http://tt-rss.org"
+    types:
+        Search Engine:
+            attributes:
+                SearchEngine: true
+                Crawler: false
+                Reader: false
+            Google Inc.:
+                Google (News): "Googlebot-News"
+                Google (Images): "Goodlebot-Images"
+                Google (Videos): "Goodlebot-Videos"
+                Google (AdSense): "Goodlebot-AdSense"
+                Google (Smartphone): "Goodlebot-Smartphone"
+                Google (Mobile): "Goodlebot-Mobile"
+                Google (Search): "Goodlebot-Main"
+            Yandex LLC.:
+                Yandex (Mobile): "compatible\; (YandexBot|YandexMobileBot)"
+                Yandex (Accessibility): "YandexAccessibilityBot"
+                Yandex (Direct): "YandexDirectDyn"
+                Yandex (Screenshot): "YandexScreenshotBot"
+                Yandex (Images): "YandexImages"
+                Yandex (Video): "YandexVideo"
+                Yandex (Media): "YandexMedia"
+                Yandex (Blogs): "YandexBlogs"
+                Yandex (Pagechecker): "YandexPagechecker"
+                Yandex (ImageResizer): "YandexImageResizer"
+                Yandex (Ad): "YandexAdNet"
+                Yandex (Direct): "(YandexDirect|YaDirectFetcher)"
+                Yandex (Calendar): "YandexCalendar"
+                Yandex (Sitelinks): "YandexSitelinks"
+                Yandex (Favicons): "YandexFavicons"
+                Yandex (Metrika): "YandexMetrika"
+                Yandex (News): "(YandexNews|YandexNewslinks)"
+                Yandex (Catalog): "YandexCatalog"
+                Yandex (Antivirus): "YandexAntivirus"
+                Yandex (Market): "YandexMarket"
+                Yandex (Vertis): "YandexVertis"
+                Yandex (Mail): "YandexForDomain"
+                Yandex (Sprav): "YandexSpravBot"
+                Yandex: "YandexBot"
+            Microsoft Corp.:
+                Bing: "(bingbot|msnbot|adidxbot|BingPreview)"
+            NetEase:
+                Yodao: "YodaoBot"
+            Baidu:
+                Baidu: "(baidu|Baidu)"
+        RSS Reader:
+            attributes:
+                SearchEngine: false
+                Crawler: false
+                Reader: true
+        Bot/Crawler:
+            attributes:
+                SearchEngine: false
+                Crawler: true
+                Reader: false
+            WASALive:
+                WASALive Bot: "WASALive-Bot"
+            Microsoft Corp.:
+                .NET Framework CLR: "MS Web Services"
+            007AC9.net:
+                007ac9 Crawler: "007ac9 Crawler"
+            80legs.com:
+                80legs Crawler: "80legs.com"
+            123metaspider.com:
+                123metaspider Crawler: "123metaspider"
+            1470.net:
+                1470 Crawler: "1470.net"
+            not available:
+                Yisou Spider: "YisouSpider"
+                Yioop Bot: "YioopBot"
