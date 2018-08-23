@@ -1,6 +1,9 @@
 language: php
 php:
   - 7.0
+  - ds
 
-before_script: composer install
+before_script:
+  - echo "extension=ds.so"                    >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
+  - composer install
 script: phpunit
