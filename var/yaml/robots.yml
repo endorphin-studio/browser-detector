@@ -26,7 +26,7 @@ robots:
                 Google (Mobile): "Goodlebot-Mobile"
                 Google (Search): "Goodlebot-Main"
             Yandex LLC.:
-                Yandex (Mobile): "compatible\; (YandexBot|YandexMobileBot)"
+                Yandex (Mobile): "compatible\\; (YandexBot|YandexMobileBot)"
                 Yandex (Accessibility): "YandexAccessibilityBot"
                 Yandex (Direct): "YandexDirectDyn"
                 Yandex (Screenshot): "YandexScreenshotBot"
