@@ -3,6 +3,8 @@ php:
   - 7.0
   - ds
 
+install:
+  - pecl install ds
 before_script:
   - echo "extension=ds.so"                    >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
   - composer install
