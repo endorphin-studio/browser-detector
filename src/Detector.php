@@ -50,7 +50,20 @@ class Detector
         $this->dataProvider = $dataProvider;
     }
 
+    /**
+     * @return mixed
+     */
+    public function getUserAgent()
+    {
+        return $this->ua;
+    }
+
     private $ua;
+
+    /**
+     * @var array
+     */
+    private $detectors;
 
     /**
      * Detector constructor.
@@ -64,18 +77,31 @@ class Detector
         $dataProvider = new $dataProvider();
         $dataProvider->setDataDirectory($dataDirectory);
         $this->setDataProvider($dataProvider);
+        $this->detectors = [];
+        $this->resultObject = new Result();
+        $check = ['device', 'os', 'browser', 'robots'];
+        foreach ($check as $detectionnType) {
+            $className = sprintf('\\EndorphinStudio\\Detector\\Detection\\%s', ucfirst(sprintf('%sDetector', $detectionnType)));
+            if(class_exists($className)) {
+                $this->detectors[$detectionnType] = new $className();
+                $this->detectors[$detectionnType]->init($this);
+            }
+        }
     }
 
     public function analyze(string $ua = 'ua')
     {
         $this->ua = $ua === 'ua' ? $_SERVER['HTTP_USER_AGENT'] : $ua;
         $config = $this->getDataProvider()->getConfig();
-        $check = ['device', 'os', 'browser', 'robots'];
-        $this->resultObject = new Result();
-        foreach ($check as $type) {
-            $this->detect($config, $type);
+        foreach ($this->detectors as $detectionType => $detector) {
+            $detector->detect($ua);
         }
-        var_dump($this->resultObject);
+        echo 'test';
+//        $this->resultObject = new Result();
+//        foreach ($check as $type) {
+//            $this->detect($config, $type);
+//        }
+//        var_dump($this->resultObject);
     }
 
     private function detect($config, $type)
@@ -83,7 +109,7 @@ class Detector
 
     }
 
-    private function getPatternList($list, $type)
+    public function getPatternList($list, $type)
     {
         return array_key_exists($type, $list) ? $list[$type] : [];
     }

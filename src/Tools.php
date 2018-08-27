@@ -13,7 +13,7 @@ class Tools
 {
     public static function getVersion(string $phrase, string $ua): string
     {
-        $version = sprintf('\'/\'%s\'(\/| )[\w-._]{1,15}/\'', $phrase);
+        $version = static::getVersionPattern($phrase);
         $uaString = str_replace(' NT', '', $ua);
         if (preg_match($version, $uaString)) {
             preg_match($version, $uaString, $v);
@@ -26,6 +26,11 @@ class Tools
 
             return $version;
         }
+    }
+
+    public static function getVersionPattern(string $phrase): string
+    {
+        return sprintf('\'/\'%s\'(\/| )[\w-._]{1,15}/\'', $phrase);
     }
 
     public static function getWindowsVersion(string $version, array $config)
