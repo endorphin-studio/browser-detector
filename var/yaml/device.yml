@@ -2,15 +2,14 @@ device:
     mobile:
         Lumia:
             pattern: "{id} [0-9]{1,5}"
-            device:
+            attributes:
                 isMobile: true
                 isTouch: true
         iPhone:
             default: true
             attributes:
-                device:
-                    isMobile: true
-                    isTouch: true
+                isMobile: true
+                isTouch: true
         Dell:
             pattern: "({id}|DELL)"
         Samsung:
@@ -38,18 +37,16 @@ device:
         iPod:
             pattern: "({id}|itouch)"
             attributes:
-                device:
-                    isMobile: true
-                    isTouch: true
+                isMobile: true
+                isTouch: true
         Zune:
             pattern: "ZuneHD"
     tablet:
         iPad:
             default: true
             attributes:
-                device:
-                    isTablet: true
-                    isTouch: true
+                isTablet: true
+                isTouch: true
         SMART TV:
             pattern: "(SMART-TV)"
         Megafon:
@@ -65,15 +62,13 @@ device:
         Kindle Fire:
             default: true
             attributes:
-                device:
-                    isTablet: true
-                    isTouch: true
+                isTablet: true
+                isTouch: true
         Microsoft Surface:
             pattern: "Windows NT 6.2; ARM;"
             attributes:
-                device:
-                    isTablet: true
-                    isTouch: true
+                isTablet: true
+                isTouch: true
     default:
         name: "PC"
         type: "desktop"

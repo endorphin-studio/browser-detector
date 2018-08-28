@@ -3,9 +3,6 @@
 
 namespace EndorphinStudio\Detector\Detection;
 
-
-use EndorphinStudio\Detector\Data\AbstractData;
-use EndorphinStudio\Detector\Data\Os;
 use EndorphinStudio\Detector\Tools;
 
 class OsDetector extends AbstractDetection

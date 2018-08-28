@@ -5,11 +5,11 @@ namespace EndorphinStudio\Detector\Detection;
 
 use EndorphinStudio\Detector\Tools;
 
-class BrowserDetector extends AbstractDetection
+class DeviceDetector extends BrowserDetector
 {
     public function detect(string $ua)
     {
-        $this->config = $this->detector->getPatternList($this->detector->getDataProvider()->getConfig(), 'browser');
+        $this->config = $this->detector->getPatternList($this->detector->getDataProvider()->getConfig(), 'device');
         $this->initResultObject();
         $this->setupResultObject();
     }
@@ -17,7 +17,7 @@ class BrowserDetector extends AbstractDetection
 
     private function initResultObject()
     {
-        $result = $this->detector->getResultObject()->getBrowser();
+        $result = $this->detector->getResultObject()->getDevice();
 
         // init default value from data
         foreach ($this->config['default'] as $defaultKey => $defaultValue) {
@@ -27,7 +27,7 @@ class BrowserDetector extends AbstractDetection
 
     private function setupResultObject()
     {
-        $result = $this->detector->getResultObject()->getBrowser();
+        $result = $this->detector->getResultObject()->getDevice();
         $browserData = $this->detectByType();
         foreach ($browserData as $key => $value) {
             if ($key === 'originalInfo') {
@@ -36,19 +36,5 @@ class BrowserDetector extends AbstractDetection
             }
             Tools::runSetter($result, $key, $value);
         }
-    }
-
-    protected function detectByType(): array
-    {
-        foreach ($this->config as $type => $patternList) {
-            if ($type === 'default') {
-                continue;
-            }
-            $browser = $this->detectByPattern($patternList);
-            if ($browser) {
-                return array_merge($browser, ['type' => $type]);
-            }
-        }
-        return [];
     }
 }
