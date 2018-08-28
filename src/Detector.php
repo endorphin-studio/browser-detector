@@ -79,12 +79,12 @@ class Detector
         $this->setDataProvider($dataProvider);
         $this->detectors = [];
         $this->resultObject = new Result();
-        $check = ['device', 'os', 'browser', 'robots'];
-        foreach ($check as $detectionnType) {
-            $className = sprintf('\\EndorphinStudio\\Detector\\Detection\\%s', ucfirst(sprintf('%sDetector', $detectionnType)));
+        $check = ['os','device', 'browser', 'robots'];
+        foreach ($check as $detectionType) {
+            $className = sprintf('\\EndorphinStudio\\Detector\\Detection\\%s', ucfirst(sprintf('%sDetector', $detectionType)));
             if(class_exists($className)) {
-                $this->detectors[$detectionnType] = new $className();
-                $this->detectors[$detectionnType]->init($this);
+                $this->detectors[$detectionType] = new $className();
+                $this->detectors[$detectionType]->init($this);
             }
         }
     }

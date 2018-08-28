@@ -23,53 +23,64 @@ class OsDetector extends AbstractDetection
             }
             $result->$methodName($defaultValue);
         }
-        $this->detectByFamily();
+        $osData = $this->detectByFamily();
+        foreach ($osData as $key => $value) {
+            if($key !== 'originalInfo') {
+                echo sprintf('%s: %s%s',$key, $value, PHP_EOL);
+            }
+        }
     }
 
     private function detectByFamily(): array
     {
-        $result = [];
         foreach ($this->config as $family => $data) {
-            if($family === 'default') {
+            if ($family === 'default') {
                 continue;
             }
-            $this->detectByDeviceType($family);
+            $os = $this->detectByDeviceType($family);
+            if ($os) {
+                return array_merge($os, ['family' => $family]);
+            }
         }
-        return $result;
+        return [];
     }
 
     private function detectByDeviceType($family): array
     {
-        $result = [];
         foreach ($this->config[$family] as $deviceType => $patternList) {
-            $this->detectByPattern($patternList);
+            $os = $this->detectByPattern($patternList);
+            if ($os) {
+                return array_merge($os, ['type' => $deviceType]);
+            }
         }
-        return $result;
+        return [];
     }
 
     private function detectByPattern(array $deviceList)
     {
-        $result = null;
         foreach ($deviceList as $patternId => $patternData) {
             $useDefault = false;
             $pattern = '/%s/';
             $version = '%s';
-            if(array_key_exists('default', $patternData) && $patternData['default'] === true) {
+            if (array_key_exists('default', $patternData) && $patternData['default'] === true) {
                 $useDefault = true;
                 $pattern = sprintf($pattern, $patternId);
-                $version = Tools::getVersionPattern(sprintf($version, $patternId));
+                $version = sprintf($version, $patternId);
             }
 
-            if(!$useDefault) {
+            if (!$useDefault) {
                 $pattern = sprintf($pattern, $patternData['pattern']);
-                $version = Tools::getVersionPattern(sprintf($version, $patternData['version']));
+                if(array_key_exists('version',$patternData)) {
+                    $version = sprintf($version, $patternData['version']);
+                }
             }
 
-            if(preg_match($pattern, $this->detector->getUserAgent())) {
-                echo 'BINGO';
+            if (preg_match($pattern, $this->detector->getUserAgent())) {
+                $version = Tools::getVersion($version, $this->detector->getUserAgent());
+                return ['name' => $patternId, 'version' => $version, 'originalInfo' => $patternData];
             }
         }
-        return $result;
+        return null;
     }
 
 }

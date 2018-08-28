@@ -30,7 +30,7 @@ class Tools
 
     public static function getVersionPattern(string $phrase): string
     {
-        return sprintf('\'/\'%s\'(\/| )[\w-._]{1,15}/\'', $phrase);
+        return sprintf('/%s(\/| )[\w-._]{1,15}/', $phrase);
     }
 
     public static function getWindowsVersion(string $version, array $config)

@@ -20,7 +20,7 @@ os:
             Baidu Yi:
                 default: true
             Android:
-                pattern: "(; |()Android"
+                pattern: "(; |\\()Android"
                 version: "Android"
                 attributes:
                     device:
@@ -67,10 +67,11 @@ os:
                 pattern: "AppleTV"
         mobile:
             iOS:
-                pattern: "like MAC OS X"
-                version: "like MAC OS X"
-                device:
-                    isTouch: true
+                pattern: "(iPhone OS|iPad|iPod|like MAC OS X)"
+                version: "(iPhone OS|iPad|iPod|like MAC OS X)"
+                attributes:
+                    device:
+                        isTouch: true
         desktop:
             Mac OS X:
                 default: true
