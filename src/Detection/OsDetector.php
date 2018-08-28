@@ -40,16 +40,6 @@ class OsDetector extends AbstractDetection
         }
     }
 
-    private function setAttributes($info)
-    {
-        $result = $this->detector->getResultObject();
-        if (array_key_exists('attributes', $info)) {
-            foreach ($info['attributes'] as $attributeKey => $attributeValue) {
-                Tools::runSetter($result, $attributeKey, $attributeValue);
-            }
-        }
-    }
-
     private function detectByFamily(): array
     {
         foreach ($this->config as $family => $data) {
@@ -73,33 +63,6 @@ class OsDetector extends AbstractDetection
             }
         }
         return [];
-    }
-
-    private function detectByPattern(array $deviceList)
-    {
-        foreach ($deviceList as $patternId => $patternData) {
-            $useDefault = false;
-            $pattern = '/%s/';
-            $version = '%s';
-            if (array_key_exists('default', $patternData) && $patternData['default'] === true) {
-                $useDefault = true;
-                $pattern = sprintf($pattern, $patternId);
-                $version = sprintf($version, $patternId);
-            }
-
-            if (!$useDefault) {
-                $pattern = sprintf($pattern, $patternData['pattern']);
-                if (array_key_exists('version', $patternData)) {
-                    $version = sprintf($version, $patternData['version']);
-                }
-            }
-
-            if (preg_match($pattern, $this->detector->getUserAgent())) {
-                $version = Tools::getVersion($version, $this->detector->getUserAgent());
-                return ['name' => $patternId, 'version' => $version, 'originalInfo' => $patternData];
-            }
-        }
-        return null;
     }
 
 }
