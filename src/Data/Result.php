@@ -26,6 +26,82 @@ class Result
      */
     protected $isRobot = false;
 
+    /**
+     * @var boolean
+     */
+    protected $isTouch = false;
+    /**
+     * @var boolean
+     */
+    protected $isMobile = false;
+
+    /**
+     * @return bool
+     */
+    public function isRobot(): bool
+    {
+        return $this->isRobot;
+    }
+
+    /**
+     * @param bool $isRobot
+     */
+    public function setIsRobot(bool $isRobot)
+    {
+        $this->isRobot = $isRobot;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isTouch(): bool
+    {
+        return $this->isTouch;
+    }
+
+    /**
+     * @param bool $isTouch
+     */
+    public function setIsTouch(bool $isTouch)
+    {
+        $this->isTouch = $isTouch;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isMobile(): bool
+    {
+        return $this->isMobile;
+    }
+
+    /**
+     * @param bool $isMobile
+     */
+    public function setIsMobile(bool $isMobile)
+    {
+        $this->isMobile = $isMobile;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isTablet(): bool
+    {
+        return $this->isTablet;
+    }
+
+    /**
+     * @param bool $isTablet
+     */
+    public function setIsTablet(bool $isTablet)
+    {
+        $this->isTablet = $isTablet;
+    }
+
+    /** @var boolean */
+    protected $isTablet = false;
+
     public function __construct()
     {
         $this->os = new Os($this);

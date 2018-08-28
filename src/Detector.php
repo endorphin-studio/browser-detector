@@ -12,7 +12,6 @@ namespace EndorphinStudio\Detector;
 use EndorphinStudio\Detector\Data\Result;
 use EndorphinStudio\Detector\Exception\StorageException;
 use EndorphinStudio\Detector\Storage\StorageInterface;
-use Twig\Parser;
 
 class Detector
 {
@@ -92,21 +91,10 @@ class Detector
     public function analyze(string $ua = 'ua')
     {
         $this->ua = $ua === 'ua' ? $_SERVER['HTTP_USER_AGENT'] : $ua;
-        $config = $this->getDataProvider()->getConfig();
         foreach ($this->detectors as $detectionType => $detector) {
             $detector->detect($ua);
         }
-        echo 'test';
-//        $this->resultObject = new Result();
-//        foreach ($check as $type) {
-//            $this->detect($config, $type);
-//        }
-//        var_dump($this->resultObject);
-    }
-
-    private function detect($config, $type)
-    {
-
+        die();
     }
 
     public function getPatternList($list, $type)

@@ -13,6 +13,13 @@ use EndorphinStudio\Detector\Exception\StorageException;
 
 abstract class AbstractStorage implements StorageInterface
 {
+    /**
+     * @var array
+     */
+    protected $config;
+    /**
+     * @var string
+     */
     protected $dataDirectory;
 
     /**

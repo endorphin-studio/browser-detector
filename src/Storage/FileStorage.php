@@ -13,7 +13,7 @@ class FileStorage  extends AbstractStorage implements StorageInterface
      */
     public function getConfig(): array
     {
-        return [];
+        return $this->config;
     }
 
     protected function getFileNames(string $directory = 'default'): array

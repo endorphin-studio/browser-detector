@@ -37,4 +37,17 @@ class Tools
     {
         return array_key_exists($version, $config) ? $config[$version] : $version;
     }
+
+    public static function getMethodName(string $name, string $type = 'set')
+    {
+        return sprintf('%s%s', $type, ucfirst($name));
+    }
+
+    public static function runSetter(&$object, string $key, $value)
+    {
+        $methodName = static::getMethodName($key);
+        if (method_exists($object, $methodName)) {
+            $object->$methodName($value);
+        }
+    }
 }
