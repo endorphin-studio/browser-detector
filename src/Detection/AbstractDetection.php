@@ -21,7 +21,7 @@ abstract class AbstractDetection implements DetectionInterface
     public function init(Detector $detector)
     {
         $this->detector = $detector;
-        echo static::class.PHP_EOL;
+        echo static::class . PHP_EOL;
     }
 
     protected function initResultObject()
@@ -37,28 +37,21 @@ abstract class AbstractDetection implements DetectionInterface
     protected function detectByPattern(array $patternList)
     {
         foreach ($patternList as $patternId => $patternData) {
-            $useDefault = false;
-            $pattern = '/%s/';
-            $version = '%s';
-            if (array_key_exists('default', $patternData) && $patternData['default'] === true) {
-                $useDefault = true;
-                $pattern = sprintf($pattern, $patternId);
-                $version = sprintf($version, $patternId);
-            }
+            $pattern = $this->getPattern($patternId, $patternData);
 
-            if (!$useDefault) {
-                $pattern = sprintf($pattern, $patternData['pattern']);
-                if (array_key_exists('version', $patternData)) {
-                    $version = sprintf($version, $patternData['version']);
-                }
-            }
-
-            if (preg_match($pattern, $this->detector->getUserAgent())) {
-                $version = Tools::getVersion($version, $this->detector->getUserAgent());
-                return ['name' => $patternId, 'version' => $version, 'originalInfo' => $patternData];
+            if (preg_match($pattern['pattern'], $this->detector->getUserAgent())) {
+                return ['name' => $patternId, 'version' => Tools::getVersion($pattern['version'], $this->detector->getUserAgent()), 'originalInfo' => $patternData];
             }
         }
         return null;
+    }
+
+    private function getPattern(string $patternId, array $patternData): array
+    {
+        if (array_key_exists('default', $patternData) && $patternData['default'] === true) {
+            return ['pattern' => sprintf('/%s/', $patternId), 'version' => $patternId];
+        }
+        return ['pattern' => sprintf('/%s/', $patternData['pattern']), 'version' => array_key_exists('version', $patternData) ? $patternData['version'] : $patternId];
     }
 
     protected function setAttributes($info)
