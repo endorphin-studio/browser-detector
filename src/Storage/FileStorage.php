@@ -5,7 +5,7 @@ namespace EndorphinStudio\Detector\Storage;
 
 use \Ds\Set;
 
-class FileStorage  extends AbstractStorage implements StorageInterface
+class FileStorage extends AbstractStorage implements StorageInterface
 {
     /**
      * Base method
@@ -18,22 +18,30 @@ class FileStorage  extends AbstractStorage implements StorageInterface
 
     protected function getFileNames(string $directory = 'default'): array
     {
-        if($directory === 'default') {
-            $directoryIterator = new \DirectoryIterator($this->dataDirectory);
-        } else {
-            $directoryIterator = new \DirectoryIterator($directory);
-        }
+        $directoryIterator = $this->getDirectoryIterator($directory);
         $files = new Set();
         foreach ($directoryIterator as $file) {
-            if($file->isDir() && !$file->isDot()) {
-                $dirFiles = $this->getFileNames($file->getRealPath());
-                $files->add($dirFiles);
-            }
-
-            if($file->isFile() && !$file->isLink() && $file->isReadable()) {
-                $files->add($file->getRealPath());
-            }
+            $this->resolveFile($file, $files);
         }
         return $files->toArray();
+    }
+
+    private function resolveFile(\DirectoryIterator $file, Set &$files)
+    {
+        if ($file->isDir() && !$file->isDot()) {
+            $files->add($this->getFileNames($file->getRealPath()));
+        }
+
+        if ($file->isFile() && !$file->isLink() && $file->isReadable()) {
+            $files->add($file->getRealPath());
+        }
+    }
+
+    private function getDirectoryIterator(string $directory): \DirectoryIterator
+    {
+        if ($directory === 'default') {
+            return new \DirectoryIterator($this->dataDirectory);
+        }
+        return new \DirectoryIterator($directory);
     }
 }
