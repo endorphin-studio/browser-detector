@@ -10,45 +10,21 @@ class BrowserDetector extends AbstractDetection
     public function detect(string $ua)
     {
         $this->config = $this->detector->getPatternList($this->detector->getDataProvider()->getConfig(), 'browser');
+        $this->resultObject = $this->detector->getResultObject()->getBrowser();
         $this->initResultObject();
         $this->setupResultObject();
     }
 
 
-    private function initResultObject()
+    protected function setupResultObject()
     {
-        $result = $this->detector->getResultObject()->getBrowser();
-
-        // init default value from data
-        foreach ($this->config['default'] as $defaultKey => $defaultValue) {
-            Tools::runSetter($result, $defaultKey, $defaultValue);
-        }
-    }
-
-    private function setupResultObject()
-    {
-        $result = $this->detector->getResultObject()->getBrowser();
         $browserData = $this->detectByType();
         foreach ($browserData as $key => $value) {
             if ($key === 'originalInfo') {
                 $this->setAttributes($value);
                 continue;
             }
-            Tools::runSetter($result, $key, $value);
+            Tools::runSetter($this->resultObject, $key, $value);
         }
-    }
-
-    protected function detectByType(): array
-    {
-        foreach ($this->config as $type => $patternList) {
-            if ($type === 'default') {
-                continue;
-            }
-            $browser = $this->detectByPattern($patternList);
-            if ($browser) {
-                return array_merge($browser, ['type' => $type]);
-            }
-        }
-        return [];
     }
 }

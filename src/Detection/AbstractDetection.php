@@ -4,6 +4,7 @@
 namespace EndorphinStudio\Detector\Detection;
 
 
+use EndorphinStudio\Detector\Data\AbstractData;
 use EndorphinStudio\Detector\Detector;
 use EndorphinStudio\Detector\Tools;
 
@@ -14,10 +15,21 @@ abstract class AbstractDetection implements DetectionInterface
     /** @var Detector */
     protected $detector;
 
+    /** @var AbstractData */
+    protected $resultObject;
+
     public function init(Detector $detector)
     {
         $this->detector = $detector;
         echo static::class.PHP_EOL;
+    }
+
+    protected function initResultObject()
+    {
+        // init default value from data
+        foreach ($this->config['default'] as $defaultKey => $defaultValue) {
+            Tools::runSetter($this->resultObject, $defaultKey, $defaultValue);
+        }
     }
 
     public abstract function detect(string $ua);
@@ -57,5 +69,19 @@ abstract class AbstractDetection implements DetectionInterface
                 Tools::runSetter($result, $attributeKey, $attributeValue);
             }
         }
+    }
+
+    protected function detectByType(): array
+    {
+        foreach ($this->config as $type => $patternList) {
+            if ($type === 'default') {
+                continue;
+            }
+            $browser = $this->detectByPattern($patternList);
+            if ($browser) {
+                return array_merge($browser, ['type' => $type]);
+            }
+        }
+        return [];
     }
 }

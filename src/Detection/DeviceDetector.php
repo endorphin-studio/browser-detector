@@ -5,36 +5,26 @@ namespace EndorphinStudio\Detector\Detection;
 
 use EndorphinStudio\Detector\Tools;
 
-class DeviceDetector extends BrowserDetector
+class DeviceDetector extends AbstractDetection
 {
     public function detect(string $ua)
     {
         $this->config = $this->detector->getPatternList($this->detector->getDataProvider()->getConfig(), 'device');
+        $this->resultObject = $this->detector->getResultObject()->getDevice();
         $this->initResultObject();
         $this->setupResultObject();
     }
 
 
-    private function initResultObject()
+    protected function setupResultObject()
     {
-        $result = $this->detector->getResultObject()->getDevice();
-
-        // init default value from data
-        foreach ($this->config['default'] as $defaultKey => $defaultValue) {
-            Tools::runSetter($result, $defaultKey, $defaultValue);
-        }
-    }
-
-    private function setupResultObject()
-    {
-        $result = $this->detector->getResultObject()->getDevice();
         $browserData = $this->detectByType();
         foreach ($browserData as $key => $value) {
             if ($key === 'originalInfo') {
                 $this->setAttributes($value);
                 continue;
             }
-            Tools::runSetter($result, $key, $value);
+            Tools::runSetter($this->resultObject, $key, $value);
         }
     }
 }
