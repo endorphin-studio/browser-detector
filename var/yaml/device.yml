@@ -1,4 +1,35 @@
 device:
+    tv:
+        Apple TV:
+            pattern: "AppleTV"
+        SMART TV:
+            pattern: "SMART-TV"
+    tablet:
+        iPad:
+            default: true
+            attributes:
+                isTablet: true
+                isTouch: true
+        MegaFon:
+            default: true
+        NOOK:
+            pattern: "(BNTV)"
+        Toshiba:
+            pattern: "AT[0-9]{1,3}"
+        Cisco:
+            pattern: "(CIUS|cius)"
+        Asus:
+            pattern: "(Asus|ASUS)"
+        Kindle Fire:
+            default: true
+            attributes:
+                isTablet: true
+                isTouch: true
+        Microsoft Surface:
+            pattern: "Windows NT 6.2; ARM;"
+            attributes:
+                isTablet: true
+                isTouch: true
     mobile:
         Lumia:
             pattern: "Lumia [0-9]{1,5}"
@@ -30,9 +61,6 @@ device:
             pattern: "(PDA; SL|sharp pda browser)"
         Android:
             default: true
-    tv:
-        Apple TV:
-            pattern: "AppleTV"
     player:
         iPod:
             pattern: "(iPod|itouch)"
@@ -41,34 +69,6 @@ device:
                 isTouch: true
         Zune:
             pattern: "ZuneHD"
-    tablet:
-        iPad:
-            default: true
-            attributes:
-                isTablet: true
-                isTouch: true
-        SMART TV:
-            pattern: "(SMART-TV)"
-        Megafon:
-            default: true
-        NOOK:
-            pattern: "(BNTV)"
-        Toshiba:
-            pattern: "AT[0-9]{1,3}"
-        Cisco:
-            pattern: "(CIUS|cius)"
-        Asus:
-            pattern: "(Asus|ASUS)"
-        Kindle Fire:
-            default: true
-            attributes:
-                isTablet: true
-                isTouch: true
-        Microsoft Surface:
-            pattern: "Windows NT 6.2; ARM;"
-            attributes:
-                isTablet: true
-                isTouch: true
     default:
         name: "PC"
         type: "desktop"

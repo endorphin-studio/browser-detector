@@ -1,0 +1,5 @@
+checkList:
+    name: Apple TV
+    type: tv
+uaList:
+    - "AppleTV/1.1"

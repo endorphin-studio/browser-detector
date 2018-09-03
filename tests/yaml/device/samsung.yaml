@@ -1,0 +1,7 @@
+checkList:
+    name: Samsung
+    type: mobile
+uaList:
+    - "SAMSUNG-SGH-ZV50"
+    - "SAMSUNG-SGH-ZV40"
+    - "SAMSUNG-SGH-ZV30"

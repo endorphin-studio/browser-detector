@@ -1,0 +1,5 @@
+checkList:
+    name: Sony Ericsson
+    type: mobile
+uaList:
+    - "SonyEricssonW200c/R4GB Browser/NetFront/3.3 Profile/MIDP-2.0 Configuration/CLDC- 1.1"
