@@ -1,16 +1,4 @@
 os:
-    win:
-        mobile:
-            Windows Mobile:
-                pattern: "(Windows Phone OS|Windows Phone|Windows+Phone|Windows+Phone+OS)"
-                version: "(Windows Phone OS|Windows Phone|Windows+Phone|Windows+Phone+OS)"
-                attributes:
-                    isMobile: true
-                    isTouch: true
-        desktop:
-            Windows:
-                pattern: "(Windows|Win|WP)"
-                version: "(Windows|Win|WP)"
     unix:
         mobile:
             Aliyun OS:
@@ -35,6 +23,11 @@ os:
                 version: "(BlackBerry)"
             Qtopia:
                 default: true
+        tv:
+            Android:
+                pattern: "(GoogleTV|SmartTv|PhilipsTV|OMI)"
+            tvOS:
+                pattern: "AppleTV"
         desktop:
             AROS:
                 pattern: "(Paros|Aros)"
@@ -56,9 +49,6 @@ os:
                 version: "(Linux|X11)"
             BeOS:
                 default: true
-        tv:
-            Android:
-                pattern: "(GoogleTV|SmartTv|PhilipsTV|OMI)"
     mac:
         tv:
             Apple:
@@ -72,6 +62,18 @@ os:
         desktop:
             Mac OS X:
                 default: true
+    win:
+        mobile:
+            Windows Mobile:
+                pattern: "(Windows Phone OS|Windows Phone|Windows+Phone|Windows+Phone+OS)"
+                version: "(Windows Phone OS|Windows Phone|Windows+Phone|Windows+Phone+OS)"
+                attributes:
+                    isMobile: true
+                    isTouch: true
+        desktop:
+            Windows:
+                pattern: "(Windows|Win|WP)"
+                version: "(Windows|Win|WP)"
     default:
         name: "not available"
         type: "not available"

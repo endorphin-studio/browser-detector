@@ -1,0 +1,4 @@
+checkList:
+    name: AIX
+uaList:
+    - "Mozilla/4.04j2 [en] (X11; I; AIX 4.2)"

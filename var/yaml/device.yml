@@ -1,7 +1,7 @@
 device:
     mobile:
         Lumia:
-            pattern: "{id} [0-9]{1,5}"
+            pattern: "Lumia [0-9]{1,5}"
             attributes:
                 isMobile: true
                 isTouch: true
@@ -11,9 +11,9 @@ device:
                 isMobile: true
                 isTouch: true
         Dell:
-            pattern: "({id}|DELL)"
+            pattern: "(Dell|DELL)"
         Samsung:
-            pattern: "(SGH|{id}|SAMSUNG)"
+            pattern: "(SGH|Samsung|SAMSUNG)"
         HTC:
             pattern: "(Evo|PG86100|EVO|Sprint |Mazaa|Mozart|MWP6885|T7576|HTC-7 Pro|USCCHTC-PC93100|T7575|HTC|Trophy|T8686)"
         Nexus:
@@ -35,7 +35,7 @@ device:
             pattern: "AppleTV"
     player:
         iPod:
-            pattern: "({id}|itouch)"
+            pattern: "(iPod|itouch)"
             attributes:
                 isMobile: true
                 isTouch: true
@@ -58,7 +58,7 @@ device:
         Cisco:
             pattern: "(CIUS|cius)"
         Asus:
-            pattern: "({id}|ASUS)"
+            pattern: "(Asus|ASUS)"
         Kindle Fire:
             default: true
             attributes:

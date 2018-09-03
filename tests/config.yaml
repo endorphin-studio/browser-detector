@@ -1,3 +1,5 @@
 configDir: "%s/yaml/"
 testObjects:
     browser: "%s/browser/"
+    os: "%s/os/"
+    device: "%s/device/"

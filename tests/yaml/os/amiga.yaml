@@ -1,0 +1,5 @@
+checkList:
+    name: Amiga
+uaList:
+    - "Mozilla/5.0 (Macintosh; PowerPC AmigaOS 4.1; Odyssey Web Browser; rv:1.16) AppleWebKit/535.14 (KHTML, like Gecko) OWB/1.16 Safari/535.14"
+    - "IBrowse/2.4 (AmigaOS V53; PPC; 68K build)"

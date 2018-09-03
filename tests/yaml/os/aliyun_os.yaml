@@ -1,0 +1,4 @@
+checkList:
+    name: Aliyun OS
+uaList:
+    - "Mozilla/5.0 (Linux; U; AliyunOS 2.0; Android 4.0 Compatible; xx; R819T Build/AliyunOs-2012) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30"
