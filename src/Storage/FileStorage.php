@@ -1,9 +1,8 @@
 <?php
 
-
 namespace EndorphinStudio\Detector\Storage;
 
-use \Ds\Set;
+use EndorphinStudio\Detector\Tools;
 
 class FileStorage extends AbstractStorage implements StorageInterface
 {
@@ -19,21 +18,21 @@ class FileStorage extends AbstractStorage implements StorageInterface
     protected function getFileNames(string $directory = 'default'): array
     {
         $directoryIterator = $this->getDirectoryIterator($directory);
-        $files = new Set();
+        $files = [];
         foreach ($directoryIterator as $file) {
             $this->resolveFile($file, $files);
         }
-        return $files->toArray();
+        return $files;
     }
 
-    private function resolveFile(\DirectoryIterator $file, Set &$files)
+    private function resolveFile(\DirectoryIterator $file, array &$files)
     {
         if ($file->isDir() && !$file->isDot()) {
-            $files->add($this->getFileNames($file->getRealPath()));
+            $files = Tools::resolvePath($files, $this->getFileNames());
         }
 
         if ($file->isFile() && !$file->isLink() && $file->isReadable()) {
-            $files->add($file->getRealPath());
+            $files = Tools::resolvePath($files, $file->getRealPath());
         }
     }
 

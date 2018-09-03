@@ -50,4 +50,14 @@ class Tools
             $object->$methodName($value);
         }
     }
+
+    public static function resolvePath(array &$files, $path)
+    {
+        if(is_array($path)) {
+            $files = \array_merge($files, $path);
+        } else {
+            $files[] = $path;
+        }
+        return \array_unique($files);
+    }
 }

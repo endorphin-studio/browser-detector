@@ -12,6 +12,7 @@ namespace EndorphinStudio\Detector;
 use EndorphinStudio\Detector\Data\Result;
 use EndorphinStudio\Detector\Exception\StorageException;
 use EndorphinStudio\Detector\Storage\StorageInterface;
+use Symfony\Component\HttpFoundation\Request;
 
 class Detector
 {
@@ -90,7 +91,8 @@ class Detector
 
     public function analyze(string $ua = 'ua')
     {
-        $this->ua = $ua === 'ua' ? $_SERVER['HTTP_USER_AGENT'] : $ua;
+        $request = Request::createFromGlobals();
+        $this->ua = $ua === 'ua' ? $request->server->get('HTTP_USER_AGENT') : $ua;
         foreach ($this->detectors as $detectionType => $detector) {
             $detector->detect($ua);
         }

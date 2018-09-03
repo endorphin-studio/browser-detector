@@ -13,8 +13,8 @@
   ],
   "require": {
     "php": ">=7.0",
-    "ext-ds": "*",
-    "symfony/yaml": "v3.4.14"
+    "symfony/yaml": "v3.4.14",
+    "symfony/http-foundation": "v3.4.14"
   },
   "require-dev":
   {
