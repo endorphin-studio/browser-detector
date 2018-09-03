@@ -1,0 +1,3 @@
+configDir: "%s/yaml/"
+testObjects:
+    browser: "%s/browser/"

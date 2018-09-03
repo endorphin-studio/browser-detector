@@ -48,13 +48,13 @@ browser:
                 isMobile: true
                 isTouch: true
         Yandex Browser:
-            pattern: "YaBrowser/(.*) Mobile"
+            pattern: "YaBrowser\\/(.*) Mobile"
             version: "YaBrowser"
             attributes:
                 isMobile: true
                 isTouch: true
         Safari:
-            pattern: "Mobile/(.*) Safari"
+            pattern: "Mobile\\/(.*) Safari"
             version: "Version"
             attributes:
                 isMobile: true
@@ -128,6 +128,8 @@ browser:
         Yandex Browser:
             pattern: "YaBrowser"
             version: "YaBrowser"
+        Firefox:
+            default: true
         Safari:
             default: true
         Konqueror:

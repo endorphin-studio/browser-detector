@@ -26,6 +26,7 @@ class Tools
 
             return $version;
         }
+        return "not available";
     }
 
     public static function getVersionPattern(string $phrase): string
@@ -51,9 +52,18 @@ class Tools
         }
     }
 
+    public static function runGetter(&$object, string $key)
+    {
+        $methodName = static::getMethodName($key, 'get');
+        if (method_exists($object, $methodName)) {
+            return $object->$methodName();
+        }
+        return null;
+    }
+
     public static function resolvePath(array &$files, $path)
     {
-        if(is_array($path)) {
+        if (is_array($path)) {
             $files = \array_merge($files, $path);
         } else {
             $files[] = $path;

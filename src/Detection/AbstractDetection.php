@@ -21,7 +21,6 @@ abstract class AbstractDetection implements DetectionInterface
     public function init(Detector $detector)
     {
         $this->detector = $detector;
-        echo static::class . PHP_EOL;
     }
 
     protected function initResultObject()

@@ -93,10 +93,11 @@ class Detector
     {
         $request = Request::createFromGlobals();
         $this->ua = $ua === 'ua' ? $request->server->get('HTTP_USER_AGENT') : $ua;
+        $this->resultObject = new Result();
         foreach ($this->detectors as $detectionType => $detector) {
             $detector->detect($ua);
         }
-        die();
+        return $this->resultObject;
     }
 
     public function getPatternList($list, $type)

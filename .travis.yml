@@ -2,8 +2,6 @@ language: php
 php:
   - 7.0
 
-install:
-  - pecl install ds
 before_script:
   - composer install
 script: phpunit
