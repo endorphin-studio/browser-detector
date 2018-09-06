@@ -4,7 +4,7 @@
  * @license GPL
  * @copyright Serhii Nekhaienko &copy 2018
  * @version 4.0.0
- * @project browser-detector
+ * @project endorphin-studio/browser-detector
  */
 
 namespace EndorphinStudio\Detector;
@@ -90,7 +90,7 @@ class Detector
         }
     }
 
-    public function analyze(string $ua = 'ua')
+    public function analyze(string $ua = 'ua'): Result
     {
         $request = Request::createFromGlobals();
         $this->ua = $ua === 'ua' ? $request->server->get('HTTP_USER_AGENT') : $ua;
