@@ -1,0 +1,5 @@
+checkList:
+    name: Windows
+    version: 95
+uaList:
+    - "Opera/8.54 (Windows 95; U; xx)"

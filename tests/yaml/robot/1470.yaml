@@ -1,0 +1,6 @@
+checkList:
+    type: Bot/Crawler
+    owner: 1470.net
+    name: 1470 Crawler
+uaList:
+    - "1470.net crawler"

@@ -1,8 +1,6 @@
 <?php
 
-
 namespace EndorphinStudio\Detector\Detection;
-
 
 use EndorphinStudio\Detector\Data\AbstractData;
 use EndorphinStudio\Detector\Detector;
@@ -10,6 +8,11 @@ use EndorphinStudio\Detector\Tools;
 
 abstract class AbstractDetection implements DetectionInterface
 {
+    /**
+     * @var string Key in config (os, device, etc.)
+     */
+    protected $configKey = 'none';
+
     /** @var array */
     protected $config;
     /** @var Detector */
@@ -25,13 +28,27 @@ abstract class AbstractDetection implements DetectionInterface
 
     protected function initResultObject()
     {
+        if(!array_key_exists('default', $this->config)) {
+            return null;
+        }
         // init default value from data
         foreach ($this->config['default'] as $defaultKey => $defaultValue) {
             Tools::runSetter($this->resultObject, $defaultKey, $defaultValue);
         }
     }
 
-    public abstract function detect(string $ua);
+    public function detect(string $ua)
+    {
+        if ($this->configKey !== 'none') {
+            $this->config = $this->detector->getPatternList($this->detector->getDataProvider()->getConfig(), $this->configKey);
+            $resultObject = $this->detector->getResultObject();
+            $this->resultObject = Tools::runGetter($resultObject, $this->configKey);
+        }
+        $this->initResultObject();
+        $this->setupResultObject();
+    }
+
+    protected abstract function setupResultObject();
 
     protected function detectByPattern(array $patternList)
     {
@@ -63,15 +80,30 @@ abstract class AbstractDetection implements DetectionInterface
         }
     }
 
-    protected function detectByType(): array
+    protected function detectByType($key = 'none'): array
     {
-        foreach ($this->config as $type => $patternList) {
+        $container = $key === 'none' ? $this->config : $this->config[$key];
+        foreach ($container as $type => $patternList) {
             if ($type === 'default') {
                 continue;
             }
             $browser = $this->detectByPattern($patternList);
             if ($browser) {
                 return array_merge($browser, ['type' => $type]);
+            }
+        }
+        return [];
+    }
+
+    protected function detectByKey($keyName = 'family'): array
+    {
+        foreach ($this->config as $key => $data) {
+            if ($key === 'default') {
+                continue;
+            }
+            $detectedData = $this->detectByType($key);
+            if ($detectedData) {
+                return array_merge($detectedData, [$keyName => $key]);
             }
         }
         return [];

@@ -11,6 +11,16 @@ namespace EndorphinStudio\Detector;
 
 class Tools
 {
+    private static $windowsConfig;
+
+    /**
+     * @param mixed $windowsConfig
+     */
+    public static function setWindowsConfig($windowsConfig)
+    {
+        self::$windowsConfig = $windowsConfig;
+    }
+
     public static function getVersion(string $phrase, string $ua): string
     {
         $version = static::getVersionPattern($phrase);
@@ -24,6 +34,9 @@ class Tools
             $version = str_replace('/', '', $version);
             $version = str_replace('_', '.', $version);
 
+            if(preg_match('/ Windows /', $uaString)) {
+                $version = static::getWindowsVersion($version);
+            }
             return $version;
         }
         return "not available";
@@ -34,9 +47,10 @@ class Tools
         return sprintf('/%s(\/| )[\w-._]{1,15}/', $phrase);
     }
 
-    public static function getWindowsVersion(string $version, array $config)
+    public static function getWindowsVersion(string $version)
     {
-        return array_key_exists($version, $config) ? $config[$version] : $version;
+        $config = static::$windowsConfig;
+        return \array_key_exists($version, $config) ? $config[$version] : $version;
     }
 
     public static function getMethodName(string $name, string $type = 'set')

@@ -3,3 +3,4 @@ testObjects:
     browser: "%s/browser/"
     os: "%s/os/"
     device: "%s/device/"
+    robot: "%s/robot/"

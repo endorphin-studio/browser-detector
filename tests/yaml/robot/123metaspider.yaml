@@ -1,0 +1,6 @@
+checkList:
+    type: Bot/Crawler
+    owner: 123metaspider.com
+    name: 123metaspider Crawler
+uaList:
+    - "123metaspider-Bot (Version: 1.04, powered by www.123metaspider.com)"

@@ -1,0 +1,6 @@
+checkList:
+    type: Bot/Crawler
+    owner: Microsoft Corp.
+    name: .NET Framework CLR
+uaList:
+    - "MS Web Services Client Protocol 1.0.3705.0"

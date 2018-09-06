@@ -1,0 +1,6 @@
+checkList:
+    type: Search Engine
+    name: Yodao
+uaList:
+    - "Mozilla/5.0 (compatible;YodaoBot/1.0;http://www.youdao.com/help/webmaster/spider/;)"
+    - "Mozilla/5.0 (compatible;YodaoBot-Image/1.0;http://www.youdao.com/help/webmaster/spider/;)"

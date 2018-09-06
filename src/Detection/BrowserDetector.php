@@ -7,14 +7,7 @@ use EndorphinStudio\Detector\Tools;
 
 class BrowserDetector extends AbstractDetection
 {
-    public function detect(string $ua)
-    {
-        $this->config = $this->detector->getPatternList($this->detector->getDataProvider()->getConfig(), 'browser');
-        $this->resultObject = $this->detector->getResultObject()->getBrowser();
-        $this->initResultObject();
-        $this->setupResultObject();
-    }
-
+    protected $configKey = 'browser';
 
     protected function setupResultObject()
     {

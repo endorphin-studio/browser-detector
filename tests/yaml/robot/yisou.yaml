@@ -1,0 +1,5 @@
+checkList:
+    type: Bot/Crawler
+    name: Yisou Spider
+uaList:
+    - "YisouSpider"

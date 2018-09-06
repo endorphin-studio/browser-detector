@@ -1,0 +1,6 @@
+checkList:
+    type: Bot/Crawler
+    owner: 007AC9.net
+    name: 007ac9 Crawler
+uaList:
+    - "Mozilla/5.0 (compatible; 007ac9 Crawler; http://crawler.007ac9.net/)"

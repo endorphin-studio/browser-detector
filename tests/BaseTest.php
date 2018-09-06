@@ -40,9 +40,9 @@ class BaseTest extends TestCase
                     $results[] = Tools::runGetter($result, static::$type);
                 }
                 foreach ($case['checkList'] as $field => $expected) {
-                    foreach ($results as $result) {
+                    foreach ($results as $resultIndex => $result) {
                         $real = Tools::runGetter($result, $field);
-                        $this->assertEquals($expected, $real);
+                        $this->assertEquals($expected, $real, print_r(['result' => $resultIndex, 'uaList' => $case['uaList'] ],1));
                     }
                 }
             }

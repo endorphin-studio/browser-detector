@@ -1,0 +1,5 @@
+checkList:
+    name: Windows
+    version: 10
+uaList:
+    - "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:25.7) Gecko/20151012 PaleMoon/25.7.3"

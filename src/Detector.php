@@ -79,7 +79,8 @@ class Detector
         $this->setDataProvider($dataProvider);
         $this->detectors = [];
         $this->resultObject = new Result();
-        $check = ['os','device', 'browser', 'robots'];
+        $check = ['os','device', 'browser', 'robot'];
+        Tools::setWindowsConfig($dataProvider->getConfig()['windows']);
         foreach ($check as $detectionType) {
             $className = sprintf('\\EndorphinStudio\\Detector\\Detection\\%s', ucfirst(sprintf('%sDetector', $detectionType)));
             if(class_exists($className)) {

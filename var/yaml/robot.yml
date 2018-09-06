@@ -1,4 +1,4 @@
-robots:
+robot:
     homepages:
         Google Inc.: "http://google.com"
         Yandex LLC.: "http://yandex.com/bots"
@@ -11,12 +11,9 @@ robots:
         NetEase: "http://www.youdao.com/help/webmaster/spider/"
         Baidu: "http://baidu.com"
         Andrew Dolgov: "http://tt-rss.org"
+        not available: "not available"
     types:
         Search Engine:
-            attributes:
-                SearchEngine: true
-                Crawler: false
-                Reader: false
             Google Inc.:
                 Google (News): "Googlebot-News"
                 Google (Images): "Goodlebot-Images"
@@ -25,10 +22,12 @@ robots:
                 Google (Smartphone): "Goodlebot-Smartphone"
                 Google (Mobile): "Goodlebot-Mobile"
                 Google (Search): "Goodlebot-Main"
+                Google (Mediapartners): "Mediapartners-Google"
+                Google Bot: "Googlebot"
             Yandex LLC.:
                 Yandex (Mobile): "compatible\\; (YandexBot|YandexMobileBot)"
                 Yandex (Accessibility): "YandexAccessibilityBot"
-                Yandex (Direct): "YandexDirectDyn"
+                Yandex (Direct): "(YandexDirectDyn|YandexDirect|YaDirectFetcher)"
                 Yandex (Screenshot): "YandexScreenshotBot"
                 Yandex (Images): "YandexImages"
                 Yandex (Video): "YandexVideo"
@@ -49,6 +48,7 @@ robots:
                 Yandex (Vertis): "YandexVertis"
                 Yandex (Mail): "YandexForDomain"
                 Yandex (Sprav): "YandexSpravBot"
+                Yandex (Webmaster): "YandexWebmaster"
                 Yandex: "YandexBot"
             Microsoft Corp.:
                 Bing: "(bingbot|msnbot|adidxbot|BingPreview)"
@@ -57,15 +57,9 @@ robots:
             Baidu:
                 Baidu: "(baidu|Baidu)"
         RSS Reader:
-            attributes:
-                SearchEngine: false
-                Crawler: false
-                Reader: true
+            Andrew Dolgov:
+                Tiny RSS: "Tiny RSS"
         Bot/Crawler:
-            attributes:
-                SearchEngine: false
-                Crawler: true
-                Reader: false
             WASALive:
                 WASALive Bot: "WASALive-Bot"
             Microsoft Corp.:
