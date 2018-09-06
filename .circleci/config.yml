@@ -1,7 +1,14 @@
 version: 2
-machine:
-  php:
-    version: 7.0.4
-dependencies:
-  pre:
-    - rm /opt/circleci/php/$(phpenv global)/etc/conf.d/xdebug.ini
+jobs:
+    test:
+        machine:
+          php:
+            version: 7.0.4
+        dependencies:
+          pre:
+            - rm /opt/circleci/php/$(phpenv global)/etc/conf.d/xdebug.ini
+workflows:
+  version: 2
+  test:
+    jobs:
+      - test
