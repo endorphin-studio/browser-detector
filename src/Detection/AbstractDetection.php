@@ -95,7 +95,7 @@ abstract class AbstractDetection implements DetectionInterface
                 continue;
             }
             $browser = $this->detectByPattern($patternList);
-            if ($browser) {
+            if (!empty($browser)) {
                 return array_merge($browser, ['type' => $type]);
             }
         }
@@ -109,7 +109,7 @@ abstract class AbstractDetection implements DetectionInterface
                 continue;
             }
             $detectedData = $this->detectByType($key);
-            if ($detectedData) {
+            if (!empty($detectedData)) {
                 return array_merge($detectedData, [$keyName => $key]);
             }
         }

@@ -26,7 +26,7 @@ class YamlStorage extends FileStorage implements StorageInterface
      */
     public function getConfig(): array
     {
-        if (!$this->config || empty($this->config)) {
+        if (empty($this->config)) {
             $yamlParser = new Parser();
             $files = $this->getFileNames();
             $config = [];
