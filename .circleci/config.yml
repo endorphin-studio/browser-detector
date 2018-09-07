@@ -7,7 +7,7 @@ jobs:
            - checkout
            - run: sudo composer self-update
            - run: composer install
-           - run: ./vendor/bin/phpunit
+           - run: ./vendor/bin/phpunit -c ./phpunit.xml.dist
 workflows:
   version: 2
   test:
