@@ -7,6 +7,10 @@ jobs:
         dependencies:
           pre:
             - rm /opt/circleci/php/$(phpenv global)/etc/conf.d/xdebug.ini
+        steps:
+           - checkout
+           - run: composer install
+           - run: ./vendor/bin/phpunit
 workflows:
   version: 2
   test:
