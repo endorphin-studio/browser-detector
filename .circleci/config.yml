@@ -9,7 +9,9 @@ jobs:
             - rm /opt/circleci/php/$(phpenv global)/etc/conf.d/xdebug.ini
         steps:
            - checkout
-           - run: composer install
+           - run: sudo apt-get install wget -y
+           - run: wget https://getcomposer.org/composer.phar
+           - run: php composer.phar install
            - run: ./vendor/bin/phpunit
 workflows:
   version: 2
