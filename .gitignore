@@ -2,6 +2,7 @@ composer.phar
 /.idea/
 /example.php
 /.htaccess
+/composer.lock
 /twig-template
 /asserts
 /vendor/
