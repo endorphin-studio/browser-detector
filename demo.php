@@ -11,10 +11,9 @@ require_once __DIR__ . '/vendor/autoload.php';
 
 use EndorphinStudio\Detector\Detector;
 
-try {
-    $detector = new Detector();
-    $result = $detector->analyze();
-    var_dump($result);
-} catch (\EndorphinStudio\Detector\Exception\StorageException $exception) {
-    // log error
-}
+$detector = new Detector();
+
+/** @var \EndorphinStudio\Detector\Data\Result $result */
+$result = $detector->analyze();
+
+echo json_encode($result);

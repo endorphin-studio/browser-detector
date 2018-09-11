@@ -26,9 +26,42 @@ Detect user Browser, OS and Device through USER AGENT
 ## Basic Usage
 
     use EndorphinStudio\Detector\Detector;
+    
+    $detector = new Detector();
+    $result = $detector->analyze();
+    
+    echo json_encode($result);
 
-    $result = Detector::analyse();
-    print($result);
+    // Result
+    {
+      "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36",
+      "os": {
+        "family": "unix",
+        "type": "desktop",
+        "version": "x86.64",
+        "name": "Linux"
+      },
+      "browser": {
+        "type": "desktop",
+        "version": "66.0.3359.181",
+        "name": "Chrome"
+      },
+      "device": {
+        "version": null,
+        "name": "PC",
+        "type": "desktop"
+      },
+      "robot": {
+        "owner": null,
+        "homepage": null,
+        "name": null,
+        "type": null
+      },
+      "isRobot": false,
+      "isTouch": false,
+      "isMobile": false,
+      "isTablet": false
+    }
 
 #### Browser Detection Support
 

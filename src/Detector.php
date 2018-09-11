@@ -87,7 +87,6 @@ class Detector
         $dataProvider->setDataDirectory($dataDirectory);
         $this->setDataProvider($dataProvider);
         $this->detectors = [];
-        $this->resultObject = new Result();
         $check = ['os','device', 'browser', 'robot'];
         Tools::setWindowsConfig($dataProvider->getConfig()['windows']);
         foreach ($check as $detectionType) {
@@ -108,7 +107,7 @@ class Detector
     {
         $request = Request::createFromGlobals();
         $this->ua = $ua === 'ua' ? $request->server->get('HTTP_USER_AGENT') : $ua;
-        $this->resultObject = new Result();
+        $this->resultObject = new Result($this->ua);
         foreach ($this->detectors as $detectionType => $detector) {
             $detector->detect($ua);
         }

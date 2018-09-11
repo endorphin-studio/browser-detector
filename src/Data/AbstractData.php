@@ -13,7 +13,7 @@ namespace EndorphinStudio\Detector\Data;
  * Class AbstractData Abstract data with result detector
  * @package EndorphinStudio\Detector\Data
  */
-abstract class AbstractData
+abstract class AbstractData implements \JsonSerializable
 {
     /**
      * @var Result Link to Result object
@@ -73,5 +73,12 @@ abstract class AbstractData
     public function __construct(Result $result)
     {
         $this->result = $result;
+    }
+
+    public function jsonSerialize()
+    {
+        $fields = get_object_vars($this);
+        unset($fields['result']);
+        return $fields;
     }
 }
