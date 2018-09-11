@@ -9,10 +9,15 @@
 
 namespace EndorphinStudio\Detector\Data;
 
+/**
+ * Class Os
+ * Detect of os detection
+ * @package EndorphinStudio\Detector\Data
+ */
 class Os extends AbstractDataWithVersion
 {
     /**
-     * @return string
+     * @return string Os family
      */
     public function getFamily(): string
     {
@@ -20,6 +25,7 @@ class Os extends AbstractDataWithVersion
     }
 
     /**
+     * Set Os family
      * @param string $family
      */
     public function setFamily(string $family)
@@ -27,11 +33,11 @@ class Os extends AbstractDataWithVersion
         $this->family = $family;
     }
 
-    /** @var string */
+    /** @var string Os family */
     protected $family;
 
     /**
-     * @return string
+     * @return string Browser type
      */
     public function getType(): string
     {
@@ -39,7 +45,8 @@ class Os extends AbstractDataWithVersion
     }
 
     /**
-     * @param string $type
+     * Set browser type
+     * @param string $type Browser type
      */
     public function setType(string $type)
     {
@@ -47,7 +54,7 @@ class Os extends AbstractDataWithVersion
     }
 
     /**
-     * @var string
+     * @var string Browser type
      */
     protected $type;
 }

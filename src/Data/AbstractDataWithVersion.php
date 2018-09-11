@@ -9,7 +9,10 @@
 
 namespace EndorphinStudio\Detector\Data;
 
-
+/**
+ * Class AbstractDataWithVersion Data Object with version
+ * @package EndorphinStudio\Detector\Data
+ */
 abstract class AbstractDataWithVersion extends AbstractData
 {
     /**
@@ -18,6 +21,7 @@ abstract class AbstractDataWithVersion extends AbstractData
     protected $version;
 
     /**
+     * Set version of version
      * @return string
      */
     public function getVersion(): string
@@ -26,7 +30,7 @@ abstract class AbstractDataWithVersion extends AbstractData
     }
 
     /**
-     * @param string $version
+     * @param string $version Version
      */
     public function setVersion(string $version)
     {

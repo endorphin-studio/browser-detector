@@ -9,7 +9,10 @@
 
 namespace EndorphinStudio\Detector\Data;
 
-
+/**
+ * Class AbstractData Abstract data with result detector
+ * @package EndorphinStudio\Detector\Data
+ */
 abstract class AbstractData
 {
     /**
@@ -23,7 +26,8 @@ abstract class AbstractData
     protected $name;
 
     /**
-     * @param string $name
+     * Set name of object
+     * @param string $name Name
      */
     public function setName(string $name)
     {
@@ -31,7 +35,8 @@ abstract class AbstractData
     }
 
     /**
-     * @param string $type
+     * Set object type
+     * @param string $type Type
      */
     public function setType(string $type)
     {
@@ -44,6 +49,7 @@ abstract class AbstractData
     protected $type;
 
     /**
+     * Get object name
      * @return string
      */
     public function getName(): string
@@ -52,6 +58,7 @@ abstract class AbstractData
     }
 
     /**
+     * Get object type
      * @return string
      */
     public function getType(): string
@@ -59,6 +66,10 @@ abstract class AbstractData
         return $this->type ?? 'not available';
     }
 
+    /**
+     * AbstractData constructor.
+     * @param Result $result
+     */
     public function __construct(Result $result)
     {
         $this->result = $result;

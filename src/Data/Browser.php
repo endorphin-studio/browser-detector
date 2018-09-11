@@ -9,12 +9,18 @@
 
 namespace EndorphinStudio\Detector\Data;
 
+/**
+ * Class Browser
+ * Result of browser detection
+ * @package EndorphinStudio\Detector\Data
+ */
 class Browser extends AbstractDataWithVersion
 {
-    /** @var string */
+    /** @var string Browser type */
     protected $type;
 
     /**
+     * Get browser type
      * @return string
      */
     public function getType(): string
@@ -23,7 +29,7 @@ class Browser extends AbstractDataWithVersion
     }
 
     /**
-     * @param mixed $type
+     * @param string $type Browser type
      */
     public function setType(string $type)
     {

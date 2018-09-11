@@ -11,18 +11,25 @@ namespace EndorphinStudio\Detector\Storage;
 
 use EndorphinStudio\Detector\Exception\StorageException;
 
+/**
+ * Abstract storage of config
+ * Class AbstractStorage
+ * @package EndorphinStudio\Detector\Storage
+ */
 abstract class AbstractStorage implements StorageInterface
 {
     /**
-     * @var array
+     * @var array List with config data
      */
     protected $config;
+
     /**
-     * @var string
+     * @var string Path to data directory
      */
     protected $dataDirectory;
 
     /**
+     * Set data directory
      * @param string $directory
      * @throws StorageException
      */
@@ -38,5 +45,9 @@ abstract class AbstractStorage implements StorageInterface
         $this->dataDirectory = $directory;
     }
 
+    /**
+     * Get array of data
+     * @return array Data
+     */
     public abstract function getConfig(): array;
 }

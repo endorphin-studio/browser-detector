@@ -11,13 +11,24 @@ namespace EndorphinStudio\Detector\Detection;
 
 use EndorphinStudio\Detector\Tools;
 
+/**
+ * Detector for robot
+ * Class RobotDetector
+ * @package EndorphinStudio\Detector\Detection
+ */
 class RobotDetector extends AbstractDetection
 {
+    /**
+     * @var string Key in array
+     */
     protected $configKey = 'robot';
 
-    /** @var array */
+    /** @var array List of objects */
     private $homepages;
 
+    /**
+     * Setup result object
+     */
     protected function setupResultObject()
     {
         $this->homepages = $this->config['homepages'];
@@ -31,6 +42,9 @@ class RobotDetector extends AbstractDetection
         }
     }
 
+    /**
+     * @return array List with result
+     */
     protected function detectByConfig(): array
     {
         foreach ($this->config as $type => $companyList) {
@@ -42,6 +56,11 @@ class RobotDetector extends AbstractDetection
         return [];
     }
 
+    /**
+     * Detect by type
+     * @param string $key
+     * @return array
+     */
     protected function detectByType($key = 'none'): array
     {
         foreach ($this->config[$key] as $companyName => $patternList) {
@@ -53,6 +72,11 @@ class RobotDetector extends AbstractDetection
         return [];
     }
 
+    /**
+     * Detect by pattern
+     * @param array $patternList
+     * @return array|null
+     */
     protected function detectByPattern(array $patternList)
     {
         foreach ($patternList as $name => $pattern) {
@@ -65,6 +89,11 @@ class RobotDetector extends AbstractDetection
         return null;
     }
 
+    /**
+     * Get regex pattern
+     * @param string $pattern
+     * @return string
+     */
     private function getPattern(string $pattern): string
     {
         return sprintf('/%s/', $pattern);

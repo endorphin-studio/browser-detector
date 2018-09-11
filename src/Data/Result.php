@@ -9,40 +9,46 @@
 
 namespace EndorphinStudio\Detector\Data;
 
+/**
+ * Class Result
+ * Class with result of detection
+ * @package EndorphinStudio\Detector\Data
+ */
 class Result
 {
     /**
-     * @var Os
+     * @var Os Result of os detection
      */
     protected $os;
     /**
-     * @var Browser
+     * @var Browser Result of browser detection
      */
     protected $browser;
     /**
-     * @var Device
+     * @var Device Result of device detection
      */
     protected $device;
     /**
-     * @var Robot
+     * @var Robot Result of robot detection
      */
     protected $robot;
 
     /**
-     * @var boolean
+     * @var boolean true if user is robot
      */
     protected $isRobot = false;
 
     /**
-     * @var boolean
+     * @var boolean true if device is touch
      */
     protected $isTouch = false;
     /**
-     * @var boolean
+     * @var boolean true if device is mobile
      */
     protected $isMobile = false;
 
     /**
+     * True if user is robot
      * @return bool
      */
     public function isRobot(): bool
@@ -51,6 +57,7 @@ class Result
     }
 
     /**
+     * Setter
      * @param bool $isRobot
      */
     public function setIsRobot(bool $isRobot)
@@ -59,6 +66,7 @@ class Result
     }
 
     /**
+     * True if user is touch
      * @return bool
      */
     public function isTouch(): bool
@@ -67,6 +75,7 @@ class Result
     }
 
     /**
+     * Setter
      * @param bool $isTouch
      */
     public function setIsTouch(bool $isTouch)
@@ -75,6 +84,7 @@ class Result
     }
 
     /**
+     * True if user is mobile
      * @return bool
      */
     public function isMobile(): bool
@@ -83,6 +93,7 @@ class Result
     }
 
     /**
+     * Setter
      * @param bool $isMobile
      */
     public function setIsMobile(bool $isMobile)
@@ -91,6 +102,7 @@ class Result
     }
 
     /**
+     * True if user is tablet
      * @return bool
      */
     public function isTablet(): bool
@@ -99,6 +111,7 @@ class Result
     }
 
     /**
+     * Setter
      * @param bool $isTablet
      */
     public function setIsTablet(bool $isTablet)
@@ -106,9 +119,12 @@ class Result
         $this->isTablet = $isTablet;
     }
 
-    /** @var boolean */
+    /** @var boolean true if user is tablet */
     protected $isTablet = false;
 
+    /**
+     * Result constructor.
+     */
     public function __construct()
     {
         $this->os = new Os($this);
@@ -118,6 +134,7 @@ class Result
     }
 
     /**
+     * Get result of os detection
      * @return Os
      */
     public function getOs(): Os
@@ -126,6 +143,7 @@ class Result
     }
 
     /**
+     * Get result of browser detection
      * @return Browser
      */
     public function getBrowser(): Browser
@@ -134,6 +152,7 @@ class Result
     }
 
     /**
+     * Get result of device detection
      * @return Device
      */
     public function getDevice(): Device
@@ -142,6 +161,7 @@ class Result
     }
 
     /**
+     * Get result of robot detection
      * @return Robot
      */
     public function getRobot(): Robot

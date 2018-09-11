@@ -11,9 +11,15 @@ namespace EndorphinStudio\Detector;
 
 use EndorphinStudio\Detector\Data\Result;
 use EndorphinStudio\Detector\Exception\StorageException;
+use EndorphinStudio\Detector\Storage\AbstractStorage;
 use EndorphinStudio\Detector\Storage\StorageInterface;
 use Symfony\Component\HttpFoundation\Request;
 
+/**
+ * Class Detector
+ * Detect OS, Device, Browser, Robot
+ * @package EndorphinStudio\Detector
+ */
 class Detector
 {
     /**
@@ -22,6 +28,7 @@ class Detector
     private $dataProvider;
 
     /**
+     * Get storage provider
      * @return StorageInterface
      */
     public function getDataProvider(): StorageInterface
@@ -30,7 +37,8 @@ class Detector
     }
 
     /**
-     * @return Result
+     * Get result object
+     * @return Result Result object
      */
     public function getResultObject(): Result
     {
@@ -38,11 +46,12 @@ class Detector
     }
 
     /**
-     * @var Result
+     * @var Result Result object
      */
     private $resultObject;
 
     /**
+     * Set data provider
      * @param StorageInterface $dataProvider
      */
     public function setDataProvider(StorageInterface $dataProvider)
@@ -69,11 +78,11 @@ class Detector
      * Detector constructor.
      * @param string $dataProvider
      * @param string $format
-     * @throws StorageException
      */
     public function __construct(string $dataProvider = '\\EndorphinStudio\\Detector\\Storage\\YamlStorage', string $format = 'yaml')
     {
         $dataDirectory = sprintf('%s/var/%s', dirname(__DIR__), $format);
+        /** @var StorageInterface $dataProvider */
         $dataProvider = new $dataProvider();
         $dataProvider->setDataDirectory($dataDirectory);
         $this->setDataProvider($dataProvider);
@@ -90,6 +99,11 @@ class Detector
         }
     }
 
+    /**
+     * Analyse User Agent String
+     * @param string $ua
+     * @return Result
+     */
     public function analyze(string $ua = 'ua'): Result
     {
         $request = Request::createFromGlobals();
@@ -101,6 +115,12 @@ class Detector
         return $this->resultObject;
     }
 
+    /**
+     * Get list of patterns from config
+     * @param $list
+     * @param $type
+     * @return array
+     */
     public function getPatternList($list, $type)
     {
         return array_key_exists($type, $list) ? $list[$type] : [];

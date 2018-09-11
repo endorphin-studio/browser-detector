@@ -11,8 +11,24 @@ namespace EndorphinStudio\Detector\Detection;
 
 use EndorphinStudio\Detector\Detector;
 
+/**
+ * Interface of abstract detection
+ * Interface DetectionInterface
+ * @package EndorphinStudio\Detector\Detection
+ */
 interface DetectionInterface
 {
+    /**
+     * Init method
+     * @param Detector $detector
+     * @return mixed
+     */
     public function init(Detector $detector);
+
+    /**
+     * Detect method
+     * @param string $ua
+     * @return mixed
+     */
     public function detect(string $ua);
 }

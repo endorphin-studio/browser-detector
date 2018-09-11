@@ -9,9 +9,15 @@
 
 namespace EndorphinStudio\Detector\Data;
 
+/**
+ * Class Robot
+ * Result of robot detection
+ * @package EndorphinStudio\Detector\Data
+ */
 class Robot extends AbstractData
 {
     /**
+     * Get robot owner
      * @return string
      */
     public function getOwner(): string
@@ -20,6 +26,7 @@ class Robot extends AbstractData
     }
 
     /**
+     * Set robot owner
      * @param string $owner
      */
     public function setOwner(string $owner)
@@ -27,10 +34,11 @@ class Robot extends AbstractData
         $this->owner = $owner;
     }
 
-    /** @var string */
+    /** @var string Owner robot */
     protected $owner;
 
     /**
+     * Get robot homepage
      * @return string
      */
     public function getHomepage(): string
@@ -39,6 +47,7 @@ class Robot extends AbstractData
     }
 
     /**
+     * Set robot homepage
      * @param string $homepage
      */
     public function setHomepage(string $homepage)
@@ -46,6 +55,6 @@ class Robot extends AbstractData
         $this->homepage = $homepage;
     }
 
-    /** @var string */
+    /** @var string Robot homepage */
     protected $homepage;
 }

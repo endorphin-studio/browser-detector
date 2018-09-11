@@ -9,6 +9,11 @@
 
 namespace EndorphinStudio\Detector\Data;
 
+/**
+ * Class Device
+ * Result of device detection
+ * @package EndorphinStudio\Detector\Data
+ */
 class Device extends AbstractDataWithVersion
 {
 

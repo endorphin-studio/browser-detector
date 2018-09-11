@@ -9,6 +9,11 @@
 
 namespace EndorphinStudio\Detector\Exception;
 
+/**
+ * Exception for Storage
+ * Class StorageException
+ * @package EndorphinStudio\Detector\Exception
+ */
 class StorageException extends \Exception
 {
     /**

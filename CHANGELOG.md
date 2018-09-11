@@ -2,9 +2,10 @@
 
 performed:
 
-    code refactoring (in progress)
-    remove xml (in progress)
-    add yml (in progress)
+    code refactoring
+    add yml
+    remove PHP 5.6 support
+    add PHP 7.0 support
 
 add detection:
     

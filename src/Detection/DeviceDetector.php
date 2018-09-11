@@ -9,7 +9,15 @@
 
 namespace EndorphinStudio\Detector\Detection;
 
+/**
+ * Detector for device
+ * Class DeviceDetector
+ * @package EndorphinStudio\Detector\Detection
+ */
 class DeviceDetector extends BrowserDetector
 {
+    /**
+     * @var string Key in config
+     */
     protected $configKey = 'device';
 }

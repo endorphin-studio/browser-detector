@@ -13,6 +13,11 @@ use EndorphinStudio\Detector\Data\AbstractData;
 use EndorphinStudio\Detector\Detector;
 use EndorphinStudio\Detector\Tools;
 
+/**
+ * Class AbstractDetection
+ * Abstract detector class
+ * @package EndorphinStudio\Detector\Detection
+ */
 abstract class AbstractDetection implements DetectionInterface
 {
     /**
@@ -20,19 +25,26 @@ abstract class AbstractDetection implements DetectionInterface
      */
     protected $configKey = 'none';
 
-    /** @var array */
+    /** @var array Data for detection (patterns, etc.) */
     protected $config;
-    /** @var Detector */
+    /** @var Detector Detector class */
     protected $detector;
 
-    /** @var AbstractData */
+    /** @var AbstractData Result object */
     protected $resultObject;
 
+    /**
+     * @param Detector $detector Init detection class with detector
+     */
     public function init(Detector $detector)
     {
         $this->detector = $detector;
     }
 
+    /**
+     * Result object initialisation
+     * @return null
+     */
     protected function initResultObject()
     {
         if(!array_key_exists('default', $this->config)) {
@@ -44,6 +56,10 @@ abstract class AbstractDetection implements DetectionInterface
         }
     }
 
+    /**
+     * Detect method
+     * @param string $ua User Agent
+     */
     public function detect(string $ua)
     {
         if ($this->configKey !== 'none') {
@@ -55,8 +71,17 @@ abstract class AbstractDetection implements DetectionInterface
         $this->setupResultObject();
     }
 
+    /**
+     * Setup Result Object
+     * @return void
+     */
     protected abstract function setupResultObject();
 
+    /**
+     * Detect by pattern
+     * @param array $patternList list of patterns
+     * @return array|null
+     */
     protected function detectByPattern(array $patternList)
     {
         foreach ($patternList as $patternId => $patternData) {
@@ -69,6 +94,12 @@ abstract class AbstractDetection implements DetectionInterface
         return null;
     }
 
+    /**
+     * Get pattern form array
+     * @param string $patternId ID in config
+     * @param array $patternData array from yaml file
+     * @return array
+     */
     private function getPattern(string $patternId, array $patternData): array
     {
         if (array_key_exists('default', $patternData) && $patternData['default'] === true) {
@@ -77,7 +108,11 @@ abstract class AbstractDetection implements DetectionInterface
         return ['pattern' => sprintf('/%s/', $patternData['pattern']), 'version' => array_key_exists('version', $patternData) ? $patternData['version'] : $patternId];
     }
 
-    protected function setAttributes($info)
+    /**
+     * Set attributes of result object
+     * @param array $info Array
+     */
+    protected function setAttributes(array $info)
     {
         $result = $this->detector->getResultObject();
         if (array_key_exists('attributes', $info)) {
@@ -87,6 +122,11 @@ abstract class AbstractDetection implements DetectionInterface
         }
     }
 
+    /**
+     * Detect by type
+     * @param string $key
+     * @return array
+     */
     protected function detectByType($key = 'none'): array
     {
         $container = $key === 'none' ? $this->config : $this->config[$key];
@@ -102,6 +142,11 @@ abstract class AbstractDetection implements DetectionInterface
         return [];
     }
 
+    /**
+     * Detect by Key
+     * @param string $keyName
+     * @return array
+     */
     protected function detectByKey($keyName = 'family'): array
     {
         foreach ($this->config as $key => $data) {

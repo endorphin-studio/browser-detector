@@ -11,10 +11,21 @@ namespace EndorphinStudio\Detector\Detection;
 
 use EndorphinStudio\Detector\Tools;
 
+/**
+ * Detector of browser
+ * Class BrowserDetector
+ * @package EndorphinStudio\Detector\Detection
+ */
 class BrowserDetector extends AbstractDetection
 {
+    /**
+     * @var string Key in config
+     */
     protected $configKey = 'browser';
 
+    /**
+     * Setup result of object
+     */
     protected function setupResultObject()
     {
         $browserData = $this->detectByType();

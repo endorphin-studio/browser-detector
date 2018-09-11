@@ -21,7 +21,7 @@ use Symfony\Component\Yaml\Yaml;
 class YamlStorage extends FileStorage implements StorageInterface
 {
     /**
-     * Get array of Data
+     * Get array of Data (patterns and etc.)
      * @return array array of data
      */
     public function getConfig(): array

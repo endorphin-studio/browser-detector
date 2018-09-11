@@ -1,0 +1,12 @@
+########################################################################
+# @author Serhii Nekhaienko <sergey.nekhaenko@gmail.com>
+# @license GPL
+# @copyright Serhii Nekhaienko &copy 2018
+# @version 4.0.0
+# @project endorphin-studio/browser-detector
+########################################################################
+checkList:
+    name: Chrome
+    type: mobile
+uaList:
+    - "Mozilla/5.0 (iPhone; CPU iPhone OS 11_4_1 like Mac OS X) AppleWebKit/604.1.34 (KHTML, like Gecko) CriOS/68.0.3440.83 Mobile/15G77 Safari/604.1"

@@ -11,6 +11,11 @@ namespace EndorphinStudio\Detector\Storage;
 
 use EndorphinStudio\Detector\Tools;
 
+/**
+ * File Storage of data
+ * Class FileStorage
+ * @package EndorphinStudio\Detector\Storage
+ */
 class FileStorage extends AbstractStorage implements StorageInterface
 {
     /**
@@ -22,6 +27,11 @@ class FileStorage extends AbstractStorage implements StorageInterface
         return $this->config;
     }
 
+    /**
+     * Get list of paths in directory
+     * @param string $directory
+     * @return array
+     */
     protected function getFileNames(string $directory = 'default'): array
     {
         $directoryIterator = $this->getDirectoryIterator($directory);
@@ -32,6 +42,11 @@ class FileStorage extends AbstractStorage implements StorageInterface
         return $files;
     }
 
+    /**
+     * Add file to list or scan directory
+     * @param \DirectoryIterator $file
+     * @param array $files
+     */
     private function resolveFile(\DirectoryIterator $file, array &$files)
     {
         if ($file->isDir() && !$file->isDot()) {
@@ -43,6 +58,11 @@ class FileStorage extends AbstractStorage implements StorageInterface
         }
     }
 
+    /**
+     * Get Directory Iterator
+     * @param string $directory
+     * @return \DirectoryIterator
+     */
     private function getDirectoryIterator(string $directory): \DirectoryIterator
     {
         if ($directory === 'default') {

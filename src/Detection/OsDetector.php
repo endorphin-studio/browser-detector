@@ -11,10 +11,21 @@ namespace EndorphinStudio\Detector\Detection;
 
 use EndorphinStudio\Detector\Tools;
 
+/**
+ * Class OsDetector
+ * Detection class for OS
+ * @package EndorphinStudio\Detector\Detection
+ */
 class OsDetector extends AbstractDetection
 {
+    /**
+     * @var string Key for abstract detector
+     */
     protected $configKey = 'os';
 
+    /**
+     * Setup result object
+     */
     protected function setupResultObject()
     {
         $osData = $this->detectByKey('family');
