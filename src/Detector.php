@@ -103,7 +103,7 @@ class Detector
      * @param string $ua
      * @return Result
      */
-    public function analyze(string $ua = 'ua'): Result
+    public function analyse(string $ua = 'ua'): Result
     {
         $request = Request::createFromGlobals();
         $this->ua = $ua === 'ua' ? $request->server->get('HTTP_USER_AGENT') : $ua;
