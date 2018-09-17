@@ -14,8 +14,8 @@ Detect user Browser, OS and Device through USER AGENT
 
 ## About
 	Author: Serhii Nekhaienko <sergey.nekhaenko@gmail.com>
-	Current Version: 4.0
-	Stable Version: 4.0
+	Current Version: 4.0.1
+	Stable Version: 4.0.1
 	License: GPL-3.0+
 
 ## Requirements
@@ -28,7 +28,7 @@ Detect user Browser, OS and Device through USER AGENT
     use EndorphinStudio\Detector\Detector;
     
     $detector = new Detector();
-    $result = $detector->analyze();
+    $result = $detector->analyse();
     
     echo json_encode($result);
 
