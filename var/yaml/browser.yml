@@ -79,8 +79,6 @@ browser:
             default: true
         iCab:
             default: true
-        iCab:
-            default: true
         Chromium:
             default: true
         Beamrise:
