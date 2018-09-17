@@ -2,13 +2,27 @@
 # @author Serhii Nekhaienko <sergey.nekhaenko@gmail.com>
 # @license GPL
 # @copyright Serhii Nekhaienko &copy 2018
-# @version 4.0.0
+# @version 4.0.2
 # @project endorphin-studio/browser-detector
 ########################################################################
 device:
     tv:
         Apple TV:
-            pattern: "AppleTV"
+            pattern: "(AppleTV|Apple TV)"
+        Philips Smart TV:
+            pattern: "(PHILIPSTV|PhilipsTV)"
+        Toshiba Smart TV:
+            pattern: "(TSBNetTV|T3E01CD)"
+        Sony Bravia Smart TV:
+            pattern: "(Opera TV|SonyCEBrowser|BRAVIA)"
+        LG Smart TV:
+            pattern: "(webOS.TV|LGE|LG NetCast.TV)"
+        Roku:
+            pattern: "(Roku)"
+        Amazon Fire Stick:
+            pattern: "(AFTM|AFTT)"
+        Google Chromecast:
+            pattern: "(CrKey)"
         SMART TV:
             pattern: "SMART-TV"
     tablet:

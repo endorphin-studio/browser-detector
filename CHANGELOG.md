@@ -1,3 +1,17 @@
+### 4.0.2
+add detection:
+
+    Philips Smart TV (tv)
+    Toshiba Smart TV (tv)
+    Sony Bravia Smart TV (tv)
+    LG Smart TV (tv)
+    Roku (tv)
+    Amazon Fire Stick (tv)
+    Google Chromecast (tv)
+
+### 4.0.1
+    fix https://github.com/endorphin-studio/browser-detector/issues/17
+
 ### 4.0
 
 performed:
