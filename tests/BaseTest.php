@@ -33,6 +33,7 @@ class BaseTest extends TestCase
 
     public function testType()
     {
+        error_reporting(E_ALL);
         if (static::$type === 'none') {
             $this->assertTrue(true);
             return true;
