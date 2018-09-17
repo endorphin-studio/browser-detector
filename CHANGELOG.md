@@ -8,6 +8,14 @@ add detection:
     Roku (tv)
     Amazon Fire Stick (tv)
     Google Chromecast (tv)
+    Xbox One (console)
+    Playstation 4 (console)
+    Playstation Vita (console)
+    Nintendo 3DS (console)
+
+new device type:
+    
+    console
 
 ### 4.0.1
     fix https://github.com/endorphin-studio/browser-detector/issues/17

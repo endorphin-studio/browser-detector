@@ -25,6 +25,15 @@ device:
             pattern: "(CrKey)"
         SMART TV:
             pattern: "SMART-TV"
+    console:
+        Xbox One:
+            pattern: "(Xbox One)"
+        Playstation 4:
+            pattern: "(PlayStation 4)"
+        Playstation Vita:
+            pattern: "(PlayStation Vita)"
+        Nintendo 3DS:
+            pattern: "(Nintendo 3DS)"
     tablet:
         iPad:
             default: true
