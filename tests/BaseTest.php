@@ -43,7 +43,7 @@ class BaseTest extends TestCase
             foreach ($caseList as $case) {
                 $results = [];
                 foreach ($case['uaList'] as $ua) {
-                    $result = $detector->analyze($ua);
+                    $result = $detector->analyse($ua);
                     $results[] = Tools::runGetter($result, static::$type);
                 }
                 foreach ($case['checkList'] as $field => $expected) {

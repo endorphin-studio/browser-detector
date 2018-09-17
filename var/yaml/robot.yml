@@ -43,7 +43,6 @@ robot:
                 Yandex (Pagechecker): "YandexPagechecker"
                 Yandex (ImageResizer): "YandexImageResizer"
                 Yandex (Ad): "YandexAdNet"
-                Yandex (Direct): "(YandexDirect|YaDirectFetcher)"
                 Yandex (Calendar): "YandexCalendar"
                 Yandex (Sitelinks): "YandexSitelinks"
                 Yandex (Favicons): "YandexFavicons"

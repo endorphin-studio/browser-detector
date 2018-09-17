@@ -14,6 +14,6 @@ use EndorphinStudio\Detector\Detector;
 $detector = new Detector();
 
 /** @var \EndorphinStudio\Detector\Data\Result $result */
-$result = $detector->analyze();
+$result = $detector->analyse();
 
 echo json_encode($result);
