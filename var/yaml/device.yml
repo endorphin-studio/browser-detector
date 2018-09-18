@@ -56,7 +56,7 @@ device:
                 isTablet: true
                 isTouch: true
         NOOK:
-            pattern: "(BNTV)"
+            pattern: "(BNTV|NOOK)"
         Toshiba:
             pattern: "AT[0-9]{1,3}"
         Cisco:
@@ -69,7 +69,7 @@ device:
                 isTablet: true
                 isTouch: true
         Microsoft Surface:
-            pattern: "Windows NT 6.2; ARM;"
+            pattern: "(Windows NT 6.2; ARM;|Windows NT 6.2;(.*); Touch)"
             attributes:
                 isTablet: true
                 isTouch: true
