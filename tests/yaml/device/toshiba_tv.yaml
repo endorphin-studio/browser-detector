@@ -2,13 +2,13 @@
 # @author Serhii Nekhaienko <sergey.nekhaenko@gmail.com>
 # @license GPL
 # @copyright Serhii Nekhaienko &copy 2018
-# @version 4.0.0
+# @version 4.0.2
 # @project endorphin-studio/browser-detector
 ########################################################################
 checkList:
-    name: Apple TV
+    name: Toshiba Smart TV
     type: tv
 uaList:
-    - "AppleTV/1.1"
-    - "Mozilla/5.0 (Apple TV; CPU iPhone OS 9_0 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Mobile/13T534YI"
-    - "Haystack TV/20 (Apple TV; iOS 10.1; Scale/1.00)"
+    - "Mozilla/5.0 (Linux; U; Linux; ja-jp; DTV; TSBNetTV/T3E01CD.0203.DDD) AppleWebKit/536(KHTML, like Gecko) NX/3.0 (DTV; HTML; R1.0;) DTVNetBrowser/2.2 "
+    - "(000039;T3E01CD;0203;DDD) InettvBrowser/2.2 "
+    - "(000039;T3E01CD;0203;DDD)"

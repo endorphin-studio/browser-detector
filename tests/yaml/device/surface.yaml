@@ -6,9 +6,9 @@
 # @project endorphin-studio/browser-detector
 ########################################################################
 checkList:
-    name: Apple TV
-    type: tv
+    name: Microsoft Surface
+    type: tablet
 uaList:
-    - "AppleTV/1.1"
-    - "Mozilla/5.0 (Apple TV; CPU iPhone OS 9_0 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Mobile/13T534YI"
-    - "Haystack TV/20 (Apple TV; iOS 10.1; Scale/1.00)"
+    - "Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Win64; x64; Trident/6.0; Touch)"
+    - "Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; ARM; Trident/6.0)"
+    - "Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; ARM; Trident/6.0; Touch)"

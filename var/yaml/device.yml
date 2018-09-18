@@ -2,15 +2,41 @@
 # @author Serhii Nekhaienko <sergey.nekhaenko@gmail.com>
 # @license GPL
 # @copyright Serhii Nekhaienko &copy 2018
-# @version 4.0.0
+# @version 4.0.2
 # @project endorphin-studio/browser-detector
 ########################################################################
 device:
     tv:
         Apple TV:
-            pattern: "AppleTV"
+            pattern: "(AppleTV|Apple TV)"
+        Philips Smart TV:
+            pattern: "(PHILIPSTV|PhilipsTV)"
+        Toshiba Smart TV:
+            pattern: "(TSBNetTV|T3E01CD)"
+        Sony Bravia Smart TV:
+            pattern: "(Opera TV|SonyCEBrowser|BRAVIA)"
+        LG Smart TV:
+            pattern: "(webOS.TV|LGE|LG NetCast.TV)"
+        Roku:
+            pattern: "(Roku)"
+        Amazon Fire Stick:
+            pattern: "(AFTM|AFTT)"
+        Google Chromecast:
+            pattern: "(CrKey)"
         SMART TV:
             pattern: "SMART-TV"
+    console:
+        Xbox One:
+            pattern: "(Xbox One)"
+        Playstation 4:
+            pattern: "(PlayStation 4)"
+        Playstation Vita:
+            pattern: "(PlayStation Vita)"
+        Nintendo 3DS:
+            pattern: "(Nintendo 3DS)"
+    e-reader:
+        Amazon Kindle:
+            pattern: "(Kindle)"
     tablet:
         iPad:
             default: true
@@ -19,8 +45,18 @@ device:
                 isTouch: true
         MegaFon:
             default: true
+        Google Pixel C:
+            pattern: "(Pixel C)"
+            attributes:
+                isTablet: true
+                isTouch: true
+        Nvidia Shield:
+            pattern: "(SHIELD Tablet)"
+            attributes:
+                isTablet: true
+                isTouch: true
         NOOK:
-            pattern: "(BNTV)"
+            pattern: "(BNTV|NOOK)"
         Toshiba:
             pattern: "AT[0-9]{1,3}"
         Cisco:
@@ -28,12 +64,12 @@ device:
         Asus:
             pattern: "(Asus|ASUS)"
         Kindle Fire:
-            default: true
+            pattern: "(KFTHWI|Kindle Fire)"
             attributes:
                 isTablet: true
                 isTouch: true
         Microsoft Surface:
-            pattern: "Windows NT 6.2; ARM;"
+            pattern: "(Windows NT 6.2; ARM;|Windows NT 6.2;(.*); Touch)"
             attributes:
                 isTablet: true
                 isTouch: true
@@ -48,14 +84,37 @@ device:
             attributes:
                 isMobile: true
                 isTouch: true
+        Xiaomi:
+            pattern: "(MI 3|HM NOTE|Mi 4i|MI 5|MI 4)"
+            attributes:
+                isMobile: true
+                isTouch: true
         Dell:
             pattern: "(Dell|DELL)"
+        Samsung Galaxy Note:
+            pattern: "(SAMSUNG SM-N9|SM-N9)"
+            attributes:
+                isMobile: true
+                isTouch: true
+        Samsung Galaxy:
+            pattern: "(SAMSUNG SM)"
+            attributes:
+                isMobile: true
+                isTouch: true
         Samsung:
             pattern: "(SGH|Samsung|SAMSUNG)"
+        HTC One:
+            pattern: "(HTC One)"
+            attributes:
+                isMobile: true
+                isTouch: true
         HTC:
             pattern: "(Evo|PG86100|EVO|Sprint |Mazaa|Mozart|MWP6885|T7576|HTC-7 Pro|USCCHTC-PC93100|T7575|HTC|Trophy|T8686)"
         Nexus:
             default: true
+            attributes:
+                isMobile: true
+                isTouch: true
         Motorola:
             pattern: "(MOT|Motorola|MOT-|MOTOZINE|XT|Mot|Droid|DROIDXA[0-9]{3,4}|Motorola.*ELECTRIFY|Motorola.*i1|i867|i[0-9]{3}|MB[0-9]{3}|ME[0-9]{3}|MT[0-9]{3}|WX435|WX[0-9]{3}|XT[0-9]{3}|XT928|HR[0-9]{3}|Xoom)"
         Sony Ericsson:
