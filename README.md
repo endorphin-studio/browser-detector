@@ -84,7 +84,7 @@ Detect user Browser, OS and Device through USER AGENT
     Google Nexus, Kindle Fire, Motorolla, Microsoft Sursace, Sony Ericsson, Nokia, Apple TV, Zune HD
     ZTE, Zaurus, Megafon, Smart TV, Philips Smart TV , Toshiba Smart TV, Sony Bravia Smart TV, LG Smart TV
     Roku, Amazon Fire Stick, Google Chromecast, Xbox One, Playstation 4, Playstation Vita, Nintendo 3DS
-
+    Samsung Galaxy Note, Samsung Galaxy, HTC One, Google Pixel C, Nvidia Shield, Amazon Kindle, Xiaomi
 
 ### Device Type Detection
 
