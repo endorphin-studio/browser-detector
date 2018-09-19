@@ -19,6 +19,20 @@ add detection:
     Nvidia Shield (tablet)
     Amazon Kindle (e-reader)
     Xiaomi (mobile)
+    Yahoo (bot)
+    Simple Pie (bot)
+    MJ12bot (bot)
+    SiteLock (bot)
+    OkHttp (bot)
+    IPS agent (bot)
+    BLEXBot (bot)
+    ScoutJet (bot)
+    Nodemeter (bot)
+    DotBot (bot)
+    Anturis Agent (bot)
+    Insping Bot (bot)
+    Port Monitor (bot)
+    DownNotifier.com (bot)
 
 new device type:
     

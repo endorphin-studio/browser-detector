@@ -1,0 +1,13 @@
+########################################################################
+# @author Serhii Nekhaienko <sergey.nekhaenko@gmail.com>
+# @license GPL
+# @copyright Serhii Nekhaienko &copy 2018
+# @version 4.0.2
+# @project endorphin-studio/browser-detector
+########################################################################
+checkList:
+    type: Site Monitor
+    owner: Nodemeter
+    name: Nodemeter
+uaList:
+    - "Mozilla/5.0 (Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1985.143 Safari/537.36 Nodemeter 0.7"
