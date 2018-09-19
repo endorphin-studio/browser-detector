@@ -1,0 +1,13 @@
+########################################################################
+# @author Serhii Nekhaienko <sergey.nekhaenko@gmail.com>
+# @license GPL
+# @copyright Serhii Nekhaienko &copy 2018
+# @version 4.0.2
+# @project endorphin-studio/browser-detector
+########################################################################
+checkList:
+    type: Bot/Crawler
+    owner: WebMeUp
+    name: BLEXBot
+uaList:
+    - "Mozilla/5.0 (compatible; BLEXBot/1.0; +http://webmeup-crawler.com/)"

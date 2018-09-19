@@ -19,6 +19,20 @@ robot:
         Baidu: "http://baidu.com"
         Andrew Dolgov: "http://tt-rss.org"
         not available: "not available"
+        MJ12bot: "http://www.majestic12.co.uk/bot.php"
+        Simple Pie: "http://simplepie.org"
+        Yahoo: "http://help.yahoo.com/help/us/ysearch/slurp"
+        SiteLock: "https://www.sitelock.com/"
+        square: "https://github.com/square/okhttp"
+        VeriSign Inc.: "http://www.verisign.com/"
+        WebMeUp: "http://webmeup-crawler.com/"
+        ScoutJet: "http://www.scoutjet.com/"
+        Nodemeter: "http://nodemeter.net/"
+        Anturis Inc.: "https://anturis.com/"
+        Insping: "https://www.insping.com/"
+        Nazaries Information Technologies: "http://www.nazaries.com/"
+        DownNotifier.com: "https://www.downnotifier.com/"
+        SEOmoz Inc.: "https://moz.com/"
     types:
         Search Engine:
             Google Inc.:
@@ -62,9 +76,24 @@ robot:
                 Yodao: "YodaoBot"
             Baidu:
                 Baidu: "(baidu|Baidu)"
+            Yahoo:
+                 Yahoo! Slurp: "Yahoo! Slurp"
         RSS Reader:
             Andrew Dolgov:
                 Tiny RSS: "Tiny RSS"
+            Simple Pie:
+                Simple Pie: "SimplePie"
+        Site Monitor:
+            Nodemeter:
+                Nodemeter: "Nodemeter"
+            Anturis Inc.:
+                Anturis Agent: "Anturis Agent"
+            Insping:
+                Insping Bot: "Inspingbot"
+            Nazaries Information Technologies:
+                Port Monitor: "Port Monitor check service"
+            DownNotifier.com:
+                DownNotifier.com: "downnotifier.com"
         Bot/Crawler:
             WASALive:
                 WASALive Bot: "WASALive-Bot"
@@ -81,3 +110,17 @@ robot:
             not available:
                 Yisou Spider: "YisouSpider"
                 Yioop Bot: "YioopBot"
+            MJ12bot:
+                MJ12bot: "MJ12bot"
+            SiteLock:
+                SiteLock: "SiteLockSpider"
+            square:
+                OkHttp: "(okhttp|OkHttp)"
+            VeriSign Inc.:
+                IPS agent: "(ips-agent)"
+            WebMeUp:
+                BLEXBot: "BLEXBot"
+            ScoutJet:
+                ScoutJet: "ScoutJet"
+            SEOmoz Inc.:
+                DotBot: "(DotBot|dotbot)"
