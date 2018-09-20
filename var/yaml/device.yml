@@ -68,6 +68,11 @@ device:
             attributes:
                 isTablet: true
                 isTouch: true
+        Vivo:
+            pattern: "(vivo)"
+            attributes:
+                isTablet: true
+                isTouch: true
         Microsoft Surface:
             pattern: "(Windows NT 6.2; ARM;|Windows NT 6.2;(.*); Touch)"
             attributes:
@@ -85,7 +90,8 @@ device:
                 isMobile: true
                 isTouch: true
         Xiaomi:
-            pattern: "(MI 3|HM NOTE|Mi 4i|MI 5|MI 4)"
+            pattern: "(MI [0-9]{1}|HM NOTE|Mi [0-9]{1}i|Mi A[0-9]{1})"
+            hasModel: true
             attributes:
                 isMobile: true
                 isTouch: true
@@ -98,6 +104,11 @@ device:
                 isTouch: true
         Samsung Galaxy:
             pattern: "(SAMSUNG SM)"
+            attributes:
+                isMobile: true
+                isTouch: true
+        Samsung Galaxy J:
+            pattern: "(SM-G532G)"
             attributes:
                 isMobile: true
                 isTouch: true
@@ -138,7 +149,4 @@ device:
     default:
         name: "PC"
         type: "desktop"
-        model: "not available"
-        isMobile: false
-        isTouch: false
-        isTablet: false
+        hasModel: false

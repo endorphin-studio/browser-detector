@@ -40,6 +40,7 @@ class RobotDetector extends AbstractDetection
         if (\array_key_exists('name', $object) && $object['name']) {
             $this->detector->getResultObject()->setIsRobot(true);
         }
+        $this->additionalInfo = $object;
     }
 
     /**

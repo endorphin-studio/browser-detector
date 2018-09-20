@@ -27,8 +27,8 @@ interface DetectionInterface
 
     /**
      * Detect method
-     * @param string $ua
+     * @param array $additional
      * @return mixed
      */
-    public function detect(string $ua);
+    public function detect(array $additional);
 }

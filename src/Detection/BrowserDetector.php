@@ -36,5 +36,6 @@ class BrowserDetector extends AbstractDetection
             }
             Tools::runSetter($this->resultObject, $key, $value);
         }
+        $this->additionalInfo = $browserData;
     }
 }

@@ -20,4 +20,15 @@ class DeviceDetector extends BrowserDetector
      * @var string Key in config
      */
     protected $configKey = 'device';
+
+    protected function afterDetection()
+    {
+        if(\array_key_exists('hasModel', $this->additionalInfo['originalInfo']) && $this->additionalInfo['originalInfo']['hasModel'] === true) {
+            // detect model
+            $detector = new ModelDetector();
+            $detector->init($this->detector);
+            $detector->detect($this->additionalInfo);
+        }
+        parent::afterDetection();
+    }
 }

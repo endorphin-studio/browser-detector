@@ -109,7 +109,7 @@ class Detector
         $this->ua = $ua === 'ua' ? $request->server->get('HTTP_USER_AGENT') : $ua;
         $this->resultObject = new Result($this->ua);
         foreach ($this->detectors as $detectionType => $detector) {
-            $detector->detect($ua);
+            $detector->detect();
         }
         return $this->resultObject;
     }

@@ -5,8 +5,8 @@
 # @version 4.0.2
 # @project endorphin-studio/browser-detector
 ########################################################################
-model:
-#    Limia: "Lumia ([\\w]{3,6})"
-#    Megafon: "MegaFon ([\\w]{2,6})"
-    Xiaomi:
-        A: "Mi A([0-9])"
+checkList:
+    name: Samsung Galaxy J
+    type: mobile
+uaList:
+    - "Mozilla/5.0 (Linux; Android 6.0.1; SM-G532G Build/MMB29T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.83 Mobile Safari/537.36"

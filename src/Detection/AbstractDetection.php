@@ -21,6 +21,10 @@ use EndorphinStudio\Detector\Tools;
 abstract class AbstractDetection implements DetectionInterface
 {
     /**
+     * @var array Additional Info
+     */
+    protected $additionalInfo = [];
+    /**
      * @var string Key in config (os, device, etc.)
      */
     protected $configKey = 'none';
@@ -58,9 +62,9 @@ abstract class AbstractDetection implements DetectionInterface
 
     /**
      * Detect method
-     * @param string $ua User Agent
+     * @param array $additional Additional info
      */
-    public function detect(string $ua)
+    public function detect(array $additional = [])
     {
         if ($this->configKey !== 'none') {
             $this->config = $this->detector->getPatternList($this->detector->getDataProvider()->getConfig(), $this->configKey);
@@ -69,6 +73,7 @@ abstract class AbstractDetection implements DetectionInterface
         }
         $this->initResultObject();
         $this->setupResultObject();
+        $this->afterDetection();
     }
 
     /**
@@ -159,5 +164,9 @@ abstract class AbstractDetection implements DetectionInterface
             }
         }
         return [];
+    }
+
+    protected function afterDetection() {
+        /** Not required implementation */
     }
 }

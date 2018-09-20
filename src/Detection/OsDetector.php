@@ -36,5 +36,6 @@ class OsDetector extends AbstractDetection
             }
             Tools::runSetter($this->resultObject, $key, $value);
         }
+        $this->additionalInfo = $osData;
     }
 }
