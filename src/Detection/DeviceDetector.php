@@ -23,7 +23,10 @@ class DeviceDetector extends BrowserDetector
 
     protected function afterDetection()
     {
-        if(\array_key_exists('hasModel', $this->additionalInfo['originalInfo']) && $this->additionalInfo['originalInfo']['hasModel'] === true) {
+        if (
+            \array_key_exists('originalInfo', $this->additionalInfo) &&
+            \array_key_exists('hasModel', $this->additionalInfo['originalInfo']) &&
+            $this->additionalInfo['originalInfo']['hasModel'] === true) {
             // detect model
             $detector = new ModelDetector();
             $detector->init($this->detector);

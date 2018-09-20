@@ -46,12 +46,12 @@ class Model implements \JsonSerializable
     /**
      * @var string
      */
-    private $series;
+    private $series = '';
 
     /**
      * @var string
      */
-    private $model;
+    private $model = '';
 
     public function jsonSerialize()
     {
