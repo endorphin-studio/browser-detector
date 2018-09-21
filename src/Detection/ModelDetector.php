@@ -24,15 +24,16 @@ class ModelDetector extends AbstractDetection
     protected function setupResultObject()
     {
         $name = $this->additionalInfo['name'];
-        if(!\array_key_exists($name, $this->config)) {
+        if (!\array_key_exists($name, $this->config)) {
             return;
         }
         $patternList = $this->config[$name];
         foreach ($patternList as $series => $pattern) {
             $pattern = sprintf('/%s/', $pattern);
             $result = \preg_match($pattern, $this->detector->getUserAgent(), $model);
-            if($result) {
-                $this->resultObject->setModel(sprintf('%s%s', $series, $model[1]));
+            if ($result) {
+                $model = count($model) > 1 ? sprintf('%s%s', $series, end($model)) : $series;
+                $this->resultObject->setModel($model);
                 $this->resultObject->setSeries($series);
             }
         }
@@ -50,7 +51,7 @@ class ModelDetector extends AbstractDetection
             $this->resultObject = new Model();
         }
         $this->setupResultObject();
-        if($this->resultObject->getModel()) {
+        if ($this->resultObject->getModel()) {
             $this->detector->getResultObject()->getDevice()->setModel($this->resultObject);
             $this->detector->getResultObject()->getDevice()->setHasModel(true);
         }

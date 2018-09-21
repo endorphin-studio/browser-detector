@@ -70,6 +70,7 @@ device:
                 isTouch: true
         Vivo:
             pattern: "(vivo)"
+            hasModel: true
             attributes:
                 isTablet: true
                 isTouch: true
@@ -90,7 +91,7 @@ device:
                 isMobile: true
                 isTouch: true
         Xiaomi:
-            pattern: "(MI [0-9]{1}|HM NOTE|Mi [0-9]{1}i|Mi A[0-9]{1})"
+            pattern: "(MI [0-9]{1}|HM NOTE|Mi [0-9]{1}i|Mi A[0-9]{1}|Redmi)"
             hasModel: true
             attributes:
                 isMobile: true
@@ -109,6 +110,12 @@ device:
                 isTouch: true
         Samsung Galaxy J:
             pattern: "(SM-G532G)"
+            attributes:
+                isMobile: true
+                isTouch: true
+        Oppo:
+            pattern: "(CPH1607)"
+            hasModel: true
             attributes:
                 isMobile: true
                 isTouch: true

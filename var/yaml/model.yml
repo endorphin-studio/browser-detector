@@ -9,4 +9,9 @@ model:
 #    Limia: "Lumia ([\\w]{3,6})"
 #    Megafon: "MegaFon ([\\w]{2,6})"
     Xiaomi:
-        A: "Mi A([0-9])"
+        Mi A: "(Mi|MI) A([0-9])"
+        Redmi: "Redmi( \\w{2})"
+    Vivo:
+        X: "vivo X([0-9])"
+    Oppo:
+        R9s: "CPH1607"

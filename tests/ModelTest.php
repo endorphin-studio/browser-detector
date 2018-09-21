@@ -12,24 +12,10 @@ namespace EndorphinStudio\Tests;
 use EndorphinStudio\Detector\Detector;
 use EndorphinStudio\Detector\Exception\StorageException;
 use EndorphinStudio\Detector\Tools;
-use PHPUnit\Framework\TestCase;
 
-class BaseTest extends TestCase
+class ModelTest extends BaseTest
 {
-    protected $config;
-    protected $detector;
-    protected static $type = 'none';
-
-    public function __construct(string $name = null, array $data = [], string $dataName = '')
-    {
-        parent::__construct($name, $data, $dataName);
-        $this->config = new YamlReader();
-        try {
-            $this->detector = new Detector();
-        } catch (StorageException $exception) {
-            echo $exception->getMessage();
-        }
-    }
+    public static $type = 'model';
 
     public function testBase()
     {
@@ -44,7 +30,7 @@ class BaseTest extends TestCase
             foreach ($caseList as $case) {
                 $results = [];
                 foreach ($case['uaList'] as $ua) {
-                    $result = $detector->analyse($ua);
+                    $result = $detector->analyse($ua)->getDevice();
                     $results[] = Tools::runGetter($result, static::$type);
                 }
                 foreach ($case['checkList'] as $field => $expected) {
