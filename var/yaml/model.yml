@@ -11,11 +11,14 @@ model:
     Xiaomi:
         Mi A: "(Mi|MI) A([0-9])"
         Redmi: "Redmi( \\w{2})"
+        Redmi Note: "Redmi Note( \\w{1,2})"
     Vivo:
         V7+: "vivo 1716"
+        Y55S: "vivo 1610"
         Y53: "vivo 1606"
         X: "vivo X([0-9])"
     Oppo:
+        F5: "CPH1723"
         R9s: "CPH1607"
         A37F: "A37f"
         A37FW: "A37fw"
@@ -23,8 +26,18 @@ model:
     Sony:
         Xperia X: "F5121"
     Samsung Galaxy:
+        J7: "SM-J710F"
         J7 Pro: "SM-J730GM"
+        Note 5: "SM-N920C"
+        Nexus: "Galaxy Nexus"
     Huawei:
+        Y5 II: "CUN-L22"
         Y5: "MYA-L22"
         Y7: "TRT-LX2"
         Y6 II: "CAM-L21"
+        Mate 7: "MT7-TL00"
+        GR5: "BLL-L22"
+    Motorola:
+        Xoom: "Xoom"
+    LG:
+        Nexus: "Nexus( [0-9]{1})"

@@ -6,7 +6,7 @@
 # @project endorphin-studio/browser-detector
 ########################################################################
 checkList:
-    series: J7
-    model: J7
+    series: Redmi
+    model: Redmi 4X
 uaList:
-    - "Mozilla/5.0 (Linux; Android 7.0; SM-J710F Build/NRD90M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.84 Mobile Safari/537.36"
+    - "Mozilla/5.0 (Linux; Android 7.1.2; Redmi 4X Build/N2G47H) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.111 Mobile Safari/537.36"

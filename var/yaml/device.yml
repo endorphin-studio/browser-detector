@@ -74,6 +74,12 @@ device:
                 isTablet: true
                 isTouch: true
     mobile:
+        LG:
+            pattern: "Nexus 5"
+            hasModel: true
+            attributes:
+                isMobile: true
+                isTouch: true
         Vivo:
             pattern: "(vivo)"
             hasModel: true
@@ -104,13 +110,8 @@ device:
                 isTouch: true
         Dell:
             pattern: "(Dell|DELL)"
-        Samsung Galaxy Note:
-            pattern: "(SAMSUNG SM-N9|SM-N9)"
-            attributes:
-                isMobile: true
-                isTouch: true
         Samsung Galaxy:
-            pattern: "(SAMSUNG SM|SM-G532G|SM-J)"
+            pattern: "(SAMSUNG SM|SM-G532G|SM-J|SAMSUNG SM-N9|SM-N9|Galaxy Nexus)"
             hasModel: true
             attributes:
                 isMobile: true
@@ -122,7 +123,7 @@ device:
                 isMobile: true
                 isTouch: true
         Oppo:
-            pattern: "(CPH1607|A37f|A1601|A37fw)"
+            pattern: "(CPH1723|CPH1607|A37f|A1601|A37fw)"
             hasModel: true
             attributes:
                 isMobile: true
@@ -143,6 +144,7 @@ device:
                 isTouch: true
         Motorola:
             pattern: "(MOT|Motorola|MOT-|MOTOZINE|XT|Mot|Droid|DROIDXA[0-9]{3,4}|Motorola.*ELECTRIFY|Motorola.*i1|i867|i[0-9]{3}|MB[0-9]{3}|ME[0-9]{3}|MT[0-9]{3}|WX435|WX[0-9]{3}|XT[0-9]{3}|XT928|HR[0-9]{3}|Xoom)"
+            hasModel: true
         Sony Ericsson:
             pattern: "SonyEricsson"
         Nokia:
