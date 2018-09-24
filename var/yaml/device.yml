@@ -68,18 +68,24 @@ device:
             attributes:
                 isTablet: true
                 isTouch: true
-        Vivo:
-            pattern: "(vivo)"
-            hasModel: true
-            attributes:
-                isTablet: true
-                isTouch: true
         Microsoft Surface:
             pattern: "(Windows NT 6.2; ARM;|Windows NT 6.2;(.*); Touch)"
             attributes:
                 isTablet: true
                 isTouch: true
     mobile:
+        Vivo:
+            pattern: "(vivo)"
+            hasModel: true
+            attributes:
+                isMobile: true
+                isTouch: true
+        Sony:
+            pattern: "(F5121)"
+            hasModel: true
+            attributes:
+                isMobile: true
+                isTouch: true
         Lumia:
             pattern: "Lumia [0-9]{1,5}"
             attributes:
@@ -104,17 +110,19 @@ device:
                 isMobile: true
                 isTouch: true
         Samsung Galaxy:
-            pattern: "(SAMSUNG SM)"
+            pattern: "(SAMSUNG SM|SM-G532G|SM-J)"
+            hasModel: true
             attributes:
                 isMobile: true
                 isTouch: true
-        Samsung Galaxy J:
-            pattern: "(SM-G532G)"
+        Huawei:
+            pattern: "(HUAWEI)"
+            hasModel: true
             attributes:
                 isMobile: true
                 isTouch: true
         Oppo:
-            pattern: "(CPH1607)"
+            pattern: "(CPH1607|A37f|A1601|A37fw)"
             hasModel: true
             attributes:
                 isMobile: true

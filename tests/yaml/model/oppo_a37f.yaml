@@ -6,7 +6,7 @@
 # @project endorphin-studio/browser-detector
 ########################################################################
 checkList:
-    name: Samsung Galaxy
-    type: mobile
+    series: A37F
+    model: A37F
 uaList:
-    - "Mozilla/5.0 (Linux; Android 6.0.1; SM-G532G Build/MMB29T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.83 Mobile Safari/537.36"
+    - "Mozilla/5.0 (Linux; Android 5.1; A37f Build/LMY47V) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.93 Mobile Safari/537.36"

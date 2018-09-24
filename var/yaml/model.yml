@@ -12,6 +12,19 @@ model:
         Mi A: "(Mi|MI) A([0-9])"
         Redmi: "Redmi( \\w{2})"
     Vivo:
+        V7+: "vivo 1716"
+        Y53: "vivo 1606"
         X: "vivo X([0-9])"
     Oppo:
         R9s: "CPH1607"
+        A37F: "A37f"
+        A37FW: "A37fw"
+        F1s: "A1601"
+    Sony:
+        Xperia X: "F5121"
+    Samsung Galaxy:
+        J7 Pro: "SM-J730GM"
+    Huawei:
+        Y5: "MYA-L22"
+        Y7: "TRT-LX2"
+        Y6 II: "CAM-L21"
