@@ -41,3 +41,7 @@ model:
         Xoom: "Xoom"
     LG:
         Nexus: "Nexus( [0-9]{1})"
+    AOPEN:
+        eTile: "WT([0-9]{2})M-FI"
+    Asus:
+        Zenfone 5: "ASUS_T00J"

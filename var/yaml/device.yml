@@ -63,6 +63,7 @@ device:
             pattern: "(CIUS|cius)"
         Asus:
             pattern: "(Asus|ASUS)"
+            hasModel: true
         Kindle Fire:
             pattern: "(KFTHWI|Kindle Fire)"
             attributes:
@@ -70,6 +71,12 @@ device:
                 isTouch: true
         Microsoft Surface:
             pattern: "(Windows NT 6.2; ARM;|Windows NT 6.2;(.*); Touch)"
+            attributes:
+                isTablet: true
+                isTouch: true
+        AOPEN:
+            pattern: "(WT19M-FI)"
+            hasModel: true
             attributes:
                 isTablet: true
                 isTouch: true
@@ -151,6 +158,12 @@ device:
             pattern: "(Nokia|N900|nokia|NOKIA|Series 60|Series 40|S60|S40)"
         ZTE:
             default: true
+        Asus:
+            pattern: "ASUS"
+            hasModel: true
+            attributes:
+                isMobile: true
+                isTouch: true
         Zaurus:
             pattern: "(PDA; SL|sharp pda browser)"
         Android:

@@ -1,0 +1,12 @@
+########################################################################
+# @author Serhii Nekhaienko <sergey.nekhaenko@gmail.com>
+# @license GPL
+# @copyright Serhii Nekhaienko &copy 2018
+# @version 4.0.2
+# @project endorphin-studio/browser-detector
+########################################################################
+checkList:
+    series: eTile
+    model: eTile19
+uaList:
+    - "Dalvik/1.6.0 (Linux; U; Android 4.4.4; WT19M-FI Build/KTU84Q)"
