@@ -13,6 +13,12 @@ browser:
             attributes:
                 isMobile: true
                 isTouch: true
+        Opera Touch:
+            pattern: "(OPT)"
+            version: "(OPT)"
+            attributes:
+                isMobile: true
+                isTouch: true
         Opera Mini:
             default: true
             attributes:
