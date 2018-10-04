@@ -2,7 +2,7 @@
 # @author Serhii Nekhaienko <sergey.nekhaenko@gmail.com>
 # @license GPL
 # @copyright Serhii Nekhaienko &copy 2018
-# @version 4.0.0
+# @version 4.0.2
 # @project endorphin-studio/browser-detector
 ########################################################################
 browser:
@@ -10,6 +10,12 @@ browser:
         Dolphin:
             pattern: "(Dolfin|Dolphin)"
             version: "(Dolfin|Dolphin)"
+            attributes:
+                isMobile: true
+                isTouch: true
+        Opera Touch:
+            pattern: "(OPT)"
+            version: "(OPT)"
             attributes:
                 isMobile: true
                 isTouch: true
