@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bbd8ab12f67e5946a25a6b0cef9c53b4",
+    "content-hash": "4a458a6f296c2cc2f84cb62d645ac5ae",
     "packages": [
         {
             "name": "endorphin-studio/browser-detector-data",
@@ -45,6 +45,42 @@
             ],
             "description": "Data for endorphin-studio/browser-detector",
             "time": "2018-10-17T11:34:26+00:00"
+        },
+        {
+            "name": "endorphin-studio/browser-detector-tools",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/endorphin-studio/browser-detector-tools.git",
+                "reference": "30a6973e6c6dc97e2526b11614505bf862c24875"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/endorphin-studio/browser-detector-tools/zipball/30a6973e6c6dc97e2526b11614505bf862c24875",
+                "reference": "30a6973e6c6dc97e2526b11614505bf862c24875",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "EndorphinStudio\\Detector\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Serhii Nekhaienko",
+                    "email": "sergey.nekhaenko@gmail.com"
+                }
+            ],
+            "description": "Tools for endorphin-studio/browser-detector",
+            "time": "2018-10-17T12:10:59+00:00"
         },
         {
             "name": "symfony/http-foundation",
