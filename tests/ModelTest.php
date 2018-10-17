@@ -36,7 +36,7 @@ class ModelTest extends BaseTest
                 foreach ($case['checkList'] as $field => $expected) {
                     foreach ($results as $resultIndex => $result) {
                         $real = Tools::runGetter($result, $field);
-                        $this->assertEquals($expected, $real, print_r(['result' => $resultIndex, 'uaList' => $case['uaList'] ],1));
+                        $this->assertEquals($expected, $real, print_r(['result' => $resultIndex, 'case' => $case ],1));
                     }
                 }
             }

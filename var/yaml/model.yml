@@ -23,6 +23,7 @@ model:
             models:
                 "55S": "vivo 1610"
                 "53": "vivo 1606"
+                "51": "vivo Y51"
         X:
             pattern: "vivo X([0-9])"
     Oppo:
@@ -77,3 +78,6 @@ model:
         Zenfone:
             models:
                   " 5": "ASUS_T00J"
+    Rikomagic:
+        MK:
+            pattern: "RKM MK([0-9]{3})"

@@ -25,6 +25,9 @@ device:
             pattern: "(CrKey)"
         SMART TV:
             pattern: "SMART-TV"
+        Rikomagic:
+            hasModel: true
+            pattern: "RKM"
     console:
         Xbox One:
             pattern: "(Xbox One)"
