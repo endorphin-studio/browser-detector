@@ -81,7 +81,7 @@ class Detector
      */
     public function __construct(string $dataProvider = '\\EndorphinStudio\\Detector\\Storage\\YamlStorage', string $format = 'yaml')
     {
-        $dataDirectory = sprintf('%s/var/%s', dirname(__DIR__), $format);
+        $dataDirectory = sprintf('%s/vendor/endorphin-studio/browser-detector-data/var/%s', dirname(__DIR__), $format);
         /** @var StorageInterface $dataProvider */
         $dataProvider = new $dataProvider();
         $dataProvider->setDataDirectory($dataDirectory);
