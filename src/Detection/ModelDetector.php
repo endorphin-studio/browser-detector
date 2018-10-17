@@ -28,13 +28,37 @@ class ModelDetector extends AbstractDetection
             return;
         }
         $patternList = $this->config[$name];
-        foreach ($patternList as $series => $pattern) {
+        foreach ($patternList as $series => $data) {
+            if(array_key_exists('pattern', $data)) {
+                $this->detectModelByPattern($series,$data['pattern']);
+            } elseif (array_key_exists('models', $data)) {
+                $this->detectModelByModelList($series, $data['models']);
+            }
+        }
+    }
+
+    private function detectModelByPattern(string $series, string $pattern)
+    {
+        $pattern = sprintf('/%s/', $pattern);
+        $result = \preg_match($pattern, $this->detector->getUserAgent(), $model);
+        if ($result) {
+            $model = count($model) > 1 ? sprintf('%s%s', $series, end($model)) : $series;
+            $this->resultObject->setModel($model);
+            $this->resultObject->setSeries($series);
+            return $result;
+        }
+    }
+
+    private function detectModelByModelList(string $series, array $data)
+    {
+        foreach ($data as $model => $pattern) {
             $pattern = sprintf('/%s/', $pattern);
-            $result = \preg_match($pattern, $this->detector->getUserAgent(), $model);
+            $result = \preg_match($pattern, $this->detector->getUserAgent());
             if ($result) {
-                $model = count($model) > 1 ? sprintf('%s%s', $series, end($model)) : $series;
+                $model = sprintf('%s%s', $series, $model);
                 $this->resultObject->setModel($model);
                 $this->resultObject->setSeries($series);
+                return $result;
             }
         }
     }
