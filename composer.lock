@@ -4,23 +4,24 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4a458a6f296c2cc2f84cb62d645ac5ae",
+    "content-hash": "982779a7b31fb2cbe8541ea5ccf01747",
     "packages": [
         {
             "name": "endorphin-studio/browser-detector-data",
-            "version": "1.0.0a",
+            "version": "1.0.0b",
             "source": {
                 "type": "git",
                 "url": "https://github.com/endorphin-studio/browser-detector-data.git",
-                "reference": "d28064804945c8c3462d0dd453443cea32770783"
+                "reference": "1d82feb61f332156745224e8187239e355a70892"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/endorphin-studio/browser-detector-data/zipball/d28064804945c8c3462d0dd453443cea32770783",
-                "reference": "d28064804945c8c3462d0dd453443cea32770783",
+                "url": "https://api.github.com/repos/endorphin-studio/browser-detector-data/zipball/1d82feb61f332156745224e8187239e355a70892",
+                "reference": "1d82feb61f332156745224e8187239e355a70892",
                 "shasum": ""
             },
             "require": {
+                "endorphin-studio/browser-detector-tools": ">=1.0.0",
                 "php": ">=7.0",
                 "symfony/http-foundation": ">=v3.4.14",
                 "symfony/yaml": ">=v3.4.14"
@@ -44,7 +45,7 @@
                 }
             ],
             "description": "Data for endorphin-studio/browser-detector",
-            "time": "2018-10-17T11:34:26+00:00"
+            "time": "2018-10-17T12:43:57+00:00"
         },
         {
             "name": "endorphin-studio/browser-detector-tools",

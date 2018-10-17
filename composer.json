@@ -21,7 +21,7 @@
   "require-dev":
   {
     "endorphin-studio/browser-detector-tools": ">=1.0.0",
-    "endorphin-studio/browser-detector-data": ">=1.0.0a",
+    "endorphin-studio/browser-detector-data": ">=1.0.0b",
     "twig/twig": "^2.5.0",
     "phpunit/phpunit": "^6.5.11"
   },
