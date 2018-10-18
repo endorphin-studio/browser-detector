@@ -2,13 +2,12 @@
 # @author Serhii Nekhaienko <sergey.nekhaenko@gmail.com>
 # @license GPL
 # @copyright Serhii Nekhaienko &copy 2018
-# @version 4.0.0
+# @version 4.0.2
 # @project endorphin-studio/browser-detector
 ########################################################################
-configDir: "%s/yaml/"
-testObjects:
-    browser: "%s/browser/"
-    os: "%s/os/"
-    device: "%s/device/"
-    robot: "%s/robot/"
-    model: "%s/model/"
+checkList:
+    type: Site Monitor
+    owner: Anturis Inc.
+    name: Anturis Agent
+uaList:
+    - "Mozilla/5.0 (Anturis Agent)"

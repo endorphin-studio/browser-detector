@@ -5,10 +5,10 @@
 # @version 4.0.0
 # @project endorphin-studio/browser-detector
 ########################################################################
-configDir: "%s/yaml/"
-testObjects:
-    browser: "%s/browser/"
-    os: "%s/os/"
-    device: "%s/device/"
-    robot: "%s/robot/"
-    model: "%s/model/"
+checkList:
+    name: Microsoft Surface
+    type: tablet
+uaList:
+    - "Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Win64; x64; Trident/6.0; Touch)"
+    - "Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; ARM; Trident/6.0)"
+    - "Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; ARM; Trident/6.0; Touch)"

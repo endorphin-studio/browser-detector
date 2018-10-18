@@ -42,6 +42,7 @@ class YamlReader
         $files = $this->getFileNames($directory);
         foreach ($files as $fileName => $filePath) {
             $fileConfig[$fileName] = $this->parser->parseFile($filePath);
+            $fileConfig[$fileName]['fileName'] = $filePath;
             $config = \array_merge($config, $fileConfig);
         }
         return $config;

@@ -4,8 +4,123 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1e908f37ad47dd6f8a15969f514ade07",
+    "content-hash": "3bde33ba7b82361738fcab7f301e824d",
     "packages": [
+        {
+            "name": "endorphin-studio/browser-detector-data",
+            "version": "1.0.0b",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/endorphin-studio/browser-detector-data.git",
+                "reference": "1d82feb61f332156745224e8187239e355a70892"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/endorphin-studio/browser-detector-data/zipball/1d82feb61f332156745224e8187239e355a70892",
+                "reference": "1d82feb61f332156745224e8187239e355a70892",
+                "shasum": ""
+            },
+            "require": {
+                "endorphin-studio/browser-detector-tools": ">=1.0.0",
+                "php": ">=7.0",
+                "symfony/http-foundation": ">=v3.4.14",
+                "symfony/yaml": ">=v3.4.14"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "EndorphinStudio\\Detector\\Data\\": "src/Data",
+                    "EndorphinStudio\\Detector\\Storage\\": "src/Storage",
+                    "EndorphinStudio\\Detector\\Exception\\": "src/Exception"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Serhii Nekhaienko",
+                    "email": "sergey.nekhaenko@gmail.com"
+                }
+            ],
+            "description": "Data for endorphin-studio/browser-detector",
+            "time": "2018-10-17T12:43:57+00:00"
+        },
+        {
+            "name": "endorphin-studio/browser-detector-detection",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/endorphin-studio/browser-detector-detection.git",
+                "reference": "d7b7ecadcb4faf0d6f4ef391dfcd49f6ffb1f52c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/endorphin-studio/browser-detector-detection/zipball/d7b7ecadcb4faf0d6f4ef391dfcd49f6ffb1f52c",
+                "reference": "d7b7ecadcb4faf0d6f4ef391dfcd49f6ffb1f52c",
+                "shasum": ""
+            },
+            "require": {
+                "endorphin-studio/browser-detector-data": ">=1.0.0b",
+                "endorphin-studio/browser-detector-tools": ">=1.0.0",
+                "php": ">=7.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "EndorphinStudio\\Detector\\Detection\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Serhii Nekhaienko",
+                    "email": "sergey.nekhaenko@gmail.com"
+                }
+            ],
+            "description": "Detection for endorphin-studio/browser-detector",
+            "time": "2018-10-18T08:25:11+00:00"
+        },
+        {
+            "name": "endorphin-studio/browser-detector-tools",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/endorphin-studio/browser-detector-tools.git",
+                "reference": "30a6973e6c6dc97e2526b11614505bf862c24875"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/endorphin-studio/browser-detector-tools/zipball/30a6973e6c6dc97e2526b11614505bf862c24875",
+                "reference": "30a6973e6c6dc97e2526b11614505bf862c24875",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "EndorphinStudio\\Detector\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Serhii Nekhaienko",
+                    "email": "sergey.nekhaenko@gmail.com"
+                }
+            ],
+            "description": "Tools for endorphin-studio/browser-detector",
+            "time": "2018-10-17T12:10:59+00:00"
+        },
         {
             "name": "paragonie/random_compat",
             "version": "v9.99.99",
@@ -53,16 +168,16 @@
         },
         {
             "name": "symfony/http-foundation",
-            "version": "v3.4.15",
+            "version": "v3.4.17",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/http-foundation.git",
-                "reference": "2fb33cb6eefe6e790e4023f7c534a9e4214252fc"
+                "reference": "3a4498236ade473c52b92d509303e5fd1b211ab1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/2fb33cb6eefe6e790e4023f7c534a9e4214252fc",
-                "reference": "2fb33cb6eefe6e790e4023f7c534a9e4214252fc",
+                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/3a4498236ade473c52b92d509303e5fd1b211ab1",
+                "reference": "3a4498236ade473c52b92d509303e5fd1b211ab1",
                 "shasum": ""
             },
             "require": {
@@ -103,7 +218,7 @@
             ],
             "description": "Symfony HttpFoundation Component",
             "homepage": "https://symfony.com",
-            "time": "2018-08-27T17:45:33+00:00"
+            "time": "2018-10-03T08:48:18+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",
@@ -283,16 +398,16 @@
         },
         {
             "name": "symfony/yaml",
-            "version": "v3.4.15",
+            "version": "v3.4.17",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "c2f4812ead9f847cb69e90917ca7502e6892d6b8"
+                "reference": "640b6c27fed4066d64b64d5903a86043f4a4de7f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/c2f4812ead9f847cb69e90917ca7502e6892d6b8",
-                "reference": "c2f4812ead9f847cb69e90917ca7502e6892d6b8",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/640b6c27fed4066d64b64d5903a86043f4a4de7f",
+                "reference": "640b6c27fed4066d64b64d5903a86043f4a4de7f",
                 "shasum": ""
             },
             "require": {
@@ -338,7 +453,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2018-08-10T07:34:36+00:00"
+            "time": "2018-10-02T16:33:53+00:00"
         }
     ],
     "packages-dev": [
@@ -1869,7 +1984,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "endorphin-studio/browser-detector-data": 15
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
