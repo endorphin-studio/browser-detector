@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d4824533903eb0acfa93487a8b6727ed",
+    "content-hash": "3bde33ba7b82361738fcab7f301e824d",
     "packages": [
         {
             "name": "endorphin-studio/browser-detector-data",
@@ -46,6 +46,44 @@
             ],
             "description": "Data for endorphin-studio/browser-detector",
             "time": "2018-10-17T12:43:57+00:00"
+        },
+        {
+            "name": "endorphin-studio/browser-detector-detection",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/endorphin-studio/browser-detector-detection.git",
+                "reference": "d7b7ecadcb4faf0d6f4ef391dfcd49f6ffb1f52c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/endorphin-studio/browser-detector-detection/zipball/d7b7ecadcb4faf0d6f4ef391dfcd49f6ffb1f52c",
+                "reference": "d7b7ecadcb4faf0d6f4ef391dfcd49f6ffb1f52c",
+                "shasum": ""
+            },
+            "require": {
+                "endorphin-studio/browser-detector-data": ">=1.0.0b",
+                "endorphin-studio/browser-detector-tools": ">=1.0.0",
+                "php": ">=7.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "EndorphinStudio\\Detector\\Detection\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Serhii Nekhaienko",
+                    "email": "sergey.nekhaenko@gmail.com"
+                }
+            ],
+            "description": "Detection for endorphin-studio/browser-detector",
+            "time": "2018-10-18T08:25:11+00:00"
         },
         {
             "name": "endorphin-studio/browser-detector-tools",
@@ -130,16 +168,16 @@
         },
         {
             "name": "symfony/http-foundation",
-            "version": "v3.4.14",
+            "version": "v3.4.17",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/http-foundation.git",
-                "reference": "19a3267828046a2a4a05e3dc2954bbd2e0ad9fa6"
+                "reference": "3a4498236ade473c52b92d509303e5fd1b211ab1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/19a3267828046a2a4a05e3dc2954bbd2e0ad9fa6",
-                "reference": "19a3267828046a2a4a05e3dc2954bbd2e0ad9fa6",
+                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/3a4498236ade473c52b92d509303e5fd1b211ab1",
+                "reference": "3a4498236ade473c52b92d509303e5fd1b211ab1",
                 "shasum": ""
             },
             "require": {
@@ -180,7 +218,7 @@
             ],
             "description": "Symfony HttpFoundation Component",
             "homepage": "https://symfony.com",
-            "time": "2018-08-01T14:04:26+00:00"
+            "time": "2018-10-03T08:48:18+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",
@@ -360,16 +398,16 @@
         },
         {
             "name": "symfony/yaml",
-            "version": "v3.4.14",
+            "version": "v3.4.17",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "810af2d35fc72b6cf5c01116806d2b65ccaaf2e2"
+                "reference": "640b6c27fed4066d64b64d5903a86043f4a4de7f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/810af2d35fc72b6cf5c01116806d2b65ccaaf2e2",
-                "reference": "810af2d35fc72b6cf5c01116806d2b65ccaaf2e2",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/640b6c27fed4066d64b64d5903a86043f4a4de7f",
+                "reference": "640b6c27fed4066d64b64d5903a86043f4a4de7f",
                 "shasum": ""
             },
             "require": {
@@ -415,7 +453,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2018-07-26T11:19:56+00:00"
+            "time": "2018-10-02T16:33:53+00:00"
         }
     ],
     "packages-dev": [
