@@ -81,7 +81,7 @@ class Detector
      */
     public function __construct(string $dataProvider = '\\EndorphinStudio\\Detector\\Storage\\YamlStorage', string $format = 'yaml')
     {
-        $dataDirectory = sprintf('%s/var/%s', dirname(__DIR__), $format);
+        $dataDirectory = sprintf('%s/vendor/endorphin-studio/browser-detector-data/var/%s', dirname(__DIR__), $format);
         /** @var StorageInterface $dataProvider */
         $dataProvider = new $dataProvider();
         $dataProvider->setDataDirectory($dataDirectory);
@@ -109,7 +109,7 @@ class Detector
         $this->ua = $ua === 'ua' ? $request->server->get('HTTP_USER_AGENT') : $ua;
         $this->resultObject = new Result($this->ua);
         foreach ($this->detectors as $detectionType => $detector) {
-            $detector->detect($ua);
+            $detector->detect();
         }
         return $this->resultObject;
     }
