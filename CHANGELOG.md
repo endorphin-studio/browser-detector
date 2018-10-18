@@ -33,11 +33,43 @@ add detection:
     Insping Bot (bot)
     Port Monitor (bot)
     DownNotifier.com (bot)
+    Samsung Galaxy J (mobile)
+    Vivo (tablet)
+    Oppo (mobile)
+
+model detection:
+
+    Huawei Y5
+    Huawei Y6
+    Huawei Y7
+    Oppo A37F
+    Oppo A37FW
+    Samsung Galaxy J7
+    Sony Xperia X
+    Vivo V7+
+    Vivo Y53
+    Huawei GR5
+    Huawei Mate 7
+    Huawei Y5 II
+    Oppo F5
+    Motorola Xoom
+    LG Nexus 5
+    Samsung Galaxy Nexus
+    Samsung Galaxy J
+    Samsung Galaxy Note 5
+    Vivo Y55S
+    Xiaomi Redmi Note
+    Xiaomi Redmi 4X
+    Aopen Elite 19
+    Asus Zenfone 5
+    Rikomagic MK902
+    Vivo Y51
+
 
 new device type:
     
     console
-    e-reader
+    e-reader    
 
 ### 4.0.1
     fix https://github.com/endorphin-studio/browser-detector/issues/17
