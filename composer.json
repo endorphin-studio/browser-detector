@@ -13,6 +13,7 @@
   ],
   "require": {
     "php": ">=7.0",
+
     "endorphin-studio/browser-detector-detection": ">=1.0.0",
     "endorphin-studio/browser-detector-tools": ">=1.0.0",
     "endorphin-studio/browser-detector-data": ">=1.0.2"
