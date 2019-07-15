@@ -152,9 +152,12 @@ class Detector
         /** @var StorageInterface $dataProvider */
         $this->setDataProvider($dataProvider);
         $this->dataProvider->setDataDirectory($this->findDataDirectory());
-        $this->dataProvider->setCacheDirectory($this->findCacheDirectory());
-        $this->dataProvider->setCacheEnabled(true);
-        $this->setDataProvider($dataProvider);
+        if(method_exists($this->dataProvider,'setCacheDirectory')) {
+            $this->dataProvider->setCacheDirectory($this->findCacheDirectory());
+        }
+        if(method_exists($this->dataProvider,'setCacheEnabled')) {
+            $this->dataProvider->setCacheEnabled(true);
+        }
     }
 
     /**
