@@ -148,13 +148,11 @@ class Detector
     protected function init()
     {
         $dataProvider = $this->options['dataProvider'];
-        $dataDirectory = $this->findDataDirectory();
-        $cacheDirectory = $this->findCacheDirectory();
 
         /** @var StorageInterface $dataProvider */
         $dataProvider = new $dataProvider();
-        $dataProvider->setDataDirectory($dataDirectory);
-        $dataProvider->setCacheDirectory($cacheDirectory);
+        $dataProvider->setDataDirectory($this->findDataDirectory());
+        $dataProvider->setCacheDirectory($this->findCacheDirectory());
         $dataProvider->setCacheEnabled(true);
         $this->setDataProvider($dataProvider);
     }
@@ -184,8 +182,8 @@ class Detector
      */
     private function findCacheDirectory(): string
     {
-        $cacheDirectory = $this->options['dataDirectory'];
-        if($this->options['dataDirectory'] === 'auto') {
+        $cacheDirectory = $this->options['cacheDirectory'];
+        if($this->options['cacheDirectory'] === 'auto') {
             $reflection = new \ReflectionClass(AbstractData::class);
             $cacheDirectory = sprintf('%s/var/cache', dirname($reflection->getFileName(),3));
         }
