@@ -9,6 +9,7 @@
 
 namespace EndorphinStudio\Detector;
 
+use EndorphinStudio\Detector\Data\AbstractData;
 use EndorphinStudio\Detector\Data\Result;
 use EndorphinStudio\Detector\Exception\StorageException;
 use EndorphinStudio\Detector\Storage\AbstractStorage;
@@ -22,6 +23,16 @@ use Symfony\Component\HttpFoundation\Request;
  */
 class Detector
 {
+    /**
+     * @var array Array of options
+     */
+    protected $options = [
+        'dataProvider' => '\\EndorphinStudio\\Detector\\Storage\\YamlStorage',
+        'dataDirectory' => 'auto',
+        'cacheDirectory' => 'auto',
+        'format' => 'yaml'
+    ];
+
     /**
      * @var StorageInterface
      */
@@ -76,19 +87,23 @@ class Detector
 
     /**
      * Detector constructor.
-     * @param string $dataProvider
-     * @param string $format
+     * Options:
+     * 'dataProvider' => '\\EndorphinStudio\\Detector\\Storage\\YamlStorage',
+     * 'dataDirectory' => 'auto',
+     * 'cacheDirectory' => 'auto',
+     * 'format' => 'yaml'
+     * @param array $options Array of options
+     * @throws \ReflectionException
+     * @throws StorageException
      */
-    public function __construct(string $dataProvider = '\\EndorphinStudio\\Detector\\Storage\\YamlStorage', string $format = 'yaml')
+    public function __construct(array $options = [])
     {
-        $dataDirectory = sprintf('%s/vendor/endorphin-studio/browser-detector-data/var/%s', dirname(__DIR__), $format);
-        /** @var StorageInterface $dataProvider */
-        $dataProvider = new $dataProvider();
-        $dataProvider->setDataDirectory($dataDirectory);
-        $this->setDataProvider($dataProvider);
+        $this->options = array_merge_recursive($options, $this->options);
+
+        $this->init();
         $this->detectors = [];
         $check = ['os','device', 'browser', 'robot'];
-        Tools::setWindowsConfig($dataProvider->getConfig()['windows']);
+        Tools::setWindowsConfig($this->dataProvider->getConfig()['windows']);
         foreach ($check as $detectionType) {
             $className = sprintf('\\EndorphinStudio\\Detector\\Detection\\%s', ucfirst(sprintf('%sDetector', $detectionType)));
             if(class_exists($className)) {
@@ -123,5 +138,60 @@ class Detector
     public function getPatternList($list, $type)
     {
         return array_key_exists($type, $list) ? $list[$type] : [];
+    }
+
+    /**
+     * Initialisation method
+     * @throws \ReflectionException
+     * @throws StorageException
+     */
+    protected function init()
+    {
+        $dataProvider = $this->options['dataProvider'];
+        $dataDirectory = $this->findDataDirectory();
+        $cacheDirectory = $this->findCacheDirectory();
+
+        /** @var StorageInterface $dataProvider */
+        $dataProvider = new $dataProvider();
+        $dataProvider->setDataDirectory($dataDirectory);
+        $dataProvider->setCacheDirectory($cacheDirectory);
+        $dataProvider->setCacheEnabled(true);
+        $this->setDataProvider($dataProvider);
+    }
+
+    /**
+     * @return string
+     * @throws StorageException
+     * @throws \ReflectionException
+     */
+    private function findDataDirectory(): string
+    {
+        $dataDirectory = $this->options['dataDirectory'];
+        if($this->options['dataDirectory'] === 'auto') {
+            $reflection = new \ReflectionClass(AbstractData::class);
+            $dataDirectory = sprintf('%s/var/%s', dirname($reflection->getFileName(),3), $this->options['format']);
+        }
+        if(is_dir($dataDirectory)){
+            return $dataDirectory;
+        }
+        throw new StorageException(sprintf(StorageException::DIRECTORY_NOT_FOUND, $dataDirectory));
+    }
+
+    /**
+     * @return string
+     * @throws StorageException
+     * @throws \ReflectionException
+     */
+    private function findCacheDirectory(): string
+    {
+        $cacheDirectory = $this->options['dataDirectory'];
+        if($this->options['dataDirectory'] === 'auto') {
+            $reflection = new \ReflectionClass(AbstractData::class);
+            $cacheDirectory = sprintf('%s/var/cache', dirname($reflection->getFileName(),3));
+        }
+        if(is_dir($cacheDirectory)){
+            return $cacheDirectory;
+        }
+        throw new StorageException(sprintf(StorageException::DIRECTORY_NOT_FOUND, $cacheDirectory));
     }
 }
