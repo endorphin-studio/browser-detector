@@ -147,13 +147,13 @@ class Detector
      */
     protected function init()
     {
-        $dataProvider = $this->options['dataProvider'];
+        $dataProvider = new $this->options['dataProvider']();
 
         /** @var StorageInterface $dataProvider */
-        $dataProvider = new $dataProvider();
-        $dataProvider->setDataDirectory($this->findDataDirectory());
-        $dataProvider->setCacheDirectory($this->findCacheDirectory());
-        $dataProvider->setCacheEnabled(true);
+        $this->setDataProvider($dataProvider);
+        $this->dataProvider->setDataDirectory($this->findDataDirectory());
+        $this->dataProvider->setCacheDirectory($this->findCacheDirectory());
+        $this->dataProvider->setCacheEnabled(true);
         $this->setDataProvider($dataProvider);
     }
 
