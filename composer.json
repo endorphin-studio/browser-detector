@@ -13,13 +13,13 @@
   ],
   "require": {
     "php": ">=7.0 <7.3",
-    "endorphin-studio/browser-detector-detection": ">=1.0.0",
+    "endorphin-studio/browser-detector-detection": ">=1.0.1",
     "endorphin-studio/browser-detector-tools": ">=1.0.0",
     "endorphin-studio/browser-detector-data": ">=1.0.3"
   },
   "require-dev":
   {
-    "endorphin-studio/browser-detector-detection": ">=1.0.0",
+    "endorphin-studio/browser-detector-detection": ">=1.0.1",
     "endorphin-studio/browser-detector-tools": ">=1.0.0",
     "endorphin-studio/browser-detector-data": ">=1.0.3",
     "twig/twig": "^2.5.0",
