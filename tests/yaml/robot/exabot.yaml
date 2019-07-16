@@ -1,0 +1,12 @@
+########################################################################
+# @author Serhii Nekhaienko <sergey.nekhaenko@gmail.com>
+# @license GPL
+# @copyright Serhii Nekhaienko &copy 2018
+# @version 4.0.0
+# @project endorphin-studio/browser-detector
+########################################################################
+checkList:
+    type: Bot/Crawler
+    name: Exabot
+uaList:
+    - "User Agent: Mozilla/5.0 (compatible; Exabot/3.0; +http://www.exabot.com/go/robot)"
