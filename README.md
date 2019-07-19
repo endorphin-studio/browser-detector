@@ -10,15 +10,15 @@ Detect user Browser, OS and Device through USER AGENT
 
 ## About
 	Author: Serhii Nekhaienko <sergey.nekhaenko@gmail.com>
-	Current Version: 4.0.2
-	Stable Version: 4.0.2
+	Current Version: 4.0.3
+	Stable Version: 4.0.3
 	License: GPL-3.0+
 
 ## Requirements
 	PHP 7.0+
-    endorphin-studio/browser-detector-detection >=1.0.0
+    endorphin-studio/browser-detector-detection >=1.0.1
     endorphin-studio/browser-detector-tools >=1.0.0
-    endorphin-studio/browser-detector-data >=1.0.0a
+    endorphin-studio/browser-detector-data >=1.0.3
 
 ## Install via Composer
     composer require endorphin-studio/browser-detector
