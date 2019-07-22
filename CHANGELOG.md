@@ -1,3 +1,12 @@
+### 4.0.4
+add detection:
+
+    Exabot
+    TwitterBot
+
+### 4.0.3
+    Fix https://github.com/endorphin-studio/browser-detector/issues/38
+
 ### 4.0.2
 add detection:
 

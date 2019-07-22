@@ -9,9 +9,9 @@ Detect user Browser, OS and Device through USER AGENT
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/endorphin-studio/browser-detector/badges/quality-score.png?b=4.0)](https://scrutinizer-ci.com/g/endorphin-studio/browser-detector/?branch=4.0)
 
 ## About
-	Author: Serhii Nekhaienko <sergey.nekhaenko@gmail.com>
-	Current Version: 4.0.3
-	Stable Version: 4.0.3
+	Author: Serhii Nekhaienko
+	Email: sergey.nekhaenko@gmail.com
+	Stable Version: 4.0.4
 	License: GPL-3.0+
 
 ## Requirements
