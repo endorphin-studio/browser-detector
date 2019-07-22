@@ -19,8 +19,8 @@
   },
   "require-dev":
   {
-    "twig/twig": "^2.5.0",
-    "phpunit/phpunit": "^6.5.11"
+    "phpunit/phpunit": "6.5.14",
+    "doctrine/instantiator": "1.0.5"
   },
   "autoload": {
     "psr-4": { "EndorphinStudio\\Detector\\": "src/" }
