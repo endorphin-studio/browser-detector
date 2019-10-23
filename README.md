@@ -1,5 +1,5 @@
 Detect user Browser, OS and Device through USER AGENT
-[Live demo](http://detector.endorphin-studio.ru/demo/)
+[Live demo](http://detector.serhii.work/)
 
 ## Code Status
 [![Latest Stable Version](https://poser.pugx.org/endorphin-studio/browser-detector/v/stable)](https://packagist.org/packages/endorphin-studio/browser-detector)
