@@ -23,6 +23,13 @@ use Symfony\Component\HttpFoundation\Request;
  */
 class Detector
 {
+    private $version = '4.0.5';
+
+    public function getVersion(): string
+    {
+        return $this->version;
+    }
+
     /**
      * @var array Array of options
      */
@@ -122,7 +129,7 @@ class Detector
     {
         $request = Request::createFromGlobals();
         $this->ua = $ua === 'ua' ? $request->server->get('HTTP_USER_AGENT') : $ua;
-        $this->resultObject = new Result($this->ua);
+        $this->resultObject = new Result($this->ua, $this);
         foreach ($this->detectors as $detectionType => $detector) {
             $detector->detect();
         }
