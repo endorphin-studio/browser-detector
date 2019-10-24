@@ -23,6 +23,13 @@ use Symfony\Component\HttpFoundation\Request;
  */
 class Detector
 {
+    private $version = '4.0.5';
+
+    public function getVersion(): string
+    {
+        return $this->version;
+    }
+
     /**
      * @var array Array of options
      */
