@@ -129,7 +129,7 @@ class Detector
     {
         $request = Request::createFromGlobals();
         $this->ua = $ua === 'ua' ? $request->server->get('HTTP_USER_AGENT') : $ua;
-        $this->resultObject = new Result($this->ua);
+        $this->resultObject = new Result($this->ua, $this);
         foreach ($this->detectors as $detectionType => $detector) {
             $detector->detect();
         }
