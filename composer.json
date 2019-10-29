@@ -19,16 +19,9 @@
   },
   "require-dev":
   {
-    "phpunit/phpunit": "6.5.14",
-    "doctrine/instantiator": "1.0.5"
+    "endorphin-studio/browser-detector-tests": ">=1.0"
   },
   "autoload": {
     "psr-4": { "EndorphinStudio\\Detector\\": "src/" }
-  },
-  "autoload-dev": {
-    "psr-4": {
-      "EndorphinStudio\\Detector\\":  "src/",
-      "EndorphinStudio\\Tests\\":  "tests/"
-    }
   }
 }

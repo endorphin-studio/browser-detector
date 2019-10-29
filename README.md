@@ -11,11 +11,11 @@ Detect user Browser, OS and Device through USER AGENT
 ## About
 	Author: Serhii Nekhaienko
 	Email: sergey.nekhaenko@gmail.com
-	Stable Version: 4.0.4
+	Stable Version: 5.0.0
 	License: GPL-3.0+
 
 ## Requirements
-	PHP 7.0+
+	PHP >=7.0 <7.3
     endorphin-studio/browser-detector-detection >=1.0.1
     endorphin-studio/browser-detector-tools >=1.0.0
     endorphin-studio/browser-detector-data >=1.0.3
