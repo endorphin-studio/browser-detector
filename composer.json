@@ -1,7 +1,7 @@
 {
   "name": "endorphin-studio/browser-detector",
   "description": "Detect user Browser, OS and Device through Browser USER AGENT",
-  "minimum-stability": "stable",
+  "minimum-stability": "dev",
   "type": "library",
   "license": "GPL-3.0+",
   "keywords": ["browser-detector","user-agent-string","user-agent","device-detector"],
@@ -19,7 +19,7 @@
   },
   "require-dev":
   {
-    "endorphin-studio/browser-detector-tests": ">=1.0"
+    "endorphin-studio/browser-detector-tests": "dev-develop"
   },
   "autoload": {
     "psr-4": { "EndorphinStudio\\Detector\\": "src/" }
