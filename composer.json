@@ -1,10 +1,14 @@
 {
   "name": "endorphin-studio/browser-detector",
-  "description": "Detect user Browser, OS and Device through Browser USER AGENT",
-  "minimum-stability": "stable",
   "type": "library",
+  "description": "Detect user Browser, OS and Device through Browser USER AGENT",
   "license": "GPL-3.0+",
-  "keywords": ["browser-detector","user-agent-string","user-agent","device-detector"],
+  "keywords": [
+    "browser-detector",
+    "user-agent-string",
+    "user-agent",
+    "device-detector"
+  ],
   "authors": [
     {
       "name": "Serhii Nekhaienko",
@@ -12,16 +16,26 @@
     }
   ],
   "require": {
-    "php": ">=7.0 <7.3",
-    "endorphin-studio/browser-detector-detection": ">=1.0.1",
-    "endorphin-studio/browser-detector-tools": ">=1.0.0",
-    "endorphin-studio/browser-detector-data": ">=1.0"
+    "php": "^7.0.8",
+    "endorphin-studio/browser-detector-detection": "^1.0.1",
+    "endorphin-studio/browser-detector-tools": "^1.0.0",
+    "endorphin-studio/browser-detector-data": "^1.1.0"
   },
-  "require-dev":
-  {
-    "endorphin-studio/browser-detector-tests": ">=1.0"
+  "require-dev": {
+    "endorphin-studio/browser-detector-tests": "^1.0.0"
+  },
+  "config": {
+    "platform": {
+      "php": "7.0.8"
+    },
+    "preferred-install": "dist",
+    "sort-packages": true
   },
   "autoload": {
-    "psr-4": { "EndorphinStudio\\Detector\\": "src/" }
-  }
+    "psr-4": {
+      "EndorphinStudio\\Detector\\": "src/"
+    }
+  },
+  "minimum-stability": "stable",
+  "prefer-stable": true
 }

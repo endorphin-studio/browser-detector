@@ -1,9 +1,91 @@
 language: php
+sudo: false
+
 php:
   - 7.0
   - 7.1
   - 7.2
+  - 7.3
+  - 7.4
 
-before_script:
-  - composer install
-script: ./vendor/bin/phpunit -c ./vendor/endorphin-studio/browser-detector-tests/phpunit.xml.dist
+os: linux
+
+env:
+  - COMPOSER_FLAGS="--prefer-lowest"
+  - COMPOSER_FLAGS=""
+
+cache:
+  directories:
+    - $HOME/.composer/cache
+
+stages:
+  - composer validate
+  - check dependencies
+  - test
+  - test with coverage
+
+before_install:
+  - stty cols 130
+  - phpenv config-rm xdebug.ini || echo "xdebug not available"
+  - echo 'opcache.enable=1' >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
+  - echo 'opcache.enable_cli=1' >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
+  - echo 'zend.assertions=1' >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/travis.ini
+  - echo 'assert.exception=On' >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/travis.ini
+  - composer self-update
+
+install: travis_retry composer update --optimize-autoloader --prefer-dist --prefer-stable --no-progress --no-interaction --no-suggest $COMPOSER_FLAGS -vv
+
+script: vendor/bin/phpunit -c vendor/endorphin-studio/browser-detector-tests/phpunit.xml.dist --colors --columns 117 --no-coverage
+
+jobs:
+  allow_failures:
+    - php: nightly
+  include:
+    - php: nightly
+      env: COMPOSER_FLAGS="--ignore-platform-reqs"
+
+    - stage: test with coverage
+      php: 7.1
+      env: COMPOSER_FLAGS=""
+      before_install:
+        - stty cols 130
+        - echo 'opcache.enable=1' >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
+        - echo 'opcache.enable_cli=1' >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
+        - echo 'zend.assertions=1' >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/travis.ini
+        - echo 'assert.exception=On' >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/travis.ini
+        - composer self-update
+      script: vendor/bin/phpunit -c vendor/endorphin-studio/browser-detector-tests/phpunit.xml.dist --colors --columns 117 --coverage-clover=clover.xml --coverage-text
+
+    - stage: composer validate
+      php: 7.1
+      env: COMPOSER_FLAGS=""
+      install: skip
+      script: composer validate
+
+    - stage: check dependencies
+      php: 7.1
+      env: COMPOSER_FLAGS=""
+      script: composer outdated --direct
+
+    - stage: check dependencies
+      php: 7.2
+      env: COMPOSER_FLAGS=""
+      script: composer outdated --direct
+
+    - stage: check dependencies
+      php: 7.3
+      env: COMPOSER_FLAGS=""
+      script: composer outdated --direct
+
+    - stage: check dependencies
+      php: 7.4
+      env: COMPOSER_FLAGS=""
+      script: composer outdated --direct
+
+    - stage: check dependencies
+      php: nightly
+      env: COMPOSER_FLAGS="--ignore-platform-reqs"
+      script: composer outdated --direct
+
+notifications:
+  email: false

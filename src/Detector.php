@@ -11,6 +11,7 @@ namespace EndorphinStudio\Detector;
 
 use EndorphinStudio\Detector\Data\AbstractData;
 use EndorphinStudio\Detector\Data\Result;
+use EndorphinStudio\Detector\Detection\DetectionInterface;
 use EndorphinStudio\Detector\Exception\StorageException;
 use EndorphinStudio\Detector\Storage\AbstractStorage;
 use EndorphinStudio\Detector\Storage\StorageInterface;
@@ -88,7 +89,7 @@ class Detector
     private $ua;
 
     /**
-     * @var array
+     * @var DetectionInterface[]
      */
     private $detectors;
 

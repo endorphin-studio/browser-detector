@@ -1,0 +1,20 @@
+# text files
+*                text=auto
+*.md             text eol=lf
+*.json           text eol=lf
+*.lock           text eol=lf
+*.php            text eol=lf
+*.yml            text eol=lf
+*.yaml           text eol=lf
+*.xml            text eol=lf
+*.dist           text eol=lf
+LICENSE          text eol=lf
+
+# files/folders to ignore
+/.*                  export-ignore
+.editorconfig        export-ignore text eol=lf
+.gitattributes       export-ignore text eol=lf
+.gitignore           export-ignore text eol=lf
+.scrutinizer.yml     export-ignore text eol=lf
+.travis.yml          export-ignore text eol=lf
+.circleci/config.yml export-ignore text eol=lf
