@@ -8,18 +8,18 @@
   "authors": [
     {
       "name": "Serhii Nekhaienko",
-      "email": "sergey.nekhaenko@gmail.com"
+      "email": "serhii.nekhaienko@gmail.com"
     }
   ],
   "require": {
-    "php": ">=7.0 <7.3",
-    "endorphin-studio/browser-detector-detection": ">=1.0.1",
-    "endorphin-studio/browser-detector-tools": ">=1.0.0",
-    "endorphin-studio/browser-detector-data": ">=1.0"
+    "php": ">=7.0",
+    "endorphin-studio/browser-detector-detection": "^2.1",
+    "endorphin-studio/browser-detector-tools": "^1.2",
+    "endorphin-studio/browser-detector-data": "^1.2"
   },
   "require-dev":
   {
-    "endorphin-studio/browser-detector-tests": ">=1.0"
+    "endorphin-studio/browser-detector-tests": "^2.2 || ^3.1"
   },
   "autoload": {
     "psr-4": { "EndorphinStudio\\Detector\\": "src/" }
