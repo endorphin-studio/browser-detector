@@ -15,7 +15,7 @@
     "php": ">=7.0",
     "endorphin-studio/browser-detector-detection": "dev-develop",
     "endorphin-studio/browser-detector-tools": "dev-develop",
-    "endorphin-studio/browser-detector-data": "dev-master"
+    "endorphin-studio/browser-detector-data": "dev-develop"
   },
   "require-dev":
   {
