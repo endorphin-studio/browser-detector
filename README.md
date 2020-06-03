@@ -11,8 +11,8 @@ Detect user Browser, OS and Device through USER AGENT
 ## About
 	Author: Serhii Nekhaienko
 	Email: sergey.nekhaenko@gmail.com
-	Stable Version: 5.0.0
-	License: GPL-3.0+
+	Stable Version: 6.0.0
+	License: MIT
 
 ## Requirements
 	PHP >=7.0 <7.3
@@ -50,13 +50,6 @@ Detect user Browser, OS and Device through USER AGENT
         "name": "PC",
         "type": "desktop"
       },
-      "robot": {
-        "owner": null,
-        "homepage": null,
-        "name": null,
-        "type": null
-      },
-      "isRobot": false,
       "isTouch": false,
       "isMobile": false,
       "isTablet": false
@@ -93,10 +86,3 @@ Detect user Browser, OS and Device through USER AGENT
     - player
     - console
     - desktop
-
-#### Crawlers (Robots) Detection Support
-
-    Google Bots, Tiny RSS, Yandex Bots, Bing, WASALive, .NET Framework CLR, 007ac9 Crawler, 80legs Crawler,
-    123metaspider Crawler, 1470 Crawler, Yodao, Yisou Spider, Yioop Bot, Baidu, Yahoo, Simple Pie, MJ12bot
-    SiteLock, OkHttp, IPS agent, BLEXBot, ScoutJet, Nodemeter, DotBot, Anturis Agent, Insping Bot, 
-    Port Monitor, DownNotifier.com
