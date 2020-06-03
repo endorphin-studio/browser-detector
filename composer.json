@@ -8,7 +8,7 @@
   "authors": [
     {
       "name": "Serhii Nekhaienko",
-      "email": "sergey.nekhaenko@gmail.com"
+      "email": "serhii.nekhaienko@gmail.com"
     }
   ],
   "require": {
@@ -19,7 +19,7 @@
   },
   "require-dev":
   {
-    "endorphin-studio/browser-detector-tests": "dev-develop"
+    "endorphin-studio/browser-detector-tests": "^2.1 || ^3.0"
   },
   "autoload": {
     "psr-4": { "EndorphinStudio\\Detector\\": "src/" }
