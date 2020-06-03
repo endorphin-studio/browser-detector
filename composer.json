@@ -19,7 +19,7 @@
   },
   "require-dev":
   {
-    "endorphin-studio/browser-detector-tests": "^2.1 || ^3.0"
+    "endorphin-studio/browser-detector-tests": "dev-develop"
   },
   "autoload": {
     "psr-4": { "EndorphinStudio\\Detector\\": "src/" }
