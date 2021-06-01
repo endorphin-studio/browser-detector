@@ -1,5 +1,4 @@
 Detect user Browser, OS and Device through USER AGENT
-[Live demo](http://detector.serhii.work/)
 
 ## Code Status
 [![Latest Stable Version](https://poser.pugx.org/endorphin-studio/browser-detector/v/stable)](https://packagist.org/packages/endorphin-studio/browser-detector)
@@ -11,8 +10,12 @@ Detect user Browser, OS and Device through USER AGENT
 ## About
 	Author: Serhii Nekhaienko
 	Email: sergey.nekhaenko@gmail.com
-	Stable Version: 6.0.0
+	Stable Version: 6.0.1
 	License: MIT
+
+## Packages
+
+[Laravel Package](https://github.com/endorphin-studio/browser-detector-laravel)
 
 ## Requirements
 	PHP >=7.0 <7.3
@@ -23,16 +26,17 @@ Detect user Browser, OS and Device through USER AGENT
 ## Install via Composer
     composer require endorphin-studio/browser-detector
 ## Basic Usage
+```php
+use EndorphinStudio\Detector\Detector;
 
-    use EndorphinStudio\Detector\Detector;
-    
-    $detector = new Detector();
-    $result = $detector->analyse();
-    
-    echo json_encode($result);
+$detector = new Detector();
+$result = $detector->analyse();
 
-    // Result
-    {
+echo json_encode($result);
+```
+Result:
+```json
+{
       "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36",
       "os": {
         "family": "unix",
@@ -53,7 +57,8 @@ Detect user Browser, OS and Device through USER AGENT
       "isTouch": false,
       "isMobile": false,
       "isTablet": false
-    }
+}
+```
 
 #### Browser Detection Support
 

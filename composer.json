@@ -3,7 +3,7 @@
   "description": "Detect user Browser, OS and Device through Browser USER AGENT",
   "minimum-stability": "stable",
   "type": "library",
-  "license": "GPL-3.0+",
+  "license": "MIT",
   "keywords": ["browser-detector","user-agent-string","user-agent","device-detector"],
   "authors": [
     {
