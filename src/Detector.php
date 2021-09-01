@@ -9,11 +9,12 @@
 
 namespace EndorphinStudio\Detector;
 
-use EndorphinStudio\Detector\Data\AbstractData;
+use Composer\Composer;
 use EndorphinStudio\Detector\Data\Result;
 use EndorphinStudio\Detector\Exception\StorageException;
-use EndorphinStudio\Detector\Storage\AbstractStorage;
 use EndorphinStudio\Detector\Storage\StorageInterface;
+use EndorphinStudio\Detector\Storage\YamlStorage;
+use RuntimeException;
 use Symfony\Component\HttpFoundation\Request;
 
 /**
@@ -23,22 +24,19 @@ use Symfony\Component\HttpFoundation\Request;
  */
 class Detector
 {
-    private $version = '6.0.1';
-
-    public function getVersion(): string
-    {
-        return $this->version;
-    }
+    private const DATA_PACKAGE = 'endorphin-studio/browser-detector-data-yaml';
 
     /**
      * @var array Array of options
      */
     protected $options = [
-        'dataProvider' => '\\EndorphinStudio\\Detector\\Storage\\YamlStorage',
+        'dataProvider' => YamlStorage::class,
         'dataDirectory' => 'auto',
         'cacheDirectory' => 'auto',
         'format' => 'yaml'
     ];
+
+    private $version = '6.0.3';
 
     /**
      * @var StorageInterface
@@ -46,45 +44,13 @@ class Detector
     private $dataProvider;
 
     /**
-     * Get storage provider
-     * @return StorageInterface
-     */
-    public function getDataProvider(): StorageInterface
-    {
-        return $this->dataProvider;
-    }
-
-    /**
-     * Get result object
-     * @return Result Result object
-     */
-    public function getResultObject(): Result
-    {
-        return $this->resultObject;
-    }
-
-    /**
      * @var Result Result object
      */
     private $resultObject;
 
     /**
-     * Set data provider
-     * @param StorageInterface $dataProvider
+     * @var string $ua User Agent
      */
-    public function setDataProvider(StorageInterface $dataProvider)
-    {
-        $this->dataProvider = $dataProvider;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getUserAgent()
-    {
-        return $this->ua;
-    }
-
     private $ua;
 
     /**
@@ -100,8 +66,8 @@ class Detector
      * 'cacheDirectory' => 'auto',
      * 'format' => 'yaml'
      * @param array $options Array of options
-     * @throws \ReflectionException
      * @throws StorageException
+     * @SuppressWarnings(PHPMD.StaticAccess)
      */
     public function __construct(array $options = [])
     {
@@ -109,21 +75,131 @@ class Detector
 
         $this->init();
         $this->detectors = [];
-        $check = ['os','device', 'browser', 'robot'];
         Tools::setWindowsConfig($this->dataProvider->getConfig()['windows']);
-        foreach ($check as $detectionType) {
-            $className = sprintf('\\EndorphinStudio\\Detector\\Detection\\%s', ucfirst(sprintf('%sDetector', $detectionType)));
-            if(class_exists($className)) {
-                $this->detectors[$detectionType] = new $className();
-                $this->detectors[$detectionType]->init($this);
-            }
+        foreach (['os', 'device', 'browser'] as $detectionType) {
+            $this->initDetector($detectionType);
         }
+    }
+
+    /**
+     * Initialisation method
+     * @throws StorageException
+     * @throws RuntimeException
+     */
+    protected function init(): void
+    {
+        $this->setDataProvider($this->createDataProvider());
+        $this->dataProvider->setDataDirectory($this->findDataDirectory());
+        $this->callMethod($this->dataProvider, 'setCacheDirectory', $this->findCacheDirectory());
+        $this->callMethod($this->dataProvider, 'setCacheEnabled', true);
+    }
+
+    private function createDataProvider()
+    {
+        if (class_exists($this->options['dataProvider'])) {
+            return new $this->options['dataProvider']();
+        }
+        throw new RuntimeException('Data Provider class isn\'t exist');
+    }
+
+    /**
+     * @return string
+     * @throws StorageException
+     */
+    private function findDataDirectory(): string
+    {
+        $dataDirectory = $this->options['dataDirectory'];
+        if ($this->options['dataDirectory'] === 'auto') {
+            $dataDirectory = sprintf('%s/data', $this->getPackagePath(self::DATA_PACKAGE));
+        }
+        if (is_dir($dataDirectory)) {
+            return $dataDirectory;
+        }
+        throw new StorageException(sprintf(StorageException::DIRECTORY_NOT_FOUND, $dataDirectory));
+    }
+
+    private function getPackagePath(string $package): string
+    {
+        return (new Composer())->getInstallationManager()->getInstallPath($package);
+    }
+
+    protected function callMethod($object, string $methodName, ...$arguments): void
+    {
+        if (method_exists($object, $methodName)) {
+            $object->$methodName($arguments);
+        }
+    }
+
+    /**
+     * @return string
+     * @throws StorageException
+     */
+    private function findCacheDirectory(): string
+    {
+        $cacheDirectory = $this->options['cacheDirectory'];
+        if ($this->options['cacheDirectory'] === 'auto') {
+            $cacheDirectory = sprintf('%s/var/cache', dirname(__FILE__, 1));
+        }
+        if (is_dir($cacheDirectory)) {
+            return $cacheDirectory;
+        }
+        throw new StorageException(sprintf(StorageException::DIRECTORY_NOT_FOUND, $cacheDirectory));
+    }
+
+    private function initDetector(string $type): void
+    {
+        $className = sprintf('\\EndorphinStudio\\Detector\\Detection\\%s', ucfirst(sprintf('%sDetector', $type)));
+        if (class_exists($className)) {
+            $this->detectors[$type] = new $className();
+            $this->detectors[$type]->init($this);
+        }
+    }
+
+    public function getVersion(): string
+    {
+        return $this->version;
+    }
+
+    /**
+     * Get storage provider
+     * @return StorageInterface
+     */
+    public function getDataProvider(): StorageInterface
+    {
+        return $this->dataProvider;
+    }
+
+    /**
+     * Set data provider
+     * @param StorageInterface $dataProvider
+     */
+    public function setDataProvider(StorageInterface $dataProvider): void
+    {
+        $this->dataProvider = $dataProvider;
+    }
+
+    /**
+     * Get result object
+     * @return Result Result object
+     */
+    public function getResultObject(): Result
+    {
+        return $this->resultObject;
+    }
+
+    /**
+     * @return string
+     */
+    public function getUserAgent(): string
+    {
+        return $this->ua;
     }
 
     /**
      * Analyse User Agent String
      * @param string $ua
      * @return Result
+     * @SuppressWarnings(PHPMD.StaticAccess)
      */
     public function analyse(string $ua = 'ua'): Result
     {
@@ -142,64 +218,8 @@ class Detector
      * @param $type
      * @return array
      */
-    public function getPatternList($list, $type)
+    public function getPatternList($list, $type): array
     {
         return array_key_exists($type, $list) ? $list[$type] : [];
-    }
-
-    /**
-     * Initialisation method
-     * @throws \ReflectionException
-     * @throws StorageException
-     */
-    protected function init()
-    {
-        $dataProvider = new $this->options['dataProvider']();
-
-        /** @var StorageInterface $dataProvider */
-        $this->setDataProvider($dataProvider);
-        $this->dataProvider->setDataDirectory($this->findDataDirectory());
-        if(method_exists($this->dataProvider,'setCacheDirectory')) {
-            $this->dataProvider->setCacheDirectory($this->findCacheDirectory());
-        }
-        if(method_exists($this->dataProvider,'setCacheEnabled')) {
-            $this->dataProvider->setCacheEnabled(true);
-        }
-    }
-
-    /**
-     * @return string
-     * @throws StorageException
-     * @throws \ReflectionException
-     */
-    private function findDataDirectory(): string
-    {
-        $dataDirectory = $this->options['dataDirectory'];
-        if($this->options['dataDirectory'] === 'auto') {
-            $reflection = new \ReflectionClass(AbstractData::class);
-            $dataDirectory = sprintf('%s/var/%s', dirname($reflection->getFileName(),3), $this->options['format']);
-        }
-        if(is_dir($dataDirectory)){
-            return $dataDirectory;
-        }
-        throw new StorageException(sprintf(StorageException::DIRECTORY_NOT_FOUND, $dataDirectory));
-    }
-
-    /**
-     * @return string
-     * @throws StorageException
-     * @throws \ReflectionException
-     */
-    private function findCacheDirectory(): string
-    {
-        $cacheDirectory = $this->options['cacheDirectory'];
-        if($this->options['cacheDirectory'] === 'auto') {
-            $reflection = new \ReflectionClass(AbstractData::class);
-            $cacheDirectory = sprintf('%s/var/cache', dirname($reflection->getFileName(),3));
-        }
-        if(is_dir($cacheDirectory)){
-            return $cacheDirectory;
-        }
-        throw new StorageException(sprintf(StorageException::DIRECTORY_NOT_FOUND, $cacheDirectory));
     }
 }
