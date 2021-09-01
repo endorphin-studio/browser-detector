@@ -9,7 +9,6 @@
 
 namespace EndorphinStudio\Detector;
 
-use Composer\Composer;
 use EndorphinStudio\Detector\Data\Result;
 use EndorphinStudio\Detector\Exception\StorageException;
 use EndorphinStudio\Detector\Storage\StorageInterface;
@@ -120,7 +119,8 @@ class Detector
 
     private function getPackagePath(string $package): string
     {
-        return (new Composer())->getInstallationManager()->getInstallPath($package);
+        $vendorDir = dirname(__FILE__, 3);
+        return sprintf('%s/%s', $vendorDir, $package);
     }
 
     protected function callMethod($object, string $methodName, ...$arguments): void
