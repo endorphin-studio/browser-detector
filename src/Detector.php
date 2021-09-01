@@ -119,7 +119,11 @@ class Detector
 
     private function getPackagePath(string $package): string
     {
-        $vendorDir = dirname(__FILE__, 3);
+        if(dirname(__FILE__, 2) === 'endorphin-studio') {
+            $vendorDir = dirname(__FILE__, 3);
+        } else {
+            $vendorDir = dirname(__FILE__, 1).'/vendor';
+        }
         return sprintf('%s/%s', $vendorDir, $package);
     }
 
