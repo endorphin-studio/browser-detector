@@ -12,10 +12,11 @@
     }
   ],
   "require": {
-    "php": ">=7.0",
+    "php": ">=7.1",
     "endorphin-studio/browser-detector-detection": "^2.1",
     "endorphin-studio/browser-detector-tools": "^1.2",
-    "endorphin-studio/browser-detector-data": "^1.2"
+    "endorphin-studio/browser-detector-data": "^1.2",
+    "endorphin-studio/browser-detector-data-yaml": "^1.0"
   },
   "require-dev":
   {
