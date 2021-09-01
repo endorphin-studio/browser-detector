@@ -119,10 +119,13 @@ class Detector
 
     private function getPackagePath(string $package): string
     {
-        if(dirname(__FILE__, 2) === 'endorphin-studio') {
-            $vendorDir = dirname(__FILE__, 3);
+        /**
+         * If running from vendor directory
+         */
+        if (strpos(dirname(__FILE__, 3), 'endorphin-studio') !== false) {
+            $vendorDir = dirname(__FILE__, 4);
         } else {
-            $vendorDir = dirname(__FILE__, 1).'/vendor';
+            $vendorDir = dirname(__FILE__, 2) . '/vendor';
         }
         return sprintf('%s/%s', $vendorDir, $package);
     }
@@ -142,7 +145,7 @@ class Detector
     {
         $cacheDirectory = $this->options['cacheDirectory'];
         if ($this->options['cacheDirectory'] === 'auto') {
-            $cacheDirectory = sprintf('%s/var/cache', dirname(__FILE__, 1));
+            $cacheDirectory = sprintf('%s/var/cache', dirname(__FILE__, 2));
         }
         if (is_dir($cacheDirectory)) {
             return $cacheDirectory;
